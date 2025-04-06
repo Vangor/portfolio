@@ -1,0 +1,16 @@
+import tw from 'tailwind-styled-components';
+import styled from 'styled-components';
+
+export const MainContainer = tw.div`
+  min-h-screen
+  flex
+  flex-col
+`;
+
+export const Content = tw.main`
+  flex-grow
+  container
+  mx-auto
+  px-4
+  py-8
+`;
