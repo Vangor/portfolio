@@ -10,9 +10,6 @@ import {
   FooterSection,
   FooterLogo,
   FooterTagline,
-  FooterNav,
-  FooterNavTitle,
-  FooterNavLink,
   FooterSocial,
   FooterSocialLink,
   FooterBottom,
@@ -22,33 +19,19 @@ import {
 import { PolicyDialog } from './PolicyDialog/PolicyDialog';
 import { Privacy } from './Privacy';
 import { Terms } from './Terms';
+import { Navigation } from '../Navigation/Navigation';
 
 export const Footer = () => {
   const t = useTranslations('footer');
-  const nav = useTranslations('Navigation');
   const currentYear = new Date().getFullYear();
 
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isTermsOpen, setIsTermsOpen] = useState(false);
 
-  const navItems = [
-    { key: 'home', href: '#' },
-    { key: 'experience', href: '#experience' },
-    { key: 'projects', href: '#projects' },
-    { key: 'consultation', href: '#consultation' },
-  ];
-
   return (
     <FooterContainer>
       <FooterContent>
-        <FooterNav>
-          <FooterNavTitle>{t('navigation')}</FooterNavTitle>
-          {navItems.map(item => (
-            <Link key={item.key} href={item.href} legacyBehavior passHref>
-              <FooterNavLink>{nav(item.key)}</FooterNavLink>
-            </Link>
-          ))}
-        </FooterNav>
+        <Navigation showTitle />
 
         <FooterSocial>
           <FooterSocialLink href="mailto:contact@vanichk.in" aria-label="Email">
@@ -78,19 +61,13 @@ export const Footer = () => {
           <FooterCopyright>
             &copy; {currentYear} Konstantin Vanichkin. {t('rights')}
           </FooterCopyright>
-          <FooterLinks>
-            <PolicyDialog
-              isOpen={isPrivacyOpen}
-              onOpenChange={setIsPrivacyOpen}
-              title={t('privacy')}
-            >
-              <Privacy />
-            </PolicyDialog>
+          <PolicyDialog isOpen={isPrivacyOpen} onOpenChange={setIsPrivacyOpen} title={t('privacy')}>
+            <Privacy />
+          </PolicyDialog>
 
-            <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('terms')}>
-              <Terms />
-            </PolicyDialog>
-          </FooterLinks>
+          <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('terms')}>
+            <Terms />
+          </PolicyDialog>
         </FooterBottom>
       </FooterContent>
     </FooterContainer>

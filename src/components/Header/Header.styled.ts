@@ -33,3 +33,9 @@ export const Nav = tw.nav`
   items-center
   space-x-4
 `;
+
+export const Actions = tw.div`
+  flex
+  items-center
+  space-x-4
+`;

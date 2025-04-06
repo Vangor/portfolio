@@ -50,7 +50,6 @@ export const TimelineItem = tw.div`
   sm:even:flex-row-reverse
   gap-4
   sm:gap-8
-  sm:items-center
 `;
 
 export const TimelineDot = tw.div`
@@ -92,7 +91,6 @@ export const TimelineDate = styled(TimelineDateTw)<{ align?: 'left' | 'right' }>
   ${({ align }) =>
     align === 'right' &&
     css`
-      margin-left: auto;
       padding-right: 2rem;
     `}
 `;

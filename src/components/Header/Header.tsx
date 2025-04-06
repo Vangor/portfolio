@@ -1,10 +1,11 @@
 'use client';
 
-import { HeaderContainer, HeaderContent, Logo, Nav } from './Header.styled';
+import { HeaderContainer, HeaderContent, Logo, Nav, Actions } from './Header.styled';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import ThemeToggle from './Header.theme';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { Navigation } from '../Navigation/Navigation';
 
 export const Header = () => {
   const t = useTranslations('header');
@@ -17,9 +18,14 @@ export const Header = () => {
             {t('title')}
           </Link>
         </Logo>
+
         <Nav>
-          <LanguageSwitcher />
-          <ThemeToggle />
+          <Navigation className="mr-4" />
+
+          <Actions>
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </Actions>
         </Nav>
       </HeaderContent>
     </HeaderContainer>
