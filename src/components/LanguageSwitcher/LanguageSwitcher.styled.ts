@@ -13,6 +13,7 @@ export const FlagIcon = tw.span`
 
 export const LanguageText = tw.span`
   font-medium
+  mr-2
 `;
 
 export const LanguageItemContainer = tw.div`

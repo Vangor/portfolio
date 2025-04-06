@@ -12,7 +12,7 @@ const ConsultationButton = ({ buttonType, code }: { buttonType: string; code?: s
       <CWalletButton
         data-code={code}
         data-button-type="button"
-        data-button-style="black"
+        data-button-style="primary"
         data-button-text={t('payButton')}
       >
         {t('payButton')}

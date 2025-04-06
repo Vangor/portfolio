@@ -119,31 +119,80 @@ export const CustomOptionContainer = tw.div`
   text-center
 `;
 
-export const CWalletButton = styled.div`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  padding: 0.75rem 1.5rem;
-  min-width: 160px;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  border: 1px solid transparent;
+export const CWalletButton = styled.button.attrs({
+  className: 'ccwallet__tipbox__button',
+})`
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.5rem !important;
+  font-weight: 500 !important;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke, transform,
+    box-shadow !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 200ms !important;
+  padding: 0.75rem 1.5rem !important;
+  min-width: 160px !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  cursor: pointer !important;
+  border: 1px solid var(--border) !important;
+  position: relative !important;
+  overflow: hidden !important;
+
+  /* Add subtle shadow for depth */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
 
   &:hover {
-    opacity: 0.9;
+    background-color: hsl(var(--primary) / 0.9) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
   }
 
-  &:focus {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  &:active {
+    transform: translateY(0) !important;
+    background-color: hsl(var(--primary) / 0.95) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    transition-duration: 100ms !important;
+  }
+
+  &:focus-visible {
+    outline: 2px solid hsl(var(--primary)) !important;
+    outline-offset: 2px !important;
+    box-shadow:
+      0 0 0 2px hsl(var(--background)),
+      0 0 0 4px hsl(var(--primary) / 0.4) !important;
+  }
+
+  &:disabled {
+    opacity: 0.5 !important;
+    pointer-events: none !important;
+  }
+
+  /* Add a subtle shine effect on hover */
+  &::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -75% !important;
+    width: 50% !important;
+    height: 100% !important;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 100%
+    ) !important;
+    transform: skewX(-25deg) !important;
+    transition: all 0.5s ease !important;
+    opacity: 0 !important;
+  }
+
+  &:hover::before {
+    left: 125% !important;
+    opacity: 1 !important;
   }
 `;

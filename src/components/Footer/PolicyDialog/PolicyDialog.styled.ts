@@ -5,14 +5,6 @@ export const StyledDialogContent = styled(DialogContent)`
   max-width: 36rem; /* 4xl in Tailwind */
   max-height: 90vh;
   overflow: hidden;
-
-  button[data-state='open'] {
-    cursor: pointer !important;
-    &:hover {
-      background-color: hsl(var(--muted) / 0.5);
-      opacity: 1;
-    }
-  }
 `;
 
 export const ScrollableContent = styled.div`

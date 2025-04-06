@@ -39,7 +39,7 @@ export const Footer = () => {
           <FooterLogo>Konstantin Vanichkin</FooterLogo>
           <FooterTagline>{t('tagline')}</FooterTagline>
           <FooterSocial>
-            <FooterSocialLink href="mailto:konstantin@vanichk.in" aria-label="Email">
+            <FooterSocialLink href="mailto:contact@vanichk.in" aria-label="Email">
               <Mail className="h-5 w-5" />
             </FooterSocialLink>
             <FooterSocialLink
@@ -78,20 +78,6 @@ export const Footer = () => {
             </Link>
           </FooterNav>
         </FooterSection>
-
-        <FooterSection>
-          <FooterNavTitle>{t('contact')}</FooterNavTitle>
-          <FooterNav>
-            <FooterNavLink href="mailto:contact@vanichk.in">contact@vanichk.in</FooterNavLink>
-            <FooterNavLink
-              href="https://www.linkedin.com/in/konstantinvan/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn <ExternalLink className="inline h-3 w-3 ml-1" />
-            </FooterNavLink>
-          </FooterNav>
-        </FooterSection>
       </FooterContent>
 
       <FooterContent>
@@ -107,7 +93,6 @@ export const Footer = () => {
             >
               <Privacy />
             </PolicyDialog>
-
             <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('terms')}>
               <Terms />
             </PolicyDialog>

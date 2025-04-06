@@ -22,6 +22,7 @@ export const FooterContent = tw.div`
 
 export const FooterSection = tw.div`
   flex
+  w-1/2
   flex-col
   gap-4
 `;
