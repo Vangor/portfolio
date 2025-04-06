@@ -10,7 +10,6 @@ import {
   SectionContent,
   SectionList,
   ListItem,
-  ContactLink,
 } from './LegalDocument.styled';
 
 export const Privacy: React.FC = () => {

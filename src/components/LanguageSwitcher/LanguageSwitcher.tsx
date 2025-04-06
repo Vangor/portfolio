@@ -2,7 +2,6 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import { locales } from '../../../middleware';
-import { useTranslations } from 'next-intl';
 import { useLocale } from 'next-intl';
 import {
   DropdownMenu,
@@ -28,7 +27,6 @@ const languageFlags: Record<string, string> = {
 };
 
 export const LanguageSwitcher = () => {
-  const t = useTranslations('Index');
   const currentLocale = useLocale();
   const router = useRouter();
   const pathname = usePathname();

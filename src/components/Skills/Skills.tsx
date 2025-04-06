@@ -17,7 +17,6 @@ import {
   SkillName,
   SkillLevel,
   SkillLevelFill,
-  SkillIcon,
 } from './Skills.styled';
 import { skillsData, SkillCategory as SkillCategoryType } from './Skills.utils';
 

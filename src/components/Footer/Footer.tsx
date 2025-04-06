@@ -2,19 +2,14 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { Mail, Linkedin, Github } from 'lucide-react';
 import {
   FooterContainer,
   FooterContent,
-  FooterSection,
-  FooterLogo,
-  FooterTagline,
   FooterSocial,
   FooterSocialLink,
   FooterBottom,
   FooterCopyright,
-  FooterLinks,
 } from './Footer.styled';
 import { PolicyDialog } from './PolicyDialog/PolicyDialog';
 import { Privacy } from './Privacy';

@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { Building2, MapPin, Briefcase, Linkedin } from 'lucide-react';
+import { MapPin, Briefcase, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   ExperienceSection,

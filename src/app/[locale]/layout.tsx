@@ -4,8 +4,6 @@ import { NextIntlClientProvider } from 'next-intl';
 import Layout from '@/components/Layout/Layout';
 import StyledComponentsRegistry from '@/lib/registry';
 import { ThemeProvider } from '@/components/ThemeProvider/ThemeProvider';
-import { notFound } from 'next/navigation';
-import { locales } from '../../../middleware';
 import { getMessages } from '@/i18n/i18n';
 
 const inter = Inter({ subsets: ['latin'] });
