@@ -1,0 +1,24 @@
+[site]
+bucket = "./.next/static"
+
+[build]
+command = "yarn build"
+output_directory = ".next"
+
+[build.environment]
+NODE_VERSION = "20"
+
+[compatibility_flags]
+nodejs_compat = true
+
+# Configure Next.js Edge Runtime
+[env.production.build]
+command = "yarn build"
+
+[env.development]
+workers_dev = true
+
+[[redirects]]
+from = "/"
+to = "/en"
+status = 301 
