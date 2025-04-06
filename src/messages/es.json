@@ -15,7 +15,7 @@
     "es": "Español"
   },
   "Index": {
-    "title": "Bienvenido a mi portafolio",
+    "title": "Bienvenido a Mi Portafolio",
     "description": "Desarrollador Frontend y Gerente de Ingeniería"
   },
   "Navigation": {
@@ -23,5 +23,43 @@
     "skills": "Habilidades",
     "experience": "Experiencia",
     "contact": "Contacto"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de mis trabajos más recientes",
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Ver Código"
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "subtitle": "Mi trayectoria profesional",
+    "present": "Presente",
+    "fullExperience": "Experiencia Laboral Completa",
+    "pipedrive": {
+      "company": "Pipedrive",
+      "position": "Gerente de Ingeniería",
+      "period": "Septiembre 2017 - Septiembre 2023",
+      "location": "Tallinn, Estonia",
+      "description": "Comencé como Desarrollador Frontend Senior y progresé a Gerente de Ingeniería, liderando un equipo de hasta 20 ingenieros. Fomentando una cultura positiva enfocada en la excelencia técnica.",
+      "achievements": [
+        "Lideré un equipo de hasta 20 ingenieros, transformando un equipo en dificultades",
+        "Facilité colaboraciones entre equipos para lograr objetivos compartidos",
+        "Entregué una renovación significativa de características, superando las expectativas",
+        "Contribuí a bibliotecas de UI, lanzamientos de funciones y mejoras de la plataforma"
+      ]
+    },
+    "accenture": {
+      "company": "Accenture",
+      "position": "Líder de Equipo Frontend",
+      "period": "Enero 2016 - Septiembre 2017",
+      "location": "Riga, Letonia",
+      "description": "Lancé un servicio de streaming de video, mejorando el rendimiento 5 veces y reduciendo la deuda técnica en un 89%. Implementé nuevos flujos de trabajo y prioricé el aprendizaje continuo.",
+      "achievements": [
+        "Lancé un servicio de streaming de video con mejora de rendimiento 5x",
+        "Reduje la deuda técnica en un 89% mediante refactorización estratégica",
+        "Implementé nuevos flujos de trabajo para optimizar la productividad del equipo",
+        "Prioricé el aprendizaje continuo y el desarrollo profesional del equipo"
+      ]
+    }
   }
 }

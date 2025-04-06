@@ -23,5 +23,42 @@
     "skills": "Skills",
     "experience": "Experience",
     "contact": "Contact"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of my most recent work",
+    "viewProject": "View Project",
+    "viewCode": "View Code"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "present": "Present",
+    "fullExperience": "Full Work Experience",
+    "pipedrive": {
+      "company": "Pipedrive",
+      "position": "Engineering Manager",
+      "period": "September 2017 - September 2023",
+      "location": "Tallinn, Estonia",
+      "description": "Started as Senior Frontend Developer and progressed to Engineering Manager, leading a team of up to 20 engineers. Fostered a positive culture focused on technical excellence.",
+      "achievements": [
+        "Led a team of up to 20 engineers, turning around a failing team",
+        "Facilitated cross-team collaborations to achieve shared objectives",
+        "Delivered a significant feature overhaul, exceeding expectations",
+        "Contributed to UI libraries, feature launches, and platform improvements"
+      ]
+    },
+    "accenture": {
+      "company": "Accenture",
+      "position": "Frontend Team Lead",
+      "period": "January 2016 - September 2017",
+      "location": "Riga, Latvia",
+      "description": "Launched a video streaming service, improving performance by 5x and reducing technical debt by 89%. Implemented new workflows and prioritized ongoing learning.",
+      "achievements": [
+        "Launched a video streaming service with 5x performance improvement",
+        "Reduced technical debt by 89% through strategic refactoring",
+        "Implemented new workflows to optimize team productivity",
+        "Prioritized continuous learning and professional development"
+      ]
+    }
   }
 }
