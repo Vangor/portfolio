@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components';
 
 export const FooterContainer = tw.footer`
   bg-muted/50
-  py-16
+  py-8
   border-t
   border-border
 `;
@@ -14,39 +14,48 @@ export const FooterContent = tw.div`
   px-4
   md:px-8
   flex
-  flex-col
-  md:flex-row
+  flex-row
+  flex-wrap
   justify-between
-  gap-10
+  items-center
+  gap-8
 `;
 
 export const FooterSection = tw.div`
   flex
-  w-1/2
-  flex-col
-  gap-4
+  flex-row
+  items-center
+  gap-6
 `;
 
 export const FooterLogo = tw.div`
-  text-2xl
+  text-xl
   font-bold
+  mr-4
 `;
 
 export const FooterTagline = tw.p`
   text-muted-foreground
-  max-w-sm
+  text-sm
+  hidden
+  md:block
+  max-w-xs
 `;
 
 export const FooterNav = tw.nav`
   flex
-  flex-col
-  gap-3
+  flex-row
+  flex-wrap
+  gap-6
+  items-center
 `;
 
 export const FooterNavTitle = tw.h3`
   font-semibold
-  text-lg
-  mb-2
+  text-sm
+  mr-2
+  hidden
+  md:block
 `;
 
 export const FooterNavLink = tw.a`
@@ -59,7 +68,7 @@ export const FooterNavLink = tw.a`
 export const FooterSocial = tw.div`
   flex
   gap-4
-  mt-3
+  ml-auto
 `;
 
 export const FooterSocialLink = tw.a`
@@ -69,15 +78,14 @@ export const FooterSocialLink = tw.a`
 `;
 
 export const FooterBottom = tw.div`
-  mt-10
-  pt-6
-  border-t
-  border-border
+  w-full
+  mt-12
+  pt-12
   flex
-  flex-col
-  md:flex-row
+  flex-row
   justify-between
   items-center
+  flex-wrap
   gap-4
   text-sm
   text-muted-foreground

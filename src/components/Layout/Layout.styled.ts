@@ -7,7 +7,7 @@ export const MainContainer = tw.div`
   flex-col
 `;
 
-export const Content = tw.main`
+export const Content = tw.div`
   flex-grow
   container
   mx-auto

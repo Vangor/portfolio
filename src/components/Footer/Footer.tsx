@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 import {
   FooterContainer,
   FooterContent,
@@ -18,7 +18,6 @@ import {
   FooterBottom,
   FooterCopyright,
   FooterLinks,
-  FooterBottomLink,
 } from './Footer.styled';
 import { PolicyDialog } from './PolicyDialog/PolicyDialog';
 import { Privacy } from './Privacy';
@@ -32,52 +31,46 @@ export const Footer = () => {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isTermsOpen, setIsTermsOpen] = useState(false);
 
+  const navItems = [
+    { key: 'home', href: '#' },
+    { key: 'experience', href: '#experience' },
+    { key: 'projects', href: '#projects' },
+    { key: 'consultation', href: '#consultation' },
+  ];
+
   return (
     <FooterContainer>
       <FooterContent>
-        <FooterSection>
-          <FooterLogo>Konstantin Vanichkin</FooterLogo>
-          <FooterTagline>{t('tagline')}</FooterTagline>
-          <FooterSocial>
-            <FooterSocialLink href="mailto:contact@vanichk.in" aria-label="Email">
-              <Mail className="h-5 w-5" />
-            </FooterSocialLink>
-            <FooterSocialLink
-              href="https://www.linkedin.com/in/konstantinvan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </FooterSocialLink>
-            <FooterSocialLink
-              href="https://github.com/vanichols"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <Github className="h-5 w-5" />
-            </FooterSocialLink>
-          </FooterSocial>
-        </FooterSection>
-
-        <FooterSection>
+        <FooterNav>
           <FooterNavTitle>{t('navigation')}</FooterNavTitle>
-          <FooterNav>
-            <Link href="#" legacyBehavior passHref>
-              <FooterNavLink>{nav('home')}</FooterNavLink>
+          {navItems.map(item => (
+            <Link key={item.key} href={item.href} legacyBehavior passHref>
+              <FooterNavLink>{nav(item.key)}</FooterNavLink>
             </Link>
-            <Link href="#experience" legacyBehavior passHref>
-              <FooterNavLink>{nav('experience')}</FooterNavLink>
-            </Link>
-            <Link href="#projects" legacyBehavior passHref>
-              <FooterNavLink>{nav('projects')}</FooterNavLink>
-            </Link>
-            <Link href="#consultation" legacyBehavior passHref>
-              <FooterNavLink>{nav('consultation')}</FooterNavLink>
-            </Link>
-          </FooterNav>
-        </FooterSection>
+          ))}
+        </FooterNav>
+
+        <FooterSocial>
+          <FooterSocialLink href="mailto:contact@vanichk.in" aria-label="Email">
+            <Mail className="h-5 w-5" />
+          </FooterSocialLink>
+          <FooterSocialLink
+            href="https://www.linkedin.com/in/konstantinvan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-5 w-5" />
+          </FooterSocialLink>
+          <FooterSocialLink
+            href="https://github.com/vangor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <Github className="h-5 w-5" />
+          </FooterSocialLink>
+        </FooterSocial>
       </FooterContent>
 
       <FooterContent>
@@ -93,6 +86,7 @@ export const Footer = () => {
             >
               <Privacy />
             </PolicyDialog>
+
             <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('terms')}>
               <Terms />
             </PolicyDialog>
