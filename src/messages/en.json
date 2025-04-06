@@ -26,9 +26,21 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "A selection of my most recent work",
+    "subtitle": "Biggest projects I've worked on",
     "viewProject": "View Project",
-    "viewCode": "View Code"
+    "viewCode": "View Code",
+    "filmstruck": {
+      "title": "FilmStruck",
+      "description": "Streaming service from Turner Classic Movies focused on rare, classic, foreign, arthouse, and independent cinema. Led a team that improved performance and implemented significant refactoring to enhance user experience."
+    },
+    "pipedrive": {
+      "title": "Pipedrive",
+      "description": "CRM platform designed to help salespeople manage complex sales processes. Contributed to UI libraries, feature launches, and platform improvements while focusing on technical excellence."
+    },
+    "channel4": {
+      "title": "Channel 4",
+      "description": "British public-service television broadcaster with an advanced digital streaming platform. Worked on improving user experience, streaming performance, and modernizing frontend architecture."
+    }
   },
   "experience": {
     "title": "Work Experience",

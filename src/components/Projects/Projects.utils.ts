@@ -6,7 +6,7 @@ export interface ProjectTag {
 export interface Project {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   imageUrl: string;
   tags: ProjectTag[];
   projectUrl?: string;
@@ -15,47 +15,39 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    id: 'portfolio',
-    title: 'Personal Portfolio',
-    description:
-      'A responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features internationalization support with next-intl.',
-    imageUrl: '/images/projects/portfolio.jpg',
+    id: 'filmstruck',
+    title: 'FilmStruck',
+    imageUrl: '/images/projects/filmstruck.png',
     tags: [
-      { id: 'nextjs', name: 'Next.js' },
+      { id: 'angular', name: 'Angular' },
+      { id: 'javascript', name: 'JavaScript' },
+      { id: 'css', name: 'CSS' },
+      { id: 'refactoring', name: 'Refactoring' },
+    ],
+    projectUrl: 'https://en.wikipedia.org/wiki/FilmStruck',
+  },
+  {
+    id: 'pipedrive',
+    title: 'Pipedrive',
+    imageUrl: '/images/projects/pipedrive.png',
+    tags: [
+      { id: 'react', name: 'React' },
       { id: 'typescript', name: 'TypeScript' },
-      { id: 'tailwind', name: 'Tailwind CSS' },
-      { id: 'i18n', name: 'Internationalization' },
-    ],
-    githubUrl: 'https://github.com/Vangor/portfolio',
-  },
-  {
-    id: 'ecommerce',
-    title: 'E-commerce Platform',
-    description:
-      'A modern e-commerce platform with product listings, cart functionality, and secure checkout process.',
-    imageUrl: '/images/projects/ecommerce.jpg',
-    tags: [
-      { id: 'react', name: 'React' },
+      { id: 'docker', name: 'Docker' },
       { id: 'redux', name: 'Redux' },
-      { id: 'node', name: 'Node.js' },
-      { id: 'mongodb', name: 'MongoDB' },
     ],
-    projectUrl: 'https://example-ecommerce.com',
-    githubUrl: 'https://github.com/Vangor/ecommerce',
+    projectUrl: 'https://www.pipedrive.com/',
   },
   {
-    id: 'dashboard',
-    title: 'Analytics Dashboard',
-    description:
-      'A comprehensive analytics dashboard with real-time data visualization, interactive charts, and customizable reports.',
-    imageUrl: '/images/projects/dashboard.jpg',
+    id: 'channel4',
+    title: 'Channel 4',
+    imageUrl: '/images/projects/channel4.png',
     tags: [
       { id: 'react', name: 'React' },
-      { id: 'chartjs', name: 'Chart.js' },
-      { id: 'firebase', name: 'Firebase' },
-      { id: 'mui', name: 'Material UI' },
+      { id: 'typescript', name: 'TypeScript' },
+      { id: 'postcss', name: 'PostCSS' },
+      { id: 'nextjs', name: 'Next.js' },
     ],
-    projectUrl: 'https://analytics-dashboard.example.com',
-    githubUrl: 'https://github.com/Vangor/analytics-dashboard',
+    projectUrl: 'https://channel4.com/',
   },
 ];

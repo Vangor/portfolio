@@ -8,7 +8,6 @@ import {
   ExperienceSection,
   ExperienceContainer,
   SectionTitle,
-  SectionSubtitle,
   TimelineContainer,
   TimelineLine,
   TimelineItem,

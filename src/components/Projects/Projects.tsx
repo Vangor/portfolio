@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   ProjectsSection,
@@ -37,7 +37,7 @@ export const Projects = () => {
               <ProjectImage>
                 <Image
                   src={project.imageUrl}
-                  alt={project.title}
+                  alt={t(`${project.id}.title`)}
                   fill
                   style={{ objectFit: 'cover' }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -45,8 +45,8 @@ export const Projects = () => {
               </ProjectImage>
 
               <ProjectInfo>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectDescription>{project.description}</ProjectDescription>
+                <ProjectTitle>{t(`${project.id}.title`)}</ProjectTitle>
+                <ProjectDescription>{t(`${project.id}.description`)}</ProjectDescription>
 
                 <ProjectTags>
                   {project.tags.map(tag => (
@@ -60,15 +60,6 @@ export const Projects = () => {
                       <Link href={project.projectUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-2 h-4 w-4" />
                         {t('viewProject')}
-                      </Link>
-                    </Button>
-                  )}
-
-                  {project.githubUrl && (
-                    <Button variant="outline" size="sm" asChild>
-                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" />
-                        {t('viewCode')}
                       </Link>
                     </Button>
                   )}
