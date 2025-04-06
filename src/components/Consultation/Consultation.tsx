@@ -2,8 +2,6 @@
 
 import { useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import {
   ConsultationSection,
   ConsultationContainer,
@@ -17,10 +15,7 @@ import {
   PricingCardContent,
   PricingCardDescription,
   PricingCardButton,
-  CustomOptionContainer,
-  CWalletButton,
 } from './Consultation.styled';
-import { Mail } from 'lucide-react';
 import ConsultationButton from './Consultation.button';
 
 export const Consultation = () => {

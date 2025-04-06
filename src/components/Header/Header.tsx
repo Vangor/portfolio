@@ -4,12 +4,9 @@ import { HeaderContainer, HeaderContent, Logo, Nav } from './Header.styled';
 import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher';
 import ThemeToggle from './Header.theme';
 import { useTranslations } from 'next-intl';
-import { Link } from 'lucide-react';
-import { Mail } from 'lucide-react';
+import Link from 'next/link';
 
 export const Header = () => {
-  console.log('Header :>> ', Header);
-
   const t = useTranslations('header');
 
   return (

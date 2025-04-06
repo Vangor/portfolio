@@ -96,5 +96,100 @@
         "Prioricé el aprendizaje continuo y el desarrollo profesional del equipo"
       ]
     }
+  },
+  "footer": {
+    "tagline": "Gerente de Ingeniería y Desarrollador Frontend con una década de experiencia en la construcción de aplicaciones web de alta calidad y liderazgo de equipos de desarrollo.",
+    "navigation": "Navegación",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "privacy": {
+    "introduction": {
+      "title": "Introducción",
+      "content": "Bienvenido al sitio web de portafolio de Konstantin Vanichkin. Respeto tu privacidad y estoy comprometido a proteger tus datos personales. Esta política de privacidad explica cómo recopilo, uso y protejo tu información cuando utilizas mi sitio web."
+    },
+    "information": {
+      "title": "Información que Recopilo",
+      "content": "Puedo recopilar, utilizar y almacenar los siguientes tipos de información cuando visitas mi sitio web:",
+      "items": {
+        "usage": "Datos de uso como la forma en que interactúas con mi sitio web, páginas visitadas, tiempo de permanencia y otros datos de diagnóstico.",
+        "contact": "Información de contacto que proporcionas al comunicarte conmigo, incluyendo tu nombre, dirección de correo electrónico y el contenido de tu mensaje.",
+        "cookies": "Cookies y tecnologías de seguimiento similares que ayudan a mejorar tu experiencia."
+      }
+    },
+    "usage": {
+      "title": "Cómo Uso Tu Información",
+      "content": "Utilizo la información que recopilo para diversos fines, incluyendo:",
+      "items": {
+        "service": "Proporcionar y mantener mi sitio web.",
+        "communication": "Responder a tus consultas y mantener la comunicación.",
+        "improvement": "Mejorar mi sitio web y servicios basados en cómo los visitantes interactúan con él."
+      }
+    },
+    "sharing": {
+      "title": "Compartir Información",
+      "content": "No vendo, intercambio ni alquilo tu información personal a terceros. Puedo compartir información con proveedores de servicios que me ayudan a operar mi sitio web, pero están obligados a mantener tu información confidencial."
+    },
+    "cookies": {
+      "title": "Política de Cookies",
+      "content": "Mi sitio web puede utilizar cookies para mejorar tu experiencia. Puedes configurar tu navegador para rechazar todas o algunas cookies del navegador, pero esto puede impedir que algunas partes del sitio web funcionen correctamente."
+    },
+    "security": {
+      "title": "Seguridad",
+      "content": "Valoro tu confianza e implemento medidas de seguridad apropiadas para proteger tu información personal. Sin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro, por lo que no puedo garantizar la seguridad absoluta."
+    },
+    "changes": {
+      "title": "Cambios en esta Política",
+      "content": "Puedo actualizar esta política de privacidad de vez en cuando. Te notificaré cualquier cambio publicando la nueva política en esta página con una fecha de revisión actualizada."
+    },
+    "contact": {
+      "title": "Contáctame",
+      "content": "Si tienes alguna pregunta sobre esta política de privacidad, por favor contáctame en:"
+    }
+  },
+  "terms": {
+    "introduction": {
+      "title": "Introducción",
+      "content": "Bienvenido al sitio web de portafolio de Konstantin Vanichkin. Al acceder a este sitio web, aceptas estar sujeto a estos Términos de Servicio, todas las leyes y regulaciones aplicables, y estás de acuerdo en que eres responsable del cumplimiento de cualquier ley local aplicable."
+    },
+    "services": {
+      "title": "Servicios Ofrecidos",
+      "content": "A través de este sitio web, ofrezco varios servicios profesionales, que incluyen pero no se limitan a:",
+      "items": {
+        "consulting": "Consultoría técnica y servicios de asesoramiento relacionados con el desarrollo frontend y la gestión de ingeniería.",
+        "development": "Desarrollo de software personalizado y soluciones técnicas.",
+        "mentoring": "Mentoría profesional y orientación de carrera en el campo tecnológico."
+      }
+    },
+    "payments": {
+      "title": "Pagos y Tarifas",
+      "content": "Todas las tarifas por servicios de consulta se detallan en el sitio web. El pago es requerido antes de la entrega de los servicios a menos que se acuerde lo contrario por escrito. Todos los pagos se procesan a través de procesadores de pago de terceros seguros."
+    },
+    "intellectual": {
+      "title": "Propiedad Intelectual",
+      "content": "El contenido de este sitio web, incluidos texto, gráficos, logotipos e imágenes, es propiedad de Konstantin Vanichkin y está protegido por derechos de autor y otras leyes de propiedad intelectual. No puedes usar, reproducir o distribuir ningún contenido de este sitio web sin permiso previo por escrito."
+    },
+    "termination": {
+      "title": "Terminación de Servicios",
+      "content": "Me reservo el derecho de terminar o suspender el acceso a mis servicios inmediatamente, sin previo aviso ni responsabilidad, por cualquier motivo, incluyendo sin limitación si incumples estos Términos de Servicio."
+    },
+    "limitation": {
+      "title": "Limitación de Responsabilidad",
+      "content": "En ningún caso Konstantin Vanichkin será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo sin limitación, pérdida de ganancias, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de tu acceso o uso o incapacidad para acceder o usar los servicios."
+    },
+    "governing": {
+      "title": "Ley Aplicable",
+      "content": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de Argentina, sin tener en cuenta sus disposiciones sobre conflictos de leyes."
+    },
+    "changes": {
+      "title": "Cambios en los Términos",
+      "content": "Me reservo el derecho, a mi exclusivo criterio, de modificar o reemplazar estos Términos en cualquier momento. Es tu responsabilidad revisar estos Términos periódicamente para verificar cambios. Tu uso continuado de este sitio web después de la publicación de cualquier cambio en estos Términos constituye la aceptación de esos cambios."
+    },
+    "contact": {
+      "title": "Información de Contacto",
+      "content": "Si tienes alguna pregunta sobre estos Términos, por favor contáctame en:"
+    }
   }
 }

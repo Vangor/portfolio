@@ -95,5 +95,100 @@
         "Prioritized continuous learning and professional development"
       ]
     }
+  },
+  "footer": {
+    "tagline": "Engineering Manager & Frontend Developer with a decade of experience in building high-quality web applications and leading development teams.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "rights": "All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "privacy": {
+    "introduction": {
+      "title": "Introduction",
+      "content": "Welcome to the Konstantin Vanichkin portfolio website. I respect your privacy and am committed to protecting your personal data. This privacy policy explains how I collect, use, and protect your information when you use my website."
+    },
+    "information": {
+      "title": "Information I Collect",
+      "content": "I may collect, use, and store the following types of information when you visit my website:",
+      "items": {
+        "usage": "Usage data such as how you interact with my website, pages visited, time spent, and other diagnostic data.",
+        "contact": "Contact information you provide when reaching out to me, including your name, email address, and the content of your message.",
+        "cookies": "Cookies and similar tracking technologies that help enhance your experience."
+      }
+    },
+    "usage": {
+      "title": "How I Use Your Information",
+      "content": "I use the information I collect for various purposes, including:",
+      "items": {
+        "service": "To provide and maintain my website.",
+        "communication": "To respond to your inquiries and maintain communication.",
+        "improvement": "To improve my website and services based on how visitors interact with it."
+      }
+    },
+    "sharing": {
+      "title": "Information Sharing",
+      "content": "I do not sell, trade, or rent your personal information to third parties. I may share information with service providers who assist me in operating my website, but they are obligated to keep your information confidential."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "content": "My website may use cookies to enhance your experience. You can set your browser to refuse all or some browser cookies, but this may prevent some parts of the website from functioning properly."
+    },
+    "security": {
+      "title": "Security",
+      "content": "I value your trust and implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, so I cannot guarantee absolute security."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "content": "I may update this privacy policy from time to time. I will notify you of any changes by posting the new policy on this page with an updated revision date."
+    },
+    "contact": {
+      "title": "Contact Me",
+      "content": "If you have any questions about this privacy policy, please contact me at:"
+    }
+  },
+  "terms": {
+    "introduction": {
+      "title": "Introduction",
+      "content": "Welcome to Konstantin Vanichkin's portfolio website. By accessing this website, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws."
+    },
+    "services": {
+      "title": "Services Offered",
+      "content": "Through this website, I offer various professional services, including but not limited to:",
+      "items": {
+        "consulting": "Technical consulting and advisory services related to frontend development and engineering management.",
+        "development": "Custom software development and technical solutions.",
+        "mentoring": "Professional mentoring and career guidance in the tech field."
+      }
+    },
+    "payments": {
+      "title": "Payments and Fees",
+      "content": "All fees for consultation services are outlined on the website. Payment is required prior to the delivery of services unless otherwise agreed upon in writing. All payments are processed through secure third-party payment processors."
+    },
+    "intellectual": {
+      "title": "Intellectual Property",
+      "content": "The content on this website, including text, graphics, logos, and images, is the property of Konstantin Vanichkin and is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content from this website without prior written permission."
+    },
+    "termination": {
+      "title": "Termination of Services",
+      "content": "I reserve the right to terminate or suspend access to my services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms of Service."
+    },
+    "limitation": {
+      "title": "Limitation of Liability",
+      "content": "In no event shall Konstantin Vanichkin be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the services."
+    },
+    "governing": {
+      "title": "Governing Law",
+      "content": "These Terms shall be governed and construed in accordance with the laws of Argentina, without regard to its conflict of law provisions."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "I reserve the right, at my sole discretion, to modify or replace these Terms at any time. It is your responsibility to check these Terms periodically for changes. Your continued use of this website following the posting of any changes to these Terms constitutes acceptance of those changes."
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "If you have any questions about these Terms, please contact me at:"
+    }
   }
 }
