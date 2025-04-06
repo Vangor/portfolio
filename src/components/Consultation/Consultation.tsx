@@ -49,7 +49,6 @@ export const Consultation = () => {
     {
       id: 'option3',
       buttonType: 'contact',
-      price: 'custom',
     },
   ];
 

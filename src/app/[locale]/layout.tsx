@@ -5,6 +5,7 @@ import Layout from '@/components/Layout/Layout';
 import StyledComponentsRegistry from '@/lib/registry';
 import { ThemeProvider } from '@/components/ThemeProvider/ThemeProvider';
 import { getMessages } from '@/i18n/i18n';
+import { PostHogProvider } from '@/providers/PostHogProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +19,7 @@ export default async function LocaleLayout({
   params: paramsPromise,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   // Await params before accessing properties
   const params = await Promise.resolve(paramsPromise);
@@ -31,11 +32,13 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <ThemeProvider defaultTheme="system">
-              <Layout>{children}</Layout>
-            </ThemeProvider>
-          </NextIntlClientProvider>
+          <PostHogProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <ThemeProvider defaultTheme="system">
+                <Layout params={Promise.resolve(paramsPromise)}>{children}</Layout>
+              </ThemeProvider>
+            </NextIntlClientProvider>
+          </PostHogProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
