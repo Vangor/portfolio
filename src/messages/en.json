@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "Konstantin Vanichkin"
+  },
+  "hero": {
+    "title": "Engineering Manager & Frontend Developer",
+    "subtitle": "Experienced Engineering Manager with over a decade of experience in IT, specializing in frontend development and team leadership. Based in Buenos Aires, Argentina.",
+    "contact": "Contact Me",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "languages": {
+    "en": "English",
+    "ru": "Russian",
+    "es": "Spanish"
+  },
+  "Index": {
+    "title": "Welcome to My Portfolio",
+    "description": "Frontend Developer & Engineering Manager"
+  },
+  "Navigation": {
+    "home": "Home",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  }
+}

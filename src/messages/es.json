@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "Konstantin Vanichkin"
+  },
+  "hero": {
+    "title": "Gerente de Ingeniería y Desarrollador Frontend",
+    "subtitle": "Gerente de Ingeniería con más de una década de experiencia en TI, especializado en desarrollo frontend y liderazgo de equipos. Basado en Buenos Aires, Argentina.",
+    "contact": "Contáctame",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "languages": {
+    "en": "Inglés",
+    "ru": "Ruso",
+    "es": "Español"
+  },
+  "Index": {
+    "title": "Bienvenido a mi portafolio",
+    "description": "Desarrollador Frontend y Gerente de Ingeniería"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  }
+}
