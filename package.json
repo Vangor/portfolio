@@ -2,7 +2,11 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn",
+  "packageManager": "yarn@3.6.3",
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=3.6.3"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
