@@ -10,6 +10,7 @@ import {
   FooterSocialLink,
   FooterBottom,
   FooterCopyright,
+  FooterLinks,
 } from './Footer.styled';
 import { PolicyDialog } from './PolicyDialog/PolicyDialog';
 import { Privacy } from './Privacy';
@@ -56,13 +57,19 @@ export const Footer = () => {
           <FooterCopyright>
             &copy; {currentYear} Konstantin Vanichkin. {t('rights')}
           </FooterCopyright>
-          <PolicyDialog isOpen={isPrivacyOpen} onOpenChange={setIsPrivacyOpen} title={t('privacy')}>
-            <Privacy />
-          </PolicyDialog>
+          <FooterLinks>
+            <PolicyDialog
+              isOpen={isPrivacyOpen}
+              onOpenChange={setIsPrivacyOpen}
+              title={t('privacy')}
+            >
+              <Privacy />
+            </PolicyDialog>
 
-          <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('terms')}>
-            <Terms />
-          </PolicyDialog>
+            <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('terms')}>
+              <Terms />
+            </PolicyDialog>
+          </FooterLinks>
         </FooterBottom>
       </FooterContent>
     </FooterContainer>

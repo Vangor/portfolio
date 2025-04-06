@@ -21,7 +21,6 @@ export const Header = () => {
 
         <Nav>
           <Navigation className="mr-4" />
-
           <Actions>
             <LanguageSwitcher />
             <ThemeToggle />
