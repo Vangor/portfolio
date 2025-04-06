@@ -3,7 +3,7 @@ bucket = "./.next/static"
 
 [build]
 command = "yarn build"
-output_directory = ".next"
+output_directory = ".next/standalone"
 
 [build.environment]
 NODE_VERSION = "20"
@@ -17,6 +17,10 @@ command = "yarn build"
 
 [env.development]
 workers_dev = true
+
+# Increase asset size limits
+[limits]
+upload_size = "50MB"
 
 [[redirects]]
 from = "/"
