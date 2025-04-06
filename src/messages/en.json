@@ -22,7 +22,9 @@
     "home": "Home",
     "skills": "Skills",
     "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "projects": "Projects",
+    "consultation": "Hire Me"
   },
   "projects": {
     "title": "Projects",
@@ -41,6 +43,27 @@
       "title": "Channel 4",
       "description": "British public-service television broadcaster with an advanced digital streaming platform. Worked on improving user experience, streaming performance, and modernizing frontend architecture."
     }
+  },
+  "consultation": {
+    "title": "Hire Me",
+    "subtitle": "Book a consultation session with me",
+    "option1": {
+      "title": "1 Hour Consultation",
+      "price": "400 USD",
+      "description": "Comprehensive consultation to discuss your project, address specific challenges, or get expert advice on frontend development and team management."
+    },
+    "option2": {
+      "title": "30 Minute Consultation",
+      "price": "250 USD",
+      "description": "Quick session to answer your questions and provide guidance on specific technical issues or career development in frontend engineering."
+    },
+    "option3": {
+      "title": "Custom Consultation",
+      "price": "Custom",
+      "description": "Need something different? Let's discuss your specific requirements and create a tailored consultation package."
+    },
+    "payButton": "Pay with Cwallet",
+    "contactForCustom": "Contact me for custom options"
   },
   "experience": {
     "title": "Work Experience",
