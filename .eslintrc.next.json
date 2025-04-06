@@ -1,0 +1,14 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "ignorePatterns": [
+    "**/__tests__/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "__mocks__/**/*",
+    "coverage/**/*",
+    "jest.config.mjs",
+    "jest.setup.js"
+  ]
+}

@@ -1,0 +1,23 @@
+# Ignore test files and directories
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+__tests__/
+__mocks__/
+coverage/
+jest.config.mjs
+jest.setup.js
+
+# Build output
+.next/
+dist/
+build/
+out/
+
+# Dependencies
+node_modules/
+
+# Misc
+.yarn/
+.swc/ 
