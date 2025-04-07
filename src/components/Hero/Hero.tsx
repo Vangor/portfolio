@@ -16,7 +16,7 @@ export const Hero = () => {
         <Subtitle>{t('subtitle')}</Subtitle>
         <ContactContainer>
           <Button variant="outline" asChild>
-            <Link href="mailto:konstantin@vanichk.in">
+            <Link href="mailto:contact@vanichk.in">
               <Mail className="mr-2 h-4 w-4" />
               {t('contact')}
             </Link>

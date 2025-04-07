@@ -27,7 +27,7 @@ const ConsultationButton = ({ buttonType, code }: { buttonType: string; code?: s
       asChild
       className="flex items-center justify-center min-w-[160px] font-medium"
     >
-      <Link href="mailto:konstantin@vanichk.in" className="flex items-center justify-center">
+      <Link href="mailto:contact@vanichk.in" className="flex items-center justify-center">
         <Mail className="mr-2 h-4 w-4" />
         {t('contactForCustom')}
       </Link>

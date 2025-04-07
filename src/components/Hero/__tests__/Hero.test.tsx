@@ -35,7 +35,7 @@ describe('Hero Component', () => {
 
     // Check email link
     const emailLink = screen.getByText('Email').closest('a');
-    expect(emailLink).toHaveAttribute('href', 'mailto:konstantin@vanichk.in');
+    expect(emailLink).toHaveAttribute('href', 'mailto:contact@vanichk.in');
 
     // Check LinkedIn link
     const linkedinLink = screen.getByText('LinkedIn').closest('a');
