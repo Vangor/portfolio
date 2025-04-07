@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Landing Page
 
-## Getting Started
+A sleek, internationalized landing page built with Next.js 15, React 19, and TypeScript. Designed for performance, SEO, and a beautiful user experience.
 
-First, run the development server:
+![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen)
+![Next.js Version](https://img.shields.io/badge/next.js-15.2.4-blue)
+![React Version](https://img.shields.io/badge/react-19.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+## 🚀 Features
+
+- **Modern Stack**: Built with Next.js 15 and React 19
+- **Internationalization**: Full i18n support with next-intl
+- **Performance Optimized**: Configured for optimal bundle splitting and fast loading
+- **Responsive Design**: Beautiful UI that works on all devices
+- **Cloudflare Integration**: Optimized for deployment on Cloudflare Pages
+- **Component Library**: Utilizes Shadcn UI components
+- **Type Safety**: Fully typed with TypeScript
+- **Testing**: Jest and React Testing Library setup for reliable testing
+
+## 📋 Prerequisites
+
+- Node.js ≥ 20.0.0
+- Yarn ≥ 1.22.19
+
+## 🔧 Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/landing.git
+   cd landing
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.local.example .env.local
+   ```
+   Edit `.env.local` with your specific configuration.
+
+## 💻 Development
+
+Start the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `yarn dev` - Start development server with Turbopack
+- `yarn build` - Build for production
+- `yarn build:analyze` - Build with bundle analyzer to inspect chunk sizes
+- `yarn start` - Start production server
+- `yarn lint` - Run ESLint
+- `yarn test` - Run Jest tests
+- `yarn test:watch` - Run tests in watch mode
+- `yarn test:coverage` - Run tests with coverage report
 
-## Learn More
+## 🏗️ Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/               # Next.js App Router
+├── components/        # Reusable components
+│   └── ComponentName/ # Each component in its own folder with
+│       ├── ComponentName.tsx
+│       ├── ComponentName.styled.ts
+│       └── ComponentName.utils.ts (if needed)
+├── i18n/              # Internationalization configuration
+├── lib/               # Utility libraries and configurations
+├── messages/          # Translation messages
+├── providers/         # React context providers
+└── utils/             # Utility functions
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Internationalization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project uses `next-intl` for internationalization. Translation files are located in the `src/messages` directory.
 
-## Deploy on Vercel
+To add a new language:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create a new file in `src/messages` named after the language code
+2. Add the language to the supported locales in `src/i18n/i18n.ts`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Styling
+
+The project uses a combination of:
+
+- Styled Components
+- Tailwind CSS
+- Tailwind Styled Components
+
+Components follow the structure:
+
+- `ComponentName.tsx` - Component logic and structure
+- `ComponentName.styled.ts` - Styled components for the component
+
+## 🧪 Testing
+
+Tests are written using Jest and React Testing Library:
+
+```bash
+# Run all tests
+yarn test
+
+# Run tests in watch mode
+yarn test:watch
+
+# Generate coverage report
+yarn test:coverage
+```
+
+## 🚢 Deployment
+
+This project is configured for deployment to Cloudflare Pages:
+
+1. Push your changes to your git repository
+2. Connect your repository to Cloudflare Pages
+3. Configure the build settings in Cloudflare:
+   - Build command: `yarn build`
+   - Build output directory: `.next/standalone`
+   - Node.js version: 20+
+
+The configuration is already set up in `wrangler.toml` for Cloudflare deployment.
+
+## 🔍 Performance Optimization
+
+The project includes webpack optimizations to ensure fast loading and compliance with Cloudflare's size limits:
+
+- Optimized chunk splitting
+- Separate vendor chunks for large dependencies
+- Bundle analyzer for monitoring asset sizes
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/my-new-feature`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+Built with ❤️ using Next.js, React, and TypeScript
