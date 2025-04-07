@@ -48,12 +48,12 @@
     "title": "Hire Me",
     "subtitle": "Book a consultation session with me",
     "option1": {
-      "title": "1 Hour Consultation",
+      "title": "Pair programming session",
       "price": "400 USD",
       "description": "Comprehensive consultation to discuss your project, address specific challenges, or get expert advice on frontend development and team management."
     },
     "option2": {
-      "title": "30 Minute Consultation",
+      "title": "1 Hour Consultation",
       "price": "250 USD",
       "description": "Quick session to answer your questions and provide guidance on specific technical issues or career development in frontend engineering."
     },
