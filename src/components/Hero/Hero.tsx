@@ -2,40 +2,39 @@
 
 import { Button } from '@/components/ui/button';
 import { Mail, Linkedin, Github } from 'lucide-react';
-import Link from 'next/link';
 import { HeroSection, HeroContainer, Title, Subtitle, ContactContainer } from './Hero.styled';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 export const Hero = () => {
-  const t = useTranslations('hero');
+  const { t } = useTranslation();
 
   return (
     <HeroSection>
       <HeroContainer>
-        <Title>{t('title')}</Title>
-        <Subtitle>{t('subtitle')}</Subtitle>
+        <Title>{t('hero.title')}</Title>
+        <Subtitle>{t('hero.subtitle')}</Subtitle>
         <ContactContainer>
           <Button variant="outline" asChild>
-            <Link href="mailto:contact@vanichk.in">
+            <a href="mailto:contact@vanichk.in">
               <Mail className="mr-2 h-4 w-4" />
-              {t('contact')}
-            </Link>
+              {t('hero.contact')}
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <Link
+            <a
               href="https://www.linkedin.com/in/konstantinvan/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin className="mr-2 h-4 w-4" />
-              {t('linkedin')}
-            </Link>
+              {t('hero.linkedin')}
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="https://github.com/Vangor" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Vangor" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-4 w-4" />
-              {t('github')}
-            </Link>
+              {t('hero.github')}
+            </a>
           </Button>
         </ContactContainer>
       </HeroContainer>

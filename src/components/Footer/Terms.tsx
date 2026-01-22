@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import {
   DocumentContainer,
   LastUpdated,
@@ -12,8 +12,9 @@ import {
   ListItem,
 } from './LegalDocument.styled';
 
-export const Terms: React.FC = () => {
-  const t = useTranslations('terms');
+export const Terms = () => {
+  const { t } = useTranslation();
+
   const formattedDate = new Date(2023, 3, 6).toLocaleDateString(); // April 6, 2023
 
   return (
@@ -21,48 +22,48 @@ export const Terms: React.FC = () => {
       <LastUpdated>Last updated: {formattedDate}</LastUpdated>
 
       <Section>
-        <SectionTitle>{t('introduction.title')}</SectionTitle>
-        <SectionContent>{t('introduction.content')}</SectionContent>
+        <SectionTitle>{t('terms.introduction.title')}</SectionTitle>
+        <SectionContent>{t('terms.introduction.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('services.title')}</SectionTitle>
-        <SectionContent>{t('services.content')}</SectionContent>
+        <SectionTitle>{t('terms.services.title')}</SectionTitle>
+        <SectionContent>{t('terms.services.content')}</SectionContent>
         <SectionList>
-          <ListItem>{t('services.items.consulting')}</ListItem>
-          <ListItem>{t('services.items.development')}</ListItem>
-          <ListItem>{t('services.items.mentoring')}</ListItem>
+          <ListItem>{t('terms.services.items.consulting')}</ListItem>
+          <ListItem>{t('terms.services.items.development')}</ListItem>
+          <ListItem>{t('terms.services.items.mentoring')}</ListItem>
         </SectionList>
       </Section>
 
       <Section>
-        <SectionTitle>{t('payments.title')}</SectionTitle>
-        <SectionContent>{t('payments.content')}</SectionContent>
+        <SectionTitle>{t('terms.payments.title')}</SectionTitle>
+        <SectionContent>{t('terms.payments.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('intellectual.title')}</SectionTitle>
-        <SectionContent>{t('intellectual.content')}</SectionContent>
+        <SectionTitle>{t('terms.intellectual.title')}</SectionTitle>
+        <SectionContent>{t('terms.intellectual.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('termination.title')}</SectionTitle>
-        <SectionContent>{t('termination.content')}</SectionContent>
+        <SectionTitle>{t('terms.termination.title')}</SectionTitle>
+        <SectionContent>{t('terms.termination.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('limitation.title')}</SectionTitle>
-        <SectionContent>{t('limitation.content')}</SectionContent>
+        <SectionTitle>{t('terms.limitation.title')}</SectionTitle>
+        <SectionContent>{t('terms.limitation.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('governing.title')}</SectionTitle>
-        <SectionContent>{t('governing.content')}</SectionContent>
+        <SectionTitle>{t('terms.governing.title')}</SectionTitle>
+        <SectionContent>{t('terms.governing.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('changes.title')}</SectionTitle>
-        <SectionContent>{t('changes.content')}</SectionContent>
+        <SectionTitle>{t('terms.changes.title')}</SectionTitle>
+        <SectionContent>{t('terms.changes.content')}</SectionContent>
       </Section>
     </DocumentContainer>
   );

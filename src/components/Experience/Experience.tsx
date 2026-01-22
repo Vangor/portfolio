@@ -1,7 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { MapPin, Briefcase, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -26,9 +25,13 @@ import {
 } from './Experience.styled';
 
 export const Experience = () => {
-  const t = useTranslations('experience');
+  const { t } = useTranslation();
 
   const jobs = [
+    {
+      id: 'nda-igaming',
+      icon: <Briefcase className="h-4 w-4" />,
+    },
     {
       id: 'pipedrive',
       icon: <Briefcase className="h-4 w-4" />,
@@ -42,7 +45,7 @@ export const Experience = () => {
   return (
     <ExperienceSection id="experience">
       <ExperienceContainer>
-        <SectionTitle>{t('title')}</SectionTitle>
+        <SectionTitle>{t('experience.title')}</SectionTitle>
 
         <TimelineContainer>
           <TimelineLine />
@@ -52,25 +55,27 @@ export const Experience = () => {
               <TimelineDot>{job.icon}</TimelineDot>
 
               <TimelineDate align={index % 2 === 0 ? 'left' : 'right'}>
-                {t(`${job.id}.period`)}
+                {t(`experience.${job.id}.period`)}
               </TimelineDate>
 
               <TimelineContent>
                 <JobHeader>
-                  <CompanyName>{t(`${job.id}.company`)}</CompanyName>
-                  <JobPosition>{t(`${job.id}.position`)}</JobPosition>
+                  <CompanyName>{t(`experience.${job.id}.company`)}</CompanyName>
+                  <JobPosition>{t(`experience.${job.id}.position`)}</JobPosition>
                   <JobLocation>
                     <MapPin className="h-4 w-4" />
-                    {t(`${job.id}.location`)}
+                    {t(`experience.${job.id}.location`)}
                   </JobLocation>
                 </JobHeader>
 
                 <JobContent>
-                  <JobDescription>{t(`${job.id}.description`)}</JobDescription>
+                  <JobDescription>{t(`experience.${job.id}.description`)}</JobDescription>
 
                   <AchievementsList>
                     {Array.from({ length: 4 }).map((_, i) => (
-                      <Achievement key={i}>{t(`${job.id}.achievements.${i}`)}</Achievement>
+                      <Achievement key={i}>
+                        {t(`experience.${job.id}.achievements.${i}`)}
+                      </Achievement>
                     ))}
                   </AchievementsList>
                 </JobContent>
@@ -81,14 +86,14 @@ export const Experience = () => {
 
         <LinkedInButtonContainer>
           <Button variant="outline" size="lg" asChild>
-            <Link
+            <a
               href="https://www.linkedin.com/in/konstantinvan/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin className="mr-2 h-5 w-5" />
-              {t('fullExperience')}
-            </Link>
+              {t('experience.fullExperience')}
+            </a>
           </Button>
         </LinkedInButtonContainer>
       </ExperienceContainer>

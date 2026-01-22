@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { Mail, Linkedin, Github } from 'lucide-react';
 import {
   FooterContainer,
@@ -18,7 +18,7 @@ import { Terms } from './Terms';
 import { Navigation } from '../Navigation/Navigation';
 
 export const Footer = () => {
-  const t = useTranslations('footer');
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
@@ -55,18 +55,22 @@ export const Footer = () => {
       <FooterContent>
         <FooterBottom>
           <FooterCopyright>
-            &copy; {currentYear} Konstantin Vanichkin. {t('rights')}
+            &copy; {currentYear} Konstantin Vanichkin. {t('footer.rights')}
           </FooterCopyright>
           <FooterLinks>
             <PolicyDialog
               isOpen={isPrivacyOpen}
               onOpenChange={setIsPrivacyOpen}
-              title={t('privacy')}
+              title={t('footer.privacy')}
             >
               <Privacy />
             </PolicyDialog>
 
-            <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('terms')}>
+            <PolicyDialog
+              isOpen={isTermsOpen}
+              onOpenChange={setIsTermsOpen}
+              title={t('footer.terms')}
+            >
               <Terms />
             </PolicyDialog>
           </FooterLinks>

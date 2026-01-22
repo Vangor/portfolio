@@ -1,8 +1,9 @@
 'use client';
 
-import { usePathname, useRouter } from 'next/navigation';
-import { locales } from '../../../middleware';
-import { useLocale } from 'next-intl';
+import { useMemo } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import i18n, { locales, type Locale } from '@/i18n/client';
+import { cn } from '@/lib/utils';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,30 +28,20 @@ const languageFlags: Record<string, string> = {
 };
 
 export const LanguageSwitcher = () => {
-  const currentLocale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
+  const navigate = useNavigate();
+  const location = useLocation();
+  useParams();
+  const currentLocale = useMemo(() => {
+    const locale = i18n.resolvedLanguage || i18n.language;
+    return locales.includes(locale as Locale) ? (locale as Locale) : 'en';
+  }, [i18n.resolvedLanguage, i18n.language]);
 
   // Handle switching the language
   const switchLanguage = (newLocale: string) => {
-    // Get path without locale
-    let newPath = pathname;
-
-    // Remove current locale from path
-    locales.forEach(locale => {
-      if (pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`) {
-        newPath = pathname.replace(`/${locale}`, '');
-      }
-    });
-
-    // Handle empty path
-    if (newPath === '') newPath = '/';
-
-    // Add new locale to path unless it's the default ('en')
-    const targetPath = newLocale === 'en' ? newPath : `/${newLocale}${newPath}`;
-
-    // Navigate to the new page
-    router.push(targetPath);
+    const pathname = location.pathname;
+    const withoutLocale = pathname.replace(/^\/(en|ru|es)(?=\/|$)/, '');
+    const normalized = withoutLocale === '' ? '/' : withoutLocale;
+    navigate(`/${newLocale}${normalized}`);
   };
 
   return (
@@ -64,7 +55,14 @@ export const LanguageSwitcher = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           {locales.map(locale => (
-            <DropdownMenuItem key={locale} onClick={() => switchLanguage(locale)}>
+            <DropdownMenuItem
+              key={locale}
+              onClick={() => switchLanguage(locale)}
+              className={cn(
+                currentLocale === locale &&
+                  'bg-accent text-accent-foreground focus:bg-accent focus:text-accent-foreground'
+              )}
+            >
               <LanguageItemContainer>
                 <FlagIcon>{languageFlags[locale]}</FlagIcon>
                 <LanguageText>
@@ -72,7 +70,7 @@ export const LanguageSwitcher = () => {
                 </LanguageText>
                 {currentLocale === locale && (
                   <CheckIconContainer>
-                    <Check className="h-4 w-4" />
+                    <Check className="h-4 w-4 text-primary" />
                   </CheckIconContainer>
                 )}
               </LanguageItemContainer>

@@ -1,11 +1,10 @@
 import { Mail } from 'lucide-react';
-import Link from 'next/link';
 import { Button } from '../ui/button';
 import { CWalletButton } from './Consultation.styled';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 
 const ConsultationButton = ({ buttonType, code }: { buttonType: string; code?: string }) => {
-  const t = useTranslations('consultation');
+  const { t } = useTranslation();
 
   if (buttonType === 'cwallet') {
     return (
@@ -13,9 +12,9 @@ const ConsultationButton = ({ buttonType, code }: { buttonType: string; code?: s
         data-code={code}
         data-button-type="button"
         data-button-style="primary"
-        data-button-text={t('payButton')}
+        data-button-text={t('consultation.payButton')}
       >
-        {t('payButton')}
+        {t('consultation.payButton')}
       </CWalletButton>
     );
   }
@@ -27,10 +26,10 @@ const ConsultationButton = ({ buttonType, code }: { buttonType: string; code?: s
       asChild
       className="flex items-center justify-center min-w-[160px] font-medium"
     >
-      <Link href="mailto:contact@vanichk.in" className="flex items-center justify-center">
+      <a href="mailto:contact@vanichk.in" className="flex items-center justify-center">
         <Mail className="mr-2 h-4 w-4" />
-        {t('contactForCustom')}
-      </Link>
+        {t('consultation.contactForCustom')}
+      </a>
     </Button>
   );
 };

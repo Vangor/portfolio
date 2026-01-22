@@ -1,7 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { NavContainer, NavLink, NavTitle } from './Navigation.styled';
 
 type NavigationProps = {
@@ -11,8 +10,7 @@ type NavigationProps = {
 };
 
 export const Navigation = ({ showTitle = false, className = '' }: NavigationProps) => {
-  const nav = useTranslations('Navigation');
-  const t = useTranslations('footer');
+  const { t } = useTranslation();
 
   const navItems = [
     { key: 'home', href: '#' },
@@ -23,12 +21,12 @@ export const Navigation = ({ showTitle = false, className = '' }: NavigationProp
 
   return (
     <NavContainer className={className}>
-      {showTitle && <NavTitle>{t('navigation')}</NavTitle>}
+      {showTitle && <NavTitle>{t('footer.navigation')}</NavTitle>}
 
       {navItems.map(item => (
-        <Link key={item.key} href={item.href} legacyBehavior passHref>
-          <NavLink>{nav(item.key)}</NavLink>
-        </Link>
+        <a key={item.key} href={item.href}>
+          <NavLink>{t(`Navigation.${item.key}`)}</NavLink>
+        </a>
       ))}
     </NavContainer>
   );

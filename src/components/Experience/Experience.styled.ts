@@ -69,8 +69,8 @@ export const TimelineDot = tw.div`
   justify-center
   z-10
   shadow-md
-  border-2
-  border-background
+  ring-4
+  ring-background
 `;
 
 export const TimelineDateTw = tw.div`
@@ -82,17 +82,18 @@ export const TimelineDateTw = tw.div`
   mb-2
   sm:mb-0
   sm:w-[calc(50%-2rem)]
-  sm:text-right
-  sm:even:text-left
 `;
 
 export const TimelineDate = styled(TimelineDateTw)<{ align?: 'left' | 'right' }>`
   text-align: ${({ align }) => align || 'left'};
   ${({ align }) =>
-    align === 'right' &&
-    css`
-      padding-right: 2rem;
-    `}
+    align === 'right'
+      ? css`
+          padding-right: 2rem;
+        `
+      : css`
+          padding-left: 2rem;
+        `}
 `;
 
 export const TimelineContent = tw.div`

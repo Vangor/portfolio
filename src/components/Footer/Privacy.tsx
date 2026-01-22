@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import {
   DocumentContainer,
   LastUpdated,
@@ -13,7 +13,8 @@ import {
 } from './LegalDocument.styled';
 
 export const Privacy: React.FC = () => {
-  const t = useTranslations('privacy');
+  const { t } = useTranslation();
+
   const formattedDate = new Date(2023, 3, 6).toLocaleDateString(); // April 6, 2023
 
   return (
@@ -21,48 +22,48 @@ export const Privacy: React.FC = () => {
       <LastUpdated>Last updated: {formattedDate}</LastUpdated>
 
       <Section>
-        <SectionTitle>{t('introduction.title')}</SectionTitle>
-        <SectionContent>{t('introduction.content')}</SectionContent>
+        <SectionTitle>{t('privacy.introduction.title')}</SectionTitle>
+        <SectionContent>{t('privacy.introduction.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('information.title')}</SectionTitle>
-        <SectionContent>{t('information.content')}</SectionContent>
+        <SectionTitle>{t('privacy.information.title')}</SectionTitle>
+        <SectionContent>{t('privacy.information.content')}</SectionContent>
         <SectionList>
-          <ListItem>{t('information.items.usage')}</ListItem>
-          <ListItem>{t('information.items.contact')}</ListItem>
-          <ListItem>{t('information.items.cookies')}</ListItem>
+          <ListItem>{t('privacy.information.items.usage')}</ListItem>
+          <ListItem>{t('privacy.information.items.contact')}</ListItem>
+          <ListItem>{t('privacy.information.items.cookies')}</ListItem>
         </SectionList>
       </Section>
 
       <Section>
-        <SectionTitle>{t('usage.title')}</SectionTitle>
-        <SectionContent>{t('usage.content')}</SectionContent>
+        <SectionTitle>{t('privacy.usage.title')}</SectionTitle>
+        <SectionContent>{t('privacy.usage.content')}</SectionContent>
         <SectionList>
-          <ListItem>{t('usage.items.service')}</ListItem>
-          <ListItem>{t('usage.items.communication')}</ListItem>
-          <ListItem>{t('usage.items.improvement')}</ListItem>
+          <ListItem>{t('privacy.usage.items.service')}</ListItem>
+          <ListItem>{t('privacy.usage.items.communication')}</ListItem>
+          <ListItem>{t('privacy.usage.items.improvement')}</ListItem>
         </SectionList>
       </Section>
 
       <Section>
-        <SectionTitle>{t('sharing.title')}</SectionTitle>
-        <SectionContent>{t('sharing.content')}</SectionContent>
+        <SectionTitle>{t('privacy.sharing.title')}</SectionTitle>
+        <SectionContent>{t('privacy.sharing.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('cookies.title')}</SectionTitle>
-        <SectionContent>{t('cookies.content')}</SectionContent>
+        <SectionTitle>{t('privacy.cookies.title')}</SectionTitle>
+        <SectionContent>{t('privacy.cookies.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('security.title')}</SectionTitle>
-        <SectionContent>{t('security.content')}</SectionContent>
+        <SectionTitle>{t('privacy.security.title')}</SectionTitle>
+        <SectionContent>{t('privacy.security.content')}</SectionContent>
       </Section>
 
       <Section>
-        <SectionTitle>{t('changes.title')}</SectionTitle>
-        <SectionContent>{t('changes.content')}</SectionContent>
+        <SectionTitle>{t('privacy.changes.title')}</SectionTitle>
+        <SectionContent>{t('privacy.changes.content')}</SectionContent>
       </Section>
     </DocumentContainer>
   );

@@ -1,8 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -23,30 +21,29 @@ import {
 import { projectsData } from './Projects.utils';
 
 export const Projects = () => {
-  const t = useTranslations('projects');
+  const { t } = useTranslation();
 
   return (
     <ProjectsSection id="projects">
       <ProjectsContainer>
-        <SectionTitle>{t('title')}</SectionTitle>
-        <SectionSubtitle>{t('subtitle')}</SectionSubtitle>
+        <SectionTitle>{t('projects.title')}</SectionTitle>
+        <SectionSubtitle>{t('projects.subtitle')}</SectionSubtitle>
 
         <ProjectsGrid>
           {projectsData.map(project => (
             <ProjectCard key={project.id}>
               <ProjectImage>
-                <Image
+                <img
                   src={project.imageUrl}
-                  alt={t(`${project.id}.title`)}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  alt={t(`projects.${project.id}.title`)}
+                  loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </ProjectImage>
 
               <ProjectInfo>
-                <ProjectTitle>{t(`${project.id}.title`)}</ProjectTitle>
-                <ProjectDescription>{t(`${project.id}.description`)}</ProjectDescription>
+                <ProjectTitle>{t(`projects.${project.id}.title`)}</ProjectTitle>
+                <ProjectDescription>{t(`projects.${project.id}.description`)}</ProjectDescription>
 
                 <ProjectTags>
                   {project.tags.map(tag => (
@@ -57,10 +54,10 @@ export const Projects = () => {
                 <ProjectLinks>
                   {project.projectUrl && (
                     <Button variant="outline" size="sm" asChild>
-                      <Link href={project.projectUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-2 h-4 w-4" />
-                        {t('viewProject')}
-                      </Link>
+                        {t('projects.viewProject')}
+                      </a>
                     </Button>
                   )}
                 </ProjectLinks>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslation } from 'react-i18next';
 import { Code2, Database, Wrench, Users } from 'lucide-react';
 import {
   SkillsSection,
@@ -29,7 +29,7 @@ const categoryIcons = {
 };
 
 export const Skills = () => {
-  const t = useTranslations('skills');
+  const { t } = useTranslation();
 
   // Get the icon component for each category
   const getCategoryWithIcon = (category: SkillCategoryType) => {
@@ -45,8 +45,8 @@ export const Skills = () => {
   return (
     <SkillsSection id="skills">
       <SkillsContainer>
-        <SectionTitle>{t('title')}</SectionTitle>
-        <SectionSubtitle>{t('subtitle')}</SectionSubtitle>
+        <SectionTitle>{t('skills.title')}</SectionTitle>
+        <SectionSubtitle>{t('skills.subtitle')}</SectionSubtitle>
 
         <SkillCategoriesContainer>
           {categoriesWithIcons.map(category => {
@@ -57,7 +57,7 @@ export const Skills = () => {
                 <CategoryHeader>
                   <CategoryTitle>
                     <IconComponent className="h-5 w-5" />
-                    {t(category.titleKey)}
+                    {t(`skills.${category.titleKey}`)}
                   </CategoryTitle>
                 </CategoryHeader>
 

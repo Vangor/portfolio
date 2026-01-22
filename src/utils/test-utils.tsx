@@ -3,18 +3,9 @@ import { render, RenderOptions } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
 import { portfolioTheme } from '@/lib/themes';
 
-// Mock next-intl provider
-const MockNextIntl = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
-};
-
 // Create a custom renderer that includes providers
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <ThemeProvider theme={portfolioTheme.light}>
-      <MockNextIntl>{children}</MockNextIntl>
-    </ThemeProvider>
-  );
+  return <ThemeProvider theme={portfolioTheme.light}>{children}</ThemeProvider>;
 };
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
