@@ -1,19 +1,22 @@
 import { render, screen } from '@/utils/test-utils';
 import { Hero } from '../Hero';
 import '@testing-library/jest-dom';
+import { vi } from 'vitest';
 
 // Mock the translations
-jest.mock('next-intl', () => ({
-  useTranslations: () => (key: string) => {
-    const translations: Record<string, string> = {
-      title: 'Konstantin Vanichkin',
-      subtitle: 'Full Stack Developer',
-      contact: 'Email',
-      linkedin: 'LinkedIn',
-      github: 'GitHub',
-    };
-    return translations[key] || key;
-  },
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (key: string) => {
+      const translations: Record<string, string> = {
+        'hero.title': 'Konstantin Vanichkin',
+        'hero.subtitle': 'Full Stack Developer',
+        'hero.contact': 'Email',
+        'hero.linkedin': 'LinkedIn',
+        'hero.github': 'GitHub',
+      };
+      return translations[key] || key;
+    },
+  }),
 }));
 
 describe('Hero Component', () => {

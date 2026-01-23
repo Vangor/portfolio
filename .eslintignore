@@ -10,7 +10,6 @@ jest.config.mjs
 jest.setup.js
 
 # Build output
-.next/
 dist/
 build/
 out/

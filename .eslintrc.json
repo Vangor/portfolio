@@ -17,7 +17,6 @@
     "coverage/",
     "jest.config.mjs",
     "jest.setup.js",
-    ".next/",
     "node_modules/",
     ".yarn/",
     ".swc/"

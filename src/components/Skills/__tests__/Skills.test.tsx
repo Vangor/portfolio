@@ -3,9 +3,10 @@ import { Skills } from '../Skills';
 import '@testing-library/jest-dom';
 import { skillsData } from '../Skills.utils';
 import React, { ReactNode, ElementType } from 'react';
+import { vi } from 'vitest';
 
 // Mock styled-components for this specific test
-jest.mock('../Skills.styled', () => {
+vi.mock('../Skills.styled', () => {
   // Helper to quickly create styled components mock with less repetition
   const createComponent =
     (element: ElementType, testId: string) =>
@@ -49,7 +50,7 @@ jest.mock('../Skills.styled', () => {
 });
 
 // Mock Lucide React icons
-jest.mock('lucide-react', () => ({
+vi.mock('lucide-react', () => ({
   Code2: () => <div data-testid="mock-icon-code">Code2 Icon</div>,
   Database: () => <div data-testid="mock-icon-database">Database Icon</div>,
   Wrench: () => <div data-testid="mock-icon-wrench">Wrench Icon</div>,
@@ -57,18 +58,20 @@ jest.mock('lucide-react', () => ({
 }));
 
 // Mock the translations
-jest.mock('next-intl', () => ({
-  useTranslations: () => (key: string) => {
-    const translations: Record<string, string> = {
-      title: 'My Skills',
-      subtitle: 'Technologies I work with',
-      frontend: 'Frontend',
-      backend: 'Backend',
-      tools: 'Tools',
-      management: 'Management',
-    };
-    return translations[key] || key;
-  },
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (key: string) => {
+      const translations: Record<string, string> = {
+        'skills.title': 'My Skills',
+        'skills.subtitle': 'Technologies I work with',
+        'skills.categories.frontend': 'Frontend',
+        'skills.categories.backend': 'Backend',
+        'skills.categories.tools': 'Tools',
+        'skills.categories.management': 'Management',
+      };
+      return translations[key] || key;
+    },
+  }),
 }));
 
 describe('Skills Component', () => {

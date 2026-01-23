@@ -24,8 +24,6 @@
     "src/i18n/navigation.ts",
     "src/i18n/request.ts",
     "src/i18n/routing.ts",
-    "middleware.ts",
-    "next-env.d.ts",
-    ".next/**"
+    "middleware.ts"
   ]
 }
