@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import i18n, { locales, type Locale } from '@/i18n/client';
 import { cn } from '@/lib/utils';
@@ -27,14 +27,22 @@ const languageFlags: Record<string, string> = {
   es: '🇪🇸',
 };
 
+const resolveLocale = (): Locale => {
+  const locale = i18n.resolvedLanguage || i18n.language;
+  return locales.includes(locale as Locale) ? (locale as Locale) : 'en';
+};
+
 export const LanguageSwitcher = () => {
   const navigate = useNavigate();
   const location = useLocation();
   useParams();
-  const currentLocale = useMemo(() => {
-    const locale = i18n.resolvedLanguage || i18n.language;
-    return locales.includes(locale as Locale) ? (locale as Locale) : 'en';
-  }, [i18n.resolvedLanguage, i18n.language]);
+  const [currentLocale, setCurrentLocale] = useState<Locale>(resolveLocale);
+
+  useEffect(() => {
+    const handler = () => setCurrentLocale(resolveLocale());
+    i18n.on('languageChanged', handler);
+    return () => i18n.off('languageChanged', handler);
+  }, []);
 
   // Handle switching the language
   const switchLanguage = (newLocale: string) => {

@@ -12,9 +12,9 @@ import {
   FooterCopyright,
   FooterLinks,
 } from './Footer.styled';
-import { PolicyDialog } from './PolicyDialog/PolicyDialog';
-import { Privacy } from './Privacy';
-import { Terms } from './Terms';
+import { PolicyDialog } from './Footer.PolicyDialog';
+import { Privacy } from './Footer.Privacy';
+import { Terms } from './Footer.Terms';
 import { Navigation } from '../Navigation/Navigation';
 
 export const Footer = () => {

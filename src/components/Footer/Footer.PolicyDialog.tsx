@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Dialog, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { FooterBottomLink } from '../Footer.styled';
-import { StyledDialogContent, ScrollableContent } from './PolicyDialog.styled';
+import { FooterBottomLink } from './Footer.styled';
+import { StyledDialogContent, ScrollableContent } from './Footer.PolicyDialog.styled';
 
 interface PolicyDialogProps {
   isOpen: boolean;
