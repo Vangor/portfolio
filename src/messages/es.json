@@ -70,6 +70,19 @@
     "subtitle": "Mi trayectoria profesional",
     "present": "Presente",
     "fullExperience": "Experiencia Laboral Completa",
+    "nda-igaming": {
+      "company": "NDA iGaming",
+      "position": "Chief Technology Officer",
+      "period": "Mayo 2024 - Julio 2025",
+      "location": "Remoto",
+      "description": "Transformé una empresa en crecimiento en los sectores iGaming y Crypto en una organización exitosa, gestionando todo el stack tecnológico y estableciendo procesos esenciales para mejorar la comunicación y la gestión de proyectos.",
+      "achievements": [
+        "Construí el equipo de desarrollo de 1 a 7 desarrolladores full-time talentosos",
+        "Construí desde cero el sistema operativo de la empresa: gestión de accesos y usuarios, herramientas (Jira/Confluence), cadencia de reuniones, rituales de planificación y roadmapping",
+        "Lancé 5 nuevos juegos e incrementé significativamente la velocidad de desarrollo",
+        "Colaboré con el CEO para definir estrategias de ventas y marketing que impulsaron el crecimiento del negocio"
+      ]
+    },
     "pipedrive": {
       "company": "Pipedrive",
       "position": "Gerente de Ingeniería",
