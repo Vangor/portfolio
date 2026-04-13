@@ -64,10 +64,10 @@ vi.mock('react-i18next', () => ({
       const translations: Record<string, string> = {
         'skills.title': 'My Skills',
         'skills.subtitle': 'Technologies I work with',
-        'skills.categories.frontend': 'Frontend',
-        'skills.categories.backend': 'Backend',
-        'skills.categories.tools': 'Tools',
-        'skills.categories.management': 'Management',
+        'skills.frontend': 'Frontend',
+        'skills.backend': 'Backend',
+        'skills.tools': 'Tools',
+        'skills.management': 'Management',
       };
       return translations[key] || key;
     },
