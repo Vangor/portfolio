@@ -3,7 +3,17 @@ import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
 export default defineConfig(() => ({
-  plugins: [react()],
+  plugins: [
+    {
+      name: 'local-dev-domain',
+      configureServer(server) {
+        server.httpServer?.once('listening', () => {
+          console.log('\n  ➜  Dev domain:  http://cv-landing.test\n')
+        })
+      },
+    },
+    react(),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
