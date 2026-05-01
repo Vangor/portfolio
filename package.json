@@ -21,6 +21,7 @@
     "test:coverage": "bun vitest run --coverage"
   },
   "dependencies": {
+    "@ops-layer/task-state": "file:../ops-layer/lib/taskState",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-dialog": "^1.1.6",
