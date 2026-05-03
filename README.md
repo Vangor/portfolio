@@ -12,7 +12,7 @@ A sleek, internationalized landing page built with Bun, Vite, React, and TypeScr
 - **Internationalization**: react-i18next
 - **Performance Optimized**: Configured for optimal bundle splitting and fast loading
 - **Responsive Design**: Beautiful UI that works on all devices
-- **Deployment**: Netlify-friendly SPA build
+- **Deployment**: Cloudflare Pages
 - **Component Library**: Utilizes Shadcn UI components
 - **Type Safety**: Fully typed with TypeScript
 - **Testing**: Vitest and Testing Library
@@ -114,7 +114,7 @@ bun run test:coverage
 
 ## 🚢 Deployment
 
-This project is configured for deployment to Netlify.
+This project is deployed to Cloudflare Pages.
 
 ## 🔍 Performance Optimization
 
