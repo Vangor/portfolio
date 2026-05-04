@@ -1,6 +1,7 @@
 ---
 title: Remove all Netlify references (migrated to Cloudflare Pages)
-status: in_progress
+status: done
+closed_at: 2026-05-04
 updated_at: 2026-05-03
 branch: feature/netlify-cleanup
 ---
