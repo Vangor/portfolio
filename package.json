@@ -18,7 +18,10 @@
     "test": "bun vitest run",
     "test:ui": "bun vitest --ui",
     "test:run": "bun vitest run",
-    "test:coverage": "bun vitest run --coverage"
+    "test:coverage": "bun vitest run --coverage",
+    "hydrate": "bash scripts/dev/hydrate-env.sh",
+    "hydrate:test": "bash scripts/dev/test-hydrate.sh",
+    "with-op": "op run --env-file=.env.local --"
   },
   "dependencies": {
     "@ops-layer/task-state": "^0.1.0",
