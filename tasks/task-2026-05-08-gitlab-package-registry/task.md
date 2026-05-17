@@ -1,10 +1,13 @@
 ---
 title: Switch @vangor / @ops-layer scopes to GitLab Package Registry
-status: in_progress
+status: done
+completed_at: 2026-05-08
 priority: medium
 created_at: 2026-05-08
 tags: [packages, gitlab, migration]
 ---
+
+> 2026-05-17: Marked done — MR !2 merged (switch to gitlab.lan package registry).
 
 # Switch package scopes to gitlab.lan
 
