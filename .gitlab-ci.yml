@@ -1,0 +1,35 @@
+image: oven/bun:1
+
+stages:
+  - build
+  - test
+
+variables:
+  BUN_INSTALL_CACHE_DIR: .bun-cache
+
+cache:
+  key:
+    files:
+      - bun.lock
+  paths:
+    - .bun-cache/
+    - node_modules/
+
+before_script:
+  - bun install --frozen-lockfile
+
+build:
+  stage: build
+  script:
+    - bun run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 hour
+  timeout: 10 minutes
+
+test:
+  stage: test
+  script:
+    - bun run test
+  timeout: 10 minutes
