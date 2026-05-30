@@ -40,3 +40,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# Filesystem task docs removed; vault/knowledge DB is sole source (2026-05-30)
+/tasks/
