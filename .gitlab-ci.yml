@@ -1,14 +1,43 @@
 stages:
   - test
+  - build
+  - deploy
 
 default:
   tags: [linux, sreda]
+  image: oven/bun:1
 
 file-size:
   stage: test
-  image: oven/bun:1
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
     - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
   script:
     - bun scripts/check-file-size.ts
+
+# Build the static site without the infisical.lan wrapper (not reachable from CI).
+# Vite reads VITE_POSTHOG_KEY from the process env at build time; the two PostHog
+# keys are provided as GitLab CI/CD variables instead of via `infisical run`.
+build:
+  stage: build
+  rules:
+    - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_COMMIT_BRANCH == "main" && $CI_PIPELINE_SOURCE == "push"
+  script:
+    - bun install --frozen-lockfile
+    - bun vite build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 1 hour
+
+# Deploy the built site to Cloudflare Pages (project "vanichkin") via wrangler.
+# staging branch -> preview deployment; main branch -> production deployment.
+deploy:
+  stage: deploy
+  needs: [build]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_COMMIT_BRANCH == "main" && $CI_PIPELINE_SOURCE == "push"
+  script:
+    - bunx wrangler@latest pages deploy dist --project-name=vanichkin --branch=$CI_COMMIT_BRANCH
