@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { Code2, Database, Wrench, Users } from 'lucide-react';
+import { Code2, Database, Wrench, Users, Bot } from 'lucide-react';
 import {
   SkillsSection,
   SkillsContainer,
@@ -24,6 +24,7 @@ import { skillsData, SkillCategory as SkillCategoryType } from './Skills.utils';
 const categoryIcons = {
   frontend: Code2,
   backend: Database,
+  ai: Bot,
   tools: Wrench,
   management: Users,
 };

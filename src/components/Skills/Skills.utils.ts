@@ -24,9 +24,8 @@ export const skillsData: SkillCategory[] = [
       { id: 'javascript', name: 'JavaScript', level: 95 },
       { id: 'nextjs', name: 'Next.js', level: 85 },
       { id: 'tailwind', name: 'Tailwind CSS', level: 90 },
+      { id: 'vite', name: 'Vite', level: 85 },
       { id: 'css', name: 'CSS/SCSS', level: 85 },
-      { id: 'redux', name: 'Redux', level: 80 },
-      { id: 'html', name: 'HTML', level: 95 },
       { id: 'responsive', name: 'Responsive Design', level: 90 },
     ],
   },
@@ -35,12 +34,23 @@ export const skillsData: SkillCategory[] = [
     titleKey: 'backend',
     icon: () => null, // Will be replaced with actual icon in the component
     skills: [
-      { id: 'node', name: 'Node.js', level: 75 },
-      { id: 'express', name: 'Express', level: 70 },
-      { id: 'mongodb', name: 'MongoDB', level: 65 },
-      { id: 'sql', name: 'SQL', level: 60 },
+      { id: 'node', name: 'Node.js / Bun', level: 80 },
+      { id: 'supabase', name: 'Supabase / Postgres', level: 80 },
       { id: 'graphql', name: 'GraphQL', level: 70 },
-      { id: 'rest', name: 'REST APIs', level: 85 },
+      { id: 'rest', name: 'REST APIs', level: 90 },
+      { id: 'telegram-apps', name: 'Telegram Mini-Apps', level: 85 },
+    ],
+  },
+  {
+    id: 'ai',
+    titleKey: 'ai',
+    icon: () => null, // Will be replaced with actual icon in the component
+    skills: [
+      { id: 'agent-orchestration', name: 'AI Agent Orchestration', level: 90 },
+      { id: 'llm-dev', name: 'LLM Application Development', level: 90 },
+      { id: 'claude', name: 'Claude / Codex', level: 90 },
+      { id: 'claudops', name: 'claudops Pipeline', level: 95 },
+      { id: 'rag', name: 'RAG & Knowledge Systems', level: 80 },
     ],
   },
   {
@@ -48,14 +58,11 @@ export const skillsData: SkillCategory[] = [
     titleKey: 'tools',
     icon: () => null, // Will be replaced with actual icon in the component
     skills: [
-      { id: 'git', name: 'Git', level: 90 },
-      { id: 'webpack', name: 'Webpack', level: 75 },
-      { id: 'docker', name: 'Docker', level: 65 },
-      { id: 'jest', name: 'Jest', level: 80 },
-      { id: 'cypress', name: 'Cypress', level: 75 },
+      { id: 'git', name: 'Git / CI/CD', level: 90 },
+      { id: 'docker', name: 'Docker', level: 70 },
+      { id: 'devinfra', name: 'Dev Infrastructure', level: 85 },
+      { id: 'jest', name: 'Vitest / Jest', level: 80 },
       { id: 'figma', name: 'Figma', level: 70 },
-      { id: 'storybook', name: 'Storybook', level: 80 },
-      { id: 'aws', name: 'AWS', level: 60 },
     ],
   },
   {
@@ -65,10 +72,9 @@ export const skillsData: SkillCategory[] = [
     skills: [
       { id: 'teamLead', name: 'Team Leadership', level: 90 },
       { id: 'agile', name: 'Agile/Scrum', level: 85 },
-      { id: 'projectMgmt', name: 'Project Management', level: 85 },
-      { id: 'performance', name: 'Performance Reviews', level: 80 },
-      { id: 'hiring', name: 'Hiring/Interviews', level: 85 },
+      { id: 'hiring', name: 'Hiring & Interviewing', level: 85 },
       { id: 'mentoring', name: 'Mentoring', level: 90 },
+      { id: 'engLeadership', name: 'Engineering Leadership', level: 90 },
     ],
   },
 ];
