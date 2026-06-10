@@ -3,8 +3,8 @@
     "title": "Konstantin Vanichkin"
   },
   "hero": {
-    "title": "Engineering Manager & Frontend Developer",
-    "subtitle": "Experienced Engineering Manager with over a decade of experience in IT, specializing in frontend development and team leadership. Based in Buenos Aires, Argentina.",
+    "title": "Founder & Engineering Leader",
+    "subtitle": "I build AI-native products and the systems — human and agent — that ship them. 10+ years in IT: IC → Engineering Manager (20 eng) → CTO → founder of 4etverg, an AI product studio in Buenos Aires.",
     "contact": "Contact Me",
     "linkedin": "LinkedIn",
     "github": "GitHub"
@@ -15,8 +15,8 @@
     "es": "Spanish"
   },
   "Index": {
-    "title": "Welcome to My Portfolio",
-    "description": "Frontend Developer & Engineering Manager"
+    "title": "Konstantin Vanichkin — Founder & Engineering Leader",
+    "description": "Founder of 4etverg, an AI product studio in Buenos Aires. 10+ years in IT: IC → Engineering Manager → CTO → Founder."
   },
   "Navigation": {
     "home": "Home",
@@ -24,16 +24,20 @@
     "experience": "Experience",
     "contact": "Contact",
     "projects": "Projects",
-    "consultation": "Hire Me"
+    "consultation": "Work with me"
   },
   "projects": {
-    "title": "Projects",
-    "subtitle": "Biggest projects I've worked on",
+    "title": "Selected Projects",
+    "subtitle": "Products I built and platforms I shaped",
     "viewProject": "View Project",
     "viewCode": "View Code",
-    "filmstruck": {
-      "title": "FilmStruck",
-      "description": "Streaming service from Turner Classic Movies focused on rare, classic, foreign, arthouse, and independent cinema. Led a team that improved performance and implemented significant refactoring to enhance user experience."
+    "lingualex": {
+      "title": "LinguaLex",
+      "description": "AI language learning on Telegram. Build your own vocabulary and get daily short stories that weave in your words, adapted from public-domain books. Live product at lingualex.app."
+    },
+    "agent-os": {
+      "title": "4etverg Agent-OS",
+      "description": "Autonomous agent fleet: a shared knowledge layer (Cortex) + self-reviewing and self-merging drone agents + a claudops pipeline. Lets one founder ship like a team of ten."
     },
     "pipedrive": {
       "title": "Pipedrive",
@@ -45,34 +49,45 @@
     }
   },
   "consultation": {
-    "title": "Hire Me",
-    "subtitle": "Book a consultation session with me",
-    "option1": {
-      "title": "Pair programming session",
-      "price": "400 USD",
-      "description": "Comprehensive consultation to discuss your project, address specific challenges, or get expert advice on frontend development and team management."
-    },
-    "option2": {
-      "title": "1 Hour Consultation",
-      "price": "250 USD",
-      "description": "Quick session to answer your questions and provide guidance on specific technical issues or career development in frontend engineering."
-    },
-    "option3": {
-      "title": "Custom Consultation",
-      "price": "Let's talk",
-      "description": "Need something different? Let's discuss your specific requirements and create a tailored consultation package."
-    },
-    "payButton": "Pay with Cwallet",
-    "contactForCustom": "Contact me for custom options"
+    "title": "Work with me",
+    "subtitle": "Interested in building something together, need a technical sounding board, or exploring a partnership?",
+    "description": "I'm open to advisory engagements, fractional CTO work, and product collaborations. Reach out and let's talk about what you're building.",
+    "cta": "Get in touch",
+    "telegram": "Message on Telegram",
+    "email": "Send an email"
   },
   "experience": {
     "title": "Work Experience",
     "present": "Present",
     "fullExperience": "Full Work Experience",
+    "fetverg": {
+      "company": "4etverg",
+      "position": "Founder",
+      "period": "December 2025 – Present",
+      "location": "Buenos Aires, Argentina",
+      "description": "Founded an AI-native product studio. Build and ship AI products end-to-end — and built the autonomous agent fleet that ships them.",
+      "achievements": [
+        "Launched LinguaLex, an AI language-learning app on Telegram (live).",
+        "Built an autonomous agent fleet (Cortex knowledge layer + drone fleet) that plans, implements, reviews, and merges production code.",
+        "Ship multiple products solo at the pace of a small team via an in-house claudops pipeline.",
+        "Deliver vertical business software for clients (booking/payments/operations)."
+      ]
+    },
+    "career-break": {
+      "company": "Career Break",
+      "position": "Independent R&D — AI agent systems",
+      "period": "July 2025 – December 2025",
+      "location": "Buenos Aires, Argentina",
+      "description": "A deliberate break to go deep on AI agent orchestration and autonomous developer tooling — the research and prototypes that became 4etverg.",
+      "achievements": [
+        "Prototyped autonomous multi-agent development workflows end-to-end.",
+        "Validated the studio thesis that became 4etverg."
+      ]
+    },
     "nda-igaming": {
       "company": "NDA iGaming",
       "position": "Chief Technology Officer",
-      "period": "May 2024 - July 2025",
+      "period": "May 2024 – July 2025",
       "location": "Remote",
       "description": "Transformed a growing company in the iGaming and Crypto sectors into a successful organization by managing the entire tech stack and establishing essential processes for better communication and project management.",
       "achievements": [
@@ -85,7 +100,7 @@
     "pipedrive": {
       "company": "Pipedrive",
       "position": "Engineering Manager",
-      "period": "September 2017 - September 2023",
+      "period": "September 2017 – September 2023",
       "location": "Tallinn, Estonia",
       "description": "Started as Senior Frontend Developer and progressed to Engineering Manager, leading a team of up to 20 engineers. Fostered a positive culture focused on technical excellence.",
       "achievements": [
@@ -98,7 +113,7 @@
     "accenture": {
       "company": "Accenture",
       "position": "Frontend Team Lead",
-      "period": "January 2016 - September 2017",
+      "period": "January 2016 – September 2017",
       "location": "Riga, Latvia",
       "description": "Launched a video streaming service, improving performance by 5x and reducing technical debt by 89%. Implemented new workflows and prioritized ongoing learning.",
       "achievements": [
@@ -109,8 +124,17 @@
       ]
     }
   },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and practices I work with",
+    "frontend": "Frontend",
+    "backend": "Backend & Data",
+    "tools": "Tools & Infrastructure",
+    "management": "Leadership",
+    "ai": "AI & Agents"
+  },
   "footer": {
-    "tagline": "Engineering Manager & Frontend Developer with a decade of experience in building high-quality web applications and leading development teams.",
+    "tagline": "Founder & Engineering Leader. Building AI-native products and the systems that ship them.",
     "navigation": "Navigation",
     "contact": "Contact",
     "rights": "All Rights Reserved.",
@@ -170,14 +194,14 @@
       "title": "Services Offered",
       "content": "Through this website, I offer various professional services, including but not limited to:",
       "items": {
-        "consulting": "Technical consulting and advisory services related to frontend development and engineering management.",
+        "consulting": "Technical consulting and advisory services related to product development, AI systems, and engineering leadership.",
         "development": "Custom software development and technical solutions.",
         "mentoring": "Professional mentoring and career guidance in the tech field."
       }
     },
     "payments": {
       "title": "Payments and Fees",
-      "content": "All fees for consultation services are outlined on the website. Payment is required prior to the delivery of services unless otherwise agreed upon in writing. All payments are processed through secure third-party payment processors."
+      "content": "Any fees for services are discussed and agreed upon directly. All payments are processed through secure third-party payment processors."
     },
     "intellectual": {
       "title": "Intellectual Property",

@@ -3,8 +3,8 @@
     "title": "Konstantin Vanichkin"
   },
   "hero": {
-    "title": "Gerente de Ingeniería y Desarrollador Frontend",
-    "subtitle": "Gerente de Ingeniería con más de una década de experiencia en TI, especializado en desarrollo frontend y liderazgo de equipos. Basado en Buenos Aires, Argentina.",
+    "title": "Fundador y Líder de Ingeniería",
+    "subtitle": "Construyo productos nativos de IA y los sistemas — humanos y de agentes — que los entregan. Más de 10 años en IT: IC → Gerente de Ingeniería (20 ingenieros) → CTO → fundador de 4etverg, un estudio de productos de IA en Buenos Aires.",
     "contact": "Contáctame",
     "linkedin": "LinkedIn",
     "github": "GitHub"
@@ -15,8 +15,8 @@
     "es": "Español"
   },
   "Index": {
-    "title": "Bienvenido a Mi Portafolio",
-    "description": "Desarrollador Frontend y Gerente de Ingeniería"
+    "title": "Konstantin Vanichkin — Fundador y Líder de Ingeniería",
+    "description": "Fundador de 4etverg, un estudio de productos de IA en Buenos Aires. Más de 10 años en IT: IC → Gerente de Ingeniería → CTO → Fundador."
   },
   "Navigation": {
     "home": "Inicio",
@@ -24,16 +24,20 @@
     "experience": "Experiencia",
     "contact": "Contacto",
     "projects": "Proyectos",
-    "consultation": "Contrátame"
+    "consultation": "Trabajar juntos"
   },
   "projects": {
-    "title": "Proyectos",
-    "subtitle": "Mis proyectos más grandes",
+    "title": "Proyectos Seleccionados",
+    "subtitle": "Productos que construí y plataformas que moldé",
     "viewProject": "Ver Proyecto",
     "viewCode": "Ver Código",
-    "filmstruck": {
-      "title": "FilmStruck",
-      "description": "Servicio de streaming de Turner Classic Movies centrado en cine raro, clásico, extranjero, de autor e independiente. Lideré un equipo que mejoró el rendimiento e implementó una refactorización significativa para mejorar la experiencia del usuario."
+    "lingualex": {
+      "title": "LinguaLex",
+      "description": "Aprendizaje de idiomas con IA en Telegram. Construye tu propio vocabulario y recibe historias cortas diarias que entrelazan tus palabras, adaptadas de libros de dominio público. Producto activo en lingualex.app."
+    },
+    "agent-os": {
+      "title": "4etverg Agent-OS",
+      "description": "Flota de agentes autónomos: una capa de conocimiento compartido (Cortex) + agentes dron que se auto-revisan y auto-fusionan + un pipeline claudops. Permite que un fundador trabaje como un equipo de diez."
     },
     "pipedrive": {
       "title": "Pipedrive",
@@ -45,35 +49,45 @@
     }
   },
   "consultation": {
-    "title": "Contrátame",
-    "subtitle": "Reserva una sesión de consulta conmigo",
-    "option1": {
-      "title": "Consulta de 1 hora",
-      "price": "400 USD",
-      "description": "Consulta completa para discutir tu proyecto, abordar desafíos específicos u obtener consejos de expertos en desarrollo frontend y gestión de equipos."
-    },
-    "option2": {
-      "title": "Consulta de 30 minutos",
-      "price": "250 USD",
-      "description": "Sesión rápida para responder tus preguntas y proporcionar orientación sobre problemas técnicos específicos o desarrollo profesional en ingeniería frontend."
-    },
-    "option3": {
-      "title": "Consulta personalizada",
-      "price": "Hablemos",
-      "description": "¿Necesitas algo diferente? Discutamos tus requisitos específicos y creemos un paquete de consulta personalizado."
-    },
-    "payButton": "Pagar con Cwallet",
-    "contactForCustom": "Contáctame para opciones personalizadas"
+    "title": "Trabajar juntos",
+    "subtitle": "¿Interesado en construir algo juntos, necesitas un interlocutor técnico o estás explorando una colaboración?",
+    "description": "Estoy abierto a compromisos de asesoramiento, trabajo fraccionado como CTO y colaboraciones de productos. Escríbeme y hablemos sobre lo que estás construyendo.",
+    "cta": "Ponerse en contacto",
+    "telegram": "Escribir en Telegram",
+    "email": "Enviar un correo"
   },
   "experience": {
     "title": "Experiencia Laboral",
-    "subtitle": "Mi trayectoria profesional",
     "present": "Presente",
     "fullExperience": "Experiencia Laboral Completa",
+    "fetverg": {
+      "company": "4etverg",
+      "position": "Fundador",
+      "period": "Diciembre 2025 – Presente",
+      "location": "Buenos Aires, Argentina",
+      "description": "Fundé un estudio de productos nativos de IA. Construyo y entrego productos de IA de principio a fin — y construí la flota de agentes autónomos que los entrega.",
+      "achievements": [
+        "Lancé LinguaLex, una app de aprendizaje de idiomas con IA en Telegram (activa).",
+        "Construí una flota de agentes autónomos (capa de conocimiento Cortex + flota dron) que planifica, implementa, revisa y fusiona código de producción.",
+        "Entrego múltiples productos en solitario al ritmo de un equipo pequeño mediante un pipeline claudops propio.",
+        "Entrego software de negocio vertical para clientes (reservas/pagos/operaciones)."
+      ]
+    },
+    "career-break": {
+      "company": "Pausa Profesional",
+      "position": "I&D Independiente — sistemas de agentes de IA",
+      "period": "Julio 2025 – Diciembre 2025",
+      "location": "Buenos Aires, Argentina",
+      "description": "Una pausa deliberada para profundizar en la orquestación de agentes de IA y las herramientas de desarrollo autónomo — las investigaciones y prototipos que se convirtieron en 4etverg.",
+      "achievements": [
+        "Prototipé flujos de trabajo de desarrollo multi-agente autónomo de extremo a extremo.",
+        "Validé la tesis del estudio que se convirtió en 4etverg."
+      ]
+    },
     "nda-igaming": {
       "company": "NDA iGaming",
       "position": "Chief Technology Officer",
-      "period": "Mayo 2024 - Julio 2025",
+      "period": "Mayo 2024 – Julio 2025",
       "location": "Remoto",
       "description": "Transformé una empresa en crecimiento en los sectores iGaming y Crypto en una organización exitosa, gestionando todo el stack tecnológico y estableciendo procesos esenciales para mejorar la comunicación y la gestión de proyectos.",
       "achievements": [
@@ -86,7 +100,7 @@
     "pipedrive": {
       "company": "Pipedrive",
       "position": "Gerente de Ingeniería",
-      "period": "Septiembre 2017 - Septiembre 2023",
+      "period": "Septiembre 2017 – Septiembre 2023",
       "location": "Tallinn, Estonia",
       "description": "Comencé como Desarrollador Frontend Senior y progresé a Gerente de Ingeniería, liderando un equipo de hasta 20 ingenieros. Fomentando una cultura positiva enfocada en la excelencia técnica.",
       "achievements": [
@@ -99,7 +113,7 @@
     "accenture": {
       "company": "Accenture",
       "position": "Líder de Equipo Frontend",
-      "period": "Enero 2016 - Septiembre 2017",
+      "period": "Enero 2016 – Septiembre 2017",
       "location": "Riga, Letonia",
       "description": "Lancé un servicio de streaming de video, mejorando el rendimiento 5 veces y reduciendo la deuda técnica en un 89%. Implementé nuevos flujos de trabajo y prioricé el aprendizaje continuo.",
       "achievements": [
@@ -110,8 +124,17 @@
       ]
     }
   },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologías y prácticas con las que trabajo",
+    "frontend": "Frontend",
+    "backend": "Backend y Datos",
+    "tools": "Herramientas e Infraestructura",
+    "management": "Liderazgo",
+    "ai": "IA y Agentes"
+  },
   "footer": {
-    "tagline": "Gerente de Ingeniería y Desarrollador Frontend con una década de experiencia en la construcción de aplicaciones web de alta calidad y liderazgo de equipos de desarrollo.",
+    "tagline": "Fundador y Líder de Ingeniería. Construyendo productos nativos de IA y los sistemas que los entregan.",
     "navigation": "Navegación",
     "contact": "Contacto",
     "rights": "Todos los derechos reservados.",
@@ -171,14 +194,14 @@
       "title": "Servicios Ofrecidos",
       "content": "A través de este sitio web, ofrezco varios servicios profesionales, que incluyen pero no se limitan a:",
       "items": {
-        "consulting": "Consultoría técnica y servicios de asesoramiento relacionados con el desarrollo frontend y la gestión de ingeniería.",
+        "consulting": "Consultoría técnica y servicios de asesoramiento relacionados con el desarrollo de productos, sistemas de IA y liderazgo de ingeniería.",
         "development": "Desarrollo de software personalizado y soluciones técnicas.",
         "mentoring": "Mentoría profesional y orientación de carrera en el campo tecnológico."
       }
     },
     "payments": {
       "title": "Pagos y Tarifas",
-      "content": "Todas las tarifas por servicios de consulta se detallan en el sitio web. El pago es requerido antes de la entrega de los servicios a menos que se acuerde lo contrario por escrito. Todos los pagos se procesan a través de procesadores de pago de terceros seguros."
+      "content": "Cualquier tarifa por servicios se discute y acuerda directamente. Todos los pagos se procesan a través de procesadores de pago de terceros seguros."
     },
     "intellectual": {
       "title": "Propiedad Intelectual",
@@ -190,7 +213,7 @@
     },
     "limitation": {
       "title": "Limitación de Responsabilidad",
-      "content": "En ningún caso Konstantin Vanichkin será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo sin limitación, pérdida de ganancias, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de tu acceso o uso o incapacidad para acceder o usar los servicios."
+      "content": "En ningún caso Konstantin Vanichkin será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos resultantes de tu acceso o uso o incapacidad para acceder o usar los servicios."
     },
     "governing": {
       "title": "Ley Aplicable",
@@ -198,7 +221,7 @@
     },
     "changes": {
       "title": "Cambios en los Términos",
-      "content": "Me reservo el derecho, a mi exclusivo criterio, de modificar o reemplazar estos Términos en cualquier momento. Es tu responsabilidad revisar estos Términos periódicamente para verificar cambios. Tu uso continuado de este sitio web después de la publicación de cualquier cambio en estos Términos constituye la aceptación de esos cambios."
+      "content": "Me reservo el derecho, a mi exclusivo criterio, de modificar o reemplazar estos Términos en cualquier momento. Es tu responsabilidad revisar estos Términos periódicamente para verificar cambios. Tu uso continuado de este sitio web después de la publicación de cualquier cambio constituye la aceptación de esos cambios."
     },
     "contact": {
       "title": "Información de Contacto",

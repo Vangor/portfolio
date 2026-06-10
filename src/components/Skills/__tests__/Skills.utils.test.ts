@@ -1,14 +1,15 @@
 import { skillsData, Skill, SkillCategory } from '../Skills.utils';
 
 describe('Skills Utils', () => {
-  it('skillsData should have 4 categories', () => {
-    expect(skillsData.length).toBe(4);
+  it('skillsData should have 5 categories', () => {
+    expect(skillsData.length).toBe(5);
   });
 
-  it('should have frontend, backend, tools, and management categories', () => {
+  it('should have frontend, backend, ai, tools, and management categories', () => {
     const categories = skillsData.map(category => category.id);
     expect(categories).toContain('frontend');
     expect(categories).toContain('backend');
+    expect(categories).toContain('ai');
     expect(categories).toContain('tools');
     expect(categories).toContain('management');
   });
@@ -47,6 +48,21 @@ describe('Skills Utils', () => {
       if (reactSkill) {
         expect(reactSkill.name).toBe('React');
         expect(reactSkill.level).toBeGreaterThanOrEqual(80); // Assuming high proficiency is >= 80
+      }
+    }
+  });
+
+  it('ai category should have AI Agent Orchestration skill', () => {
+    const aiCategory = skillsData.find(category => category.id === 'ai');
+    expect(aiCategory).toBeDefined();
+
+    if (aiCategory) {
+      const agentSkill = aiCategory.skills.find(skill => skill.id === 'agent-orchestration');
+      expect(agentSkill).toBeDefined();
+
+      if (agentSkill) {
+        expect(agentSkill.name).toBe('AI Agent Orchestration');
+        expect(agentSkill.level).toBeGreaterThanOrEqual(80);
       }
     }
   });

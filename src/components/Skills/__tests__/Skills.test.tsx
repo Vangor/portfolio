@@ -53,6 +53,7 @@ vi.mock('../Skills.styled', () => {
 vi.mock('lucide-react', () => ({
   Code2: () => <div data-testid="mock-icon-code">Code2 Icon</div>,
   Database: () => <div data-testid="mock-icon-database">Database Icon</div>,
+  Bot: () => <div data-testid="mock-icon-bot">Bot Icon</div>,
   Wrench: () => <div data-testid="mock-icon-wrench">Wrench Icon</div>,
   Users: () => <div data-testid="mock-icon-users">Users Icon</div>,
 }));
@@ -65,9 +66,10 @@ vi.mock('react-i18next', () => ({
         'skills.title': 'My Skills',
         'skills.subtitle': 'Technologies I work with',
         'skills.frontend': 'Frontend',
-        'skills.backend': 'Backend',
+        'skills.backend': 'Backend & Data',
+        'skills.ai': 'AI & Agents',
         'skills.tools': 'Tools',
-        'skills.management': 'Management',
+        'skills.management': 'Leadership',
       };
       return translations[key] || key;
     },
@@ -86,22 +88,23 @@ describe('Skills Component', () => {
     render(<Skills />);
 
     expect(screen.getByText('Frontend')).toBeInTheDocument();
-    expect(screen.getByText('Backend')).toBeInTheDocument();
+    expect(screen.getByText('Backend & Data')).toBeInTheDocument();
+    expect(screen.getByText('AI & Agents')).toBeInTheDocument();
     expect(screen.getByText('Tools')).toBeInTheDocument();
-    expect(screen.getByText('Management')).toBeInTheDocument();
+    expect(screen.getByText('Leadership')).toBeInTheDocument();
   });
 
-  it('renders correct number of skills for each category', () => {
+  it('renders correct skills for key categories', () => {
     render(<Skills />);
 
     // Check for one skill from each category to verify rendering
     const reactSkill = screen.getByText('React');
     expect(reactSkill).toBeInTheDocument();
 
-    const nodeSkill = screen.getByText('Node.js');
-    expect(nodeSkill).toBeInTheDocument();
+    const agentSkill = screen.getByText('AI Agent Orchestration');
+    expect(agentSkill).toBeInTheDocument();
 
-    const gitSkill = screen.getByText('Git');
+    const gitSkill = screen.getByText('Git / CI/CD');
     expect(gitSkill).toBeInTheDocument();
 
     const leadershipSkill = screen.getByText('Team Leadership');
@@ -112,12 +115,6 @@ describe('Skills Component', () => {
     if (reactContainer) {
       const withinReact = within(reactContainer);
       expect(withinReact.getByText('95%')).toBeInTheDocument();
-    }
-
-    const nodeContainer = nodeSkill.closest('div')?.parentElement;
-    if (nodeContainer) {
-      const withinNode = within(nodeContainer);
-      expect(withinNode.getByText('75%')).toBeInTheDocument();
     }
 
     // Use getAllByText for this test since multiple skills might have a 90% level

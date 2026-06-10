@@ -24,23 +24,16 @@ import {
   LinkedInButtonContainer,
 } from './Experience.styled';
 
+const JOBS: { id: string; achievementCount: number }[] = [
+  { id: 'fetverg',       achievementCount: 4 },
+  { id: 'career-break',  achievementCount: 2 },
+  { id: 'nda-igaming',   achievementCount: 4 },
+  { id: 'pipedrive',     achievementCount: 4 },
+  { id: 'accenture',     achievementCount: 4 },
+];
+
 export const Experience = () => {
   const { t } = useTranslation();
-
-  const jobs = [
-    {
-      id: 'nda-igaming',
-      icon: <Briefcase className="h-4 w-4" />,
-    },
-    {
-      id: 'pipedrive',
-      icon: <Briefcase className="h-4 w-4" />,
-    },
-    {
-      id: 'accenture',
-      icon: <Briefcase className="h-4 w-4" />,
-    },
-  ];
 
   return (
     <ExperienceSection id="experience">
@@ -50,9 +43,11 @@ export const Experience = () => {
         <TimelineContainer>
           <TimelineLine />
 
-          {jobs.map((job, index) => (
+          {JOBS.map((job, index) => (
             <TimelineItem key={job.id}>
-              <TimelineDot>{job.icon}</TimelineDot>
+              <TimelineDot>
+                <Briefcase className="h-4 w-4" />
+              </TimelineDot>
 
               <TimelineDate align={index % 2 === 0 ? 'left' : 'right'}>
                 {t(`experience.${job.id}.period`)}
@@ -72,7 +67,7 @@ export const Experience = () => {
                   <JobDescription>{t(`experience.${job.id}.description`)}</JobDescription>
 
                   <AchievementsList>
-                    {Array.from({ length: 4 }).map((_, i) => (
+                    {Array.from({ length: job.achievementCount }).map((_, i) => (
                       <Achievement key={i}>
                         {t(`experience.${job.id}.achievements.${i}`)}
                       </Achievement>
