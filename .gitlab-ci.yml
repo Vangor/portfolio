@@ -1,0 +1,14 @@
+stages:
+  - test
+
+default:
+  tags: [linux, sreda]
+
+file-size:
+  stage: test
+  image: oven/bun:1
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
+  script:
+    - bun scripts/check-file-size.ts
