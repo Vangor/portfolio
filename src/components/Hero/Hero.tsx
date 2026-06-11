@@ -66,7 +66,11 @@ export const Hero = () => {
 
         <div data-reveal className="translate-y-6 opacity-0 transition-all delay-200 duration-[700ms] ease-[cubic-bezier(.22,1,.36,1)]">
           <div className="overflow-hidden rounded-[20px] border border-border bg-card shadow-card">
-            <div className="aspect-[4/5] w-full bg-[linear-gradient(180deg,rgba(56,82,214,0.08),rgba(255,255,255,0)_40%),radial-gradient(circle_at_30%_20%,rgba(128,152,255,0.18),transparent_26%),linear-gradient(135deg,#fff,#fafaf7)] dark:bg-[linear-gradient(180deg,rgba(128,152,255,0.08),rgba(0,0,0,0)_40%),radial-gradient(circle_at_30%_20%,rgba(128,152,255,0.2),transparent_26%),linear-gradient(135deg,#141417,#0B0B0D)]" />
+            <img
+              src="/konstantin.jpg"
+              alt="Konstantin Vanichkin"
+              className="aspect-[4/5] w-full object-cover"
+            />
           </div>
           <div className="mt-3 flex items-center justify-between text-[13px] text-muted-foreground">
             <span>{t('hero.loc')}</span>

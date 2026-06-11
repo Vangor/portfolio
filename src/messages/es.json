@@ -5,7 +5,7 @@
   "hero": {
     "badge": "Disponible para proyectos selectos",
     "role": { "a": "Fundador", "b": "Líder de ingeniería" },
-    "subtitle": "Fundador de <strong>4etverg</strong>, un estudio de productos de IA en Buenos Aires. Ex-CTO en <strong>NDA iGaming</strong> y engineering manager en <strong>Pipedrive</strong>. Quince años convirtiendo problemas ambiguos en productos y en los equipos que los lanzan. Ayudo a las empresas a llevar la IA de la demo a algo confiable.",
+    "subtitle": "Fundador de <strong>4etverg</strong>, ex Engineering Manager en <strong>Pipedrive</strong>. Quince años construyendo productos y los equipos que los lanzan. Ayudo a las empresas a llevar la IA de la demo a algo confiable.",
     "contact": "Contactame",
     "linkedin": "LinkedIn",
     "github": "GitHub",
@@ -14,7 +14,7 @@
   "projects": {
     "kicker": "Trabajo seleccionado",
     "title": "Cosas que construí",
-    "lingualex": { "description": "Un asistente de IA que convierte contratos densos en un lenguaje claro y revisable, pensado para mantener al abogado en el circuito, no para reemplazarlo." },
+    "lingualex": { "description": "Una plataforma de aprendizaje de idiomas nativa de Telegram: lee historias adaptadas y niveladas, toca cualquier palabra para aprenderla, con progreso personalizado en 16 idiomas. Construida con React y Supabase." },
     "agent-os": { "description": "Un framework de orquestación para construir agentes de IA confiables y de múltiples pasos en producción: herramientas tipadas, ejecuciones trazables y fallas elegantes." }
   },
   "experience": {
