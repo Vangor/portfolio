@@ -34,13 +34,16 @@ build:
 # Deploy the built site to Cloudflare Pages (project "vanichkin") via wrangler.
 # staging branch -> preview deployment; main branch -> production deployment.
 #
-# IMPORTANT: wrangler `pages deploy` has been observed to exit 0 while silently
-# uploading nothing when CLOUDFLARE_API_TOKEN is invalid/empty, leaving the branch
-# alias pinned to a stale build (root-caused 2026-06-10). The guards below turn that
-# silent no-op into a hard job failure: we assert the token is present, capture the
-# wrangler output, and fail unless it reports the "Deployment complete!" success line.
+# ROOT CAUSE of the "deploy silently uploaded nothing" failures (2026-06-10/11):
+# wrangler 4.99 `pages deploy` SILENTLY NO-OPS when run under bun (the oven/bun:1
+# image). Under bun it fetches the project then exits 0 without uploading — no error,
+# no "Deployment complete". The CLOUDFLARE_API_TOKEN was always VALID (it deploys fine
+# under Node and from a workstation). Fix: run the deploy step on a Node 22 image with
+# `npx wrangler` instead of bun. The build step stays on bun (vite build is unaffected).
+# The fail-loud guard below stays as a safety net for any future regression.
 deploy:
   stage: deploy
+  image: node:22
   needs: [build]
   rules:
     - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
@@ -57,11 +60,11 @@ deploy:
         exit 1
       fi
       # Fail fast if the token can't even authenticate against Cloudflare Pages.
-      if ! bunx wrangler@latest pages project list --json >/dev/null 2>&1; then
+      if ! npx -y wrangler@4.99.0 pages project list --json >/dev/null 2>&1; then
         echo "ERROR: wrangler could not authenticate to Cloudflare Pages (bad/expired CLOUDFLARE_API_TOKEN?)." >&2
         exit 1
       fi
-      bunx wrangler@latest pages deploy dist --project-name=vanichkin --branch="$CI_COMMIT_BRANCH" 2>&1 | tee wrangler-deploy.log
+      npx -y wrangler@4.99.0 pages deploy dist --project-name=vanichkin --branch="$CI_COMMIT_BRANCH" 2>&1 | tee wrangler-deploy.log
       if ! grep -q "Deployment complete" wrangler-deploy.log; then
         echo "ERROR: wrangler did not report 'Deployment complete' — the deploy silently uploaded nothing." >&2
         exit 1
