@@ -1,109 +1,77 @@
-import styled from 'styled-components';
 import tw from 'tailwind-styled-components';
 
 export const SkillsSection = tw.section`
-  py-20
-  px-4
-  md:px-8
-  max-w-7xl
-  mx-auto
-  bg-muted/30
+  px-6
+  py-14
+  sm:px-8
+  lg:py-20
 `;
 
 export const SkillsContainer = tw.div`
-  flex
-  flex-col
-  items-center
+  mx-auto
+  w-full
+  max-w-[1080px]
+`;
+
+export const SectionHeader = tw.div`
+  mb-10
+`;
+
+export const Kicker = tw.span`
+  font-mono
+  text-[12px]
+  uppercase
+  tracking-[0.16em]
+  text-muted-foreground
 `;
 
 export const SectionTitle = tw.h2`
-  text-4xl
-  font-bold
-  mb-2
-  text-center
+  mt-3
+  text-[clamp(1.75rem,3.4vw,2.5rem)]
+  font-semibold
+  tracking-[-0.03em]
+  text-foreground
 `;
 
-export const SectionSubtitle = tw.p`
-  text-xl
-  text-muted-foreground
-  mb-16
-  text-center
-  max-w-2xl
-`;
-
-export const SkillCategoriesContainer = tw.div`
+export const SkillGroups = tw.div`
   grid
-  grid-cols-1
-  md:grid-cols-2
-  gap-8
-  w-full
+  gap-6
 `;
 
-export const SkillCategory = tw.div`
-  bg-card
-  rounded-lg
-  shadow-md
+export const SkillGroup = tw.div`
+  rounded-[20px]
   border
   border-border
-  overflow-hidden
+  bg-background
+  p-5
 `;
 
-export const CategoryHeader = tw.div`
-  p-4
-  border-b
-  border-border
-  bg-card/50
+export const GroupLabel = tw.div`
+  font-mono
+  text-[12px]
+  uppercase
+  tracking-[0.16em]
+  text-muted-foreground
 `;
 
-export const CategoryTitle = tw.h3`
-  text-xl
-  font-semibold
+export const Chips = tw.div`
+  mt-4
   flex
+  flex-wrap
+  gap-2.5
+`;
+
+export const Chip = tw.span`
+  inline-flex
   items-center
-  gap-2
-`;
-
-export const CategoryContent = tw.div`
-  p-6
-`;
-
-export const SkillsList = tw.div`
-  grid
-  grid-cols-2
-  sm:grid-cols-3
-  gap-y-4
-  gap-x-2
-`;
-
-export const SkillItem = tw.div`
-  flex
-  items-center
-  gap-2
-`;
-
-export const SkillIcon = tw.div`
-  text-primary
-  flex
-  items-center
-  justify-center
-`;
-
-export const SkillName = tw.span`
-  text-sm
-  font-medium
-`;
-
-export const SkillLevel = tw.div`
-  h-1
-  bg-primary/20
   rounded-full
-  w-full
-  mt-1
-`;
-
-export const SkillLevelFill = styled.div<{ level: number }>`
-  height: 100%;
-  border-radius: 9999px;
-  background-color: hsl(var(--primary));
-  width: ${props => `${props.level}%`};
+  border
+  border-border/80
+  bg-background
+  px-3
+  py-1.5
+  text-[14px]
+  leading-none
+  text-foreground
+  shadow-[0_1px_2px_rgba(20,22,26,0.03)]
 `;

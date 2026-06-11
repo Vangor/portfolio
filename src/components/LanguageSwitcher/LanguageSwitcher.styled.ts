@@ -1,27 +1,26 @@
 import tw from 'tailwind-styled-components';
 
 export const LanguageContainer = tw.div`
-  flex
+  inline-flex
   items-center
-  gap-2
+  rounded-full
+  border
+  border-border/80
+  bg-background
+  p-0.5
+  shadow-[0_1px_2px_rgba(20,22,26,0.04)]
 `;
 
-export const FlagIcon = tw.span`
-  mr-2
-  text-base
-`;
-
-export const LanguageText = tw.span`
+export const LanguageButton = tw.button`
+  inline-flex
+  h-8
+  items-center
+  justify-center
+  rounded-full
+  px-3
+  text-xs
   font-medium
-  mr-2
-`;
-
-export const LanguageItemContainer = tw.div`
-  flex 
-  items-center 
-  w-full
-`;
-
-export const CheckIconContainer = tw.div`
-  ml-auto
+  text-muted-foreground
+  transition-colors
+  hover:text-foreground
 `;

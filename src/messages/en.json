@@ -2,12 +2,24 @@
   "header": {
     "title": "Konstantin Vanichkin"
   },
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
   "hero": {
-    "title": "Founder & Engineering Leader",
-    "subtitle": "I build AI-native products and the systems — human and agent — that ship them. 10+ years in IT: IC → Engineering Manager (20 eng) → CTO → founder of 4etverg, an AI product studio in Buenos Aires.",
-    "contact": "Contact Me",
+    "badge": "Available for select engagements",
+    "role": {
+      "a": "Founder",
+      "b": "Engineering Leader"
+    },
+    "subtitle": "Founder of <strong>4etverg</strong>, an AI product studio in Buenos Aires. Former CTO and engineering manager at <strong>Pipedrive</strong>. Fifteen years turning ambiguous problems into products, and the teams that ship them. I help companies move AI from demo to dependable.",
+    "contact": "Get in touch",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "loc": "Buenos Aires, AR",
+    "title": "Founder & Engineering Leader"
   },
   "languages": {
     "en": "English",
@@ -16,7 +28,7 @@
   },
   "Index": {
     "title": "Konstantin Vanichkin — Founder & Engineering Leader",
-    "description": "Founder of 4etverg, an AI product studio in Buenos Aires. 10+ years in IT: IC → Engineering Manager → CTO → Founder."
+    "description": "Founder of 4etverg, an AI product studio in Buenos Aires. Former CTO and engineering manager at Pipedrive. Building dependable AI products and the systems that ship them."
   },
   "Navigation": {
     "home": "Home",
@@ -27,7 +39,7 @@
     "consultation": "Work with me"
   },
   "projects": {
-    "title": "Selected Projects",
+    "title": "Things I've built",
     "subtitle": "Products I built and platforms I shaped",
     "viewProject": "View Project",
     "viewCode": "View Code",
@@ -39,25 +51,16 @@
       "title": "4etverg Agent-OS",
       "description": "Autonomous agent fleet: a shared knowledge layer (Cortex) + self-reviewing and self-merging drone agents + a claudops pipeline. Lets one founder ship like a team of ten."
     },
-    "pipedrive": {
-      "title": "Pipedrive",
-      "description": "CRM platform designed to help salespeople manage complex sales processes. Contributed to UI libraries, feature launches, and platform improvements while focusing on technical excellence."
-    },
-    "channel4": {
-      "title": "Channel 4",
-      "description": "British public-service television broadcaster with an advanced digital streaming platform. Worked on improving user experience, streaming performance, and modernizing frontend architecture."
-    }
+    "kicker": "Selected work"
   },
   "consultation": {
-    "title": "Work with me",
-    "subtitle": "Interested in building something together, need a technical sounding board, or exploring a partnership?",
-    "description": "I'm open to advisory engagements, fractional CTO work, and product collaborations. Reach out and let's talk about what you're building.",
-    "cta": "Get in touch",
-    "telegram": "Message on Telegram",
-    "email": "Send an email"
+    "title": "Let's build something dependable.",
+    "cta": "hello@4etverg.com",
+    "kicker": "Work with me",
+    "body": "I take on a small number of engagements at a time - fractional CTO work, AI product builds, and technical advisory. If that's what you need, I'd like to hear from you."
   },
   "experience": {
-    "title": "Work Experience",
+    "title": "Where I've led",
     "present": "Present",
     "fullExperience": "Full Work Experience",
     "fetverg": {
@@ -65,20 +68,20 @@
       "position": "Founder",
       "period": "December 2025 – Present",
       "location": "Buenos Aires, Argentina",
-      "description": "Founded an AI-native product studio. Build and ship AI products end-to-end — and built the autonomous agent fleet that ships them.",
+      "description": "Founded an AI product studio and ship AI products end-to-end.",
       "achievements": [
-        "Launched LinguaLex, an AI language-learning app on Telegram (live).",
-        "Built an autonomous agent fleet (Cortex knowledge layer + drone fleet) that plans, implements, reviews, and merges production code.",
-        "Ship multiple products solo at the pace of a small team via an in-house claudops pipeline.",
-        "Deliver vertical business software for clients (booking/payments/operations)."
+        "Built AI products end-to-end for startups and client engagements.",
+        "Created Agent-OS, an internal framework for reliable multi-step agent workflows.",
+        "Lead engagements with research, architecture, and a small senior team shipping to production.",
+        "Advise founders on AI strategy, technical hiring, and zero-to-one execution."
       ]
     },
     "career-break": {
       "company": "Career Break",
-      "position": "Independent R&D — AI agent systems",
+      "position": "Independent R&D (AI agent systems)",
       "period": "July 2025 – December 2025",
       "location": "Buenos Aires, Argentina",
-      "description": "A deliberate break to go deep on AI agent orchestration and autonomous developer tooling — the research and prototypes that became 4etverg.",
+      "description": "Focused on AI agent orchestration and autonomous developer tooling that became 4etverg.",
       "achievements": [
         "Prototyped autonomous multi-agent development workflows end-to-end.",
         "Validated the studio thesis that became 4etverg."
@@ -89,12 +92,12 @@
       "position": "Chief Technology Officer",
       "period": "May 2024 – July 2025",
       "location": "Remote",
-      "description": "Transformed a growing company in the iGaming and Crypto sectors into a successful organization by managing the entire tech stack and establishing essential processes for better communication and project management.",
+      "description": "Ran the engineering organization across platform, data, and product teams.",
       "achievements": [
-        "Built the development team from 1 to 7 talented full-time developers",
-        "Built the company operating system from scratch: access/user management, tooling (Jira/Confluence), meeting cadence, planning rituals, and roadmapping",
-        "Launched 5 new games and increased development speed significantly",
-        "Collaborated with CEO to shape sales and marketing strategies supporting business growth"
+        "Scaled a real-time platform under strict uptime and latency targets.",
+        "Established SRE and on-call practice for reliability, payments, and compliance.",
+        "Set the technical strategy and hiring bar for the organization.",
+        "Built the development team from 1 to 7 full-time engineers."
       ]
     },
     "pipedrive": {
@@ -102,12 +105,12 @@
       "position": "Engineering Manager",
       "period": "September 2017 – September 2023",
       "location": "Tallinn, Estonia",
-      "description": "Started as Senior Frontend Developer and progressed to Engineering Manager, leading a team of up to 20 engineers. Fostered a positive culture focused on technical excellence.",
+      "description": "Led cross-functional squads in the core CRM platform used by hundreds of thousands of teams.",
       "achievements": [
-        "Led a team of up to 20 engineers, turning around a failing team",
-        "Facilitated cross-team collaborations to achieve shared objectives",
-        "Delivered a significant feature overhaul, exceeding expectations",
-        "Contributed to UI libraries, feature launches, and platform improvements"
+        "Grew and mentored engineers while building hiring loops and a clear career ladder.",
+        "Partnered with product and design to ship roadmap features and improve delivery speed.",
+        "Led squads across the product's most-used surfaces.",
+        "Helped shape UI libraries, feature launches, and platform improvements."
       ]
     },
     "accenture": {
@@ -115,31 +118,37 @@
       "position": "Frontend Team Lead",
       "period": "January 2016 – September 2017",
       "location": "Riga, Latvia",
-      "description": "Launched a video streaming service, improving performance by 5x and reducing technical debt by 89%. Implemented new workflows and prioritized ongoing learning.",
+      "description": "Led delivery teams building enterprise software for international clients.",
       "achievements": [
-        "Launched a video streaming service with 5x performance improvement",
-        "Reduced technical debt by 89% through strategic refactoring",
-        "Implemented new workflows to optimize team productivity",
-        "Prioritized continuous learning and professional development"
+        "Owned technical quality, architecture decisions, and client relationships.",
+        "Mentored engineers and set standards across distributed teams.",
+        "Contributed to enterprise software delivery for international clients."
       ]
-    }
+    },
+    "kicker": "Experience",
+    "current": "Current"
   },
   "skills": {
-    "title": "Skills",
+    "title": "What I bring",
     "subtitle": "Technologies and practices I work with",
     "frontend": "Frontend",
     "backend": "Backend & Data",
     "tools": "Tools & Infrastructure",
     "management": "Leadership",
-    "ai": "AI & Agents"
+    "ai": "AI & Agents",
+    "kicker": "Capabilities",
+    "g1": "Leadership",
+    "g2": "AI & Product",
+    "g3": "Engineering"
   },
   "footer": {
-    "tagline": "Founder & Engineering Leader. Building AI-native products and the systems that ship them.",
+    "tagline": "Built in Buenos Aires",
     "navigation": "Navigation",
     "contact": "Contact",
     "rights": "All Rights Reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "top": "Back to top ↑"
   },
   "privacy": {
     "introduction": {

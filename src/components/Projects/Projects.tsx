@@ -1,22 +1,22 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
 import { ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 import {
   ProjectsSection,
   ProjectsContainer,
+  SectionHeader,
+  Kicker,
   SectionTitle,
-  SectionSubtitle,
-  ProjectsGrid,
+  ProjectsList,
   ProjectCard,
-  ProjectImage,
-  ProjectInfo,
-  ProjectTitle,
-  ProjectDescription,
-  ProjectTags,
+  ProjectLinkCard,
+  ProjectTop,
+  ProjectName,
   ProjectTag,
-  ProjectLinks,
+  ProjectArrow,
+  ProjectDescription,
+  ProjectFooter,
 } from './Projects.styled';
 import { projectsData } from './Projects.utils';
 
@@ -26,45 +26,45 @@ export const Projects = () => {
   return (
     <ProjectsSection id="projects">
       <ProjectsContainer>
-        <SectionTitle>{t('projects.title')}</SectionTitle>
-        <SectionSubtitle>{t('projects.subtitle')}</SectionSubtitle>
+        <SectionHeader>
+          <Kicker>{t('projects.kicker')}</Kicker>
+          <SectionTitle>{t('projects.title')}</SectionTitle>
+        </SectionHeader>
 
-        <ProjectsGrid>
-          {projectsData.map(project => (
-            <ProjectCard key={project.id}>
-              <ProjectImage>
-                <img
-                  src={project.imageUrl}
-                  alt={t(`projects.${project.id}.title`)}
-                  loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </ProjectImage>
-
-              <ProjectInfo>
-                <ProjectTitle>{t(`projects.${project.id}.title`)}</ProjectTitle>
+        <ProjectsList>
+          {projectsData.map(project => {
+            const content = (
+              <>
+                <ProjectTop>
+                  <div>
+                    <ProjectName>{t(`projects.${project.id}.title`)}</ProjectName>
+                    <ProjectTag>{project.tag}</ProjectTag>
+                  </div>
+                  <ProjectArrow aria-hidden="true">
+                    <ExternalLink className="h-4 w-4" />
+                  </ProjectArrow>
+                </ProjectTop>
                 <ProjectDescription>{t(`projects.${project.id}.description`)}</ProjectDescription>
+                {project.external ? (
+                  <ProjectFooter>{t('common.visit')}</ProjectFooter>
+                ) : null}
+              </>
+            );
 
-                <ProjectTags>
-                  {project.tags.map(tag => (
-                    <ProjectTag key={tag.id}>{tag.name}</ProjectTag>
-                  ))}
-                </ProjectTags>
-
-                <ProjectLinks>
-                  {project.projectUrl && (
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        {t('projects.viewProject')}
-                      </a>
-                    </Button>
-                  )}
-                </ProjectLinks>
-              </ProjectInfo>
-            </ProjectCard>
-          ))}
-        </ProjectsGrid>
+            return project.href ? (
+              <ProjectLinkCard
+                key={project.id}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {content}
+              </ProjectLinkCard>
+            ) : (
+              <ProjectCard key={project.id}>{content}</ProjectCard>
+            );
+          })}
+        </ProjectsList>
       </ProjectsContainer>
     </ProjectsSection>
   );

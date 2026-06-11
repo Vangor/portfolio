@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -7,6 +6,7 @@ import Layout from '@/components/Layout/Layout';
 import { Hero } from '@/components/Hero/Hero';
 import { Experience } from '@/components/Experience/Experience';
 import { Projects } from '@/components/Projects/Projects';
+import { Skills } from '@/components/Skills/Skills';
 import { Consultation } from '@/components/Consultation/Consultation';
 
 function LocaleLanding() {
@@ -17,16 +17,18 @@ function LocaleLanding() {
     if (i18n.language !== nextLocale) {
       void i18n.changeLanguage(nextLocale);
     }
+    document.documentElement.lang = nextLocale;
     window.localStorage.setItem('locale', nextLocale);
   }, [locale]);
 
   return (
-    <main>
+    <>
       <Hero />
       <Experience />
       <Projects />
+      <Skills />
       <Consultation />
-    </main>
+    </>
   );
 }
 

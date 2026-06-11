@@ -1,36 +1,34 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { MapPin, Briefcase, Linkedin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import {
   ExperienceSection,
   ExperienceContainer,
+  SectionHeader,
+  Kicker,
   SectionTitle,
-  TimelineContainer,
-  TimelineLine,
-  TimelineItem,
-  TimelineDot,
-  TimelineDate,
-  TimelineContent,
-  JobHeader,
+  ExperienceList,
+  Role,
+  RoleAside,
+  CompanyRow,
   CompanyName,
-  JobPosition,
-  JobLocation,
-  JobContent,
-  JobDescription,
-  AchievementsList,
-  Achievement,
-  LinkedInButtonContainer,
+  RoleBadge,
+  RoleDates,
+  RoleLocation,
+  RoleBody,
+  RoleTitle,
+  RoleDescription,
+  BulletList,
+  Bullet,
 } from './Experience.styled';
 
-const JOBS: { id: string; achievementCount: number }[] = [
-  { id: 'fetverg',       achievementCount: 4 },
-  { id: 'career-break',  achievementCount: 2 },
-  { id: 'nda-igaming',   achievementCount: 4 },
-  { id: 'pipedrive',     achievementCount: 4 },
-  { id: 'accenture',     achievementCount: 4 },
-];
+const EXPERIENCE_ORDER = [
+  { id: 'fetverg', current: true },
+  { id: 'career-break', current: false },
+  { id: 'nda-igaming', current: false },
+  { id: 'pipedrive', current: false },
+  { id: 'accenture', current: false },
+] as const;
 
 export const Experience = () => {
   const { t } = useTranslation();
@@ -38,59 +36,41 @@ export const Experience = () => {
   return (
     <ExperienceSection id="experience">
       <ExperienceContainer>
-        <SectionTitle>{t('experience.title')}</SectionTitle>
+        <SectionHeader>
+          <Kicker>{t('experience.kicker')}</Kicker>
+          <SectionTitle>{t('experience.title')}</SectionTitle>
+        </SectionHeader>
 
-        <TimelineContainer>
-          <TimelineLine />
+        <ExperienceList>
+          {EXPERIENCE_ORDER.map(item => {
+            const achievements = t(`experience.${item.id}.achievements`, {
+              returnObjects: true,
+            }) as string[];
 
-          {JOBS.map((job, index) => (
-            <TimelineItem key={job.id}>
-              <TimelineDot>
-                <Briefcase className="h-4 w-4" />
-              </TimelineDot>
+            return (
+              <Role key={item.id}>
+                <RoleAside>
+                  <CompanyRow>
+                    <CompanyName>{t(`experience.${item.id}.company`)}</CompanyName>
+                    {item.current ? <RoleBadge>{t('experience.current')}</RoleBadge> : null}
+                  </CompanyRow>
+                  <RoleDates>{t(`experience.${item.id}.period`)}</RoleDates>
+                  <RoleLocation>{t(`experience.${item.id}.location`)}</RoleLocation>
+                </RoleAside>
 
-              <TimelineDate align={index % 2 === 0 ? 'left' : 'right'}>
-                {t(`experience.${job.id}.period`)}
-              </TimelineDate>
-
-              <TimelineContent>
-                <JobHeader>
-                  <CompanyName>{t(`experience.${job.id}.company`)}</CompanyName>
-                  <JobPosition>{t(`experience.${job.id}.position`)}</JobPosition>
-                  <JobLocation>
-                    <MapPin className="h-4 w-4" />
-                    {t(`experience.${job.id}.location`)}
-                  </JobLocation>
-                </JobHeader>
-
-                <JobContent>
-                  <JobDescription>{t(`experience.${job.id}.description`)}</JobDescription>
-
-                  <AchievementsList>
-                    {Array.from({ length: job.achievementCount }).map((_, i) => (
-                      <Achievement key={i}>
-                        {t(`experience.${job.id}.achievements.${i}`)}
-                      </Achievement>
+                <RoleBody>
+                  <RoleTitle>{t(`experience.${item.id}.position`)}</RoleTitle>
+                  <RoleDescription>{t(`experience.${item.id}.description`)}</RoleDescription>
+                  <BulletList>
+                    {achievements.map(achievement => (
+                      <Bullet key={achievement}>{achievement}</Bullet>
                     ))}
-                  </AchievementsList>
-                </JobContent>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </TimelineContainer>
-
-        <LinkedInButtonContainer>
-          <Button variant="outline" size="lg" asChild>
-            <a
-              href="https://www.linkedin.com/in/konstantinvan/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className="mr-2 h-5 w-5" />
-              {t('experience.fullExperience')}
-            </a>
-          </Button>
-        </LinkedInButtonContainer>
+                  </BulletList>
+                </RoleBody>
+              </Role>
+            );
+          })}
+        </ExperienceList>
       </ExperienceContainer>
     </ExperienceSection>
   );

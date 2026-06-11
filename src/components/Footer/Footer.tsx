@@ -1,80 +1,47 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Linkedin, Github } from 'lucide-react';
-import {
-  FooterContainer,
-  FooterContent,
-  FooterSocial,
-  FooterSocialLink,
-  FooterBottom,
-  FooterCopyright,
-  FooterLinks,
-} from './Footer.styled';
+import { FooterContainer, FooterContent, FooterBottom, FooterLinks, FooterLink } from './Footer.styled';
 import { PolicyDialog } from './Footer.PolicyDialog';
 import { Privacy } from './Footer.Privacy';
 import { Terms } from './Footer.Terms';
-import { Navigation } from '../Navigation/Navigation';
 
 export const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
-
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isTermsOpen, setIsTermsOpen] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <FooterContainer>
       <FooterContent>
-        <Navigation showTitle />
-
-        <FooterSocial>
-          <FooterSocialLink href="mailto:contact@vanichk.in" aria-label="Email">
-            <Mail className="h-5 w-5" />
-          </FooterSocialLink>
-          <FooterSocialLink
-            href="https://www.linkedin.com/in/konstantinvan/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5" />
-          </FooterSocialLink>
-          <FooterSocialLink
-            href="https://github.com/vangor"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <Github className="h-5 w-5" />
-          </FooterSocialLink>
-        </FooterSocial>
-      </FooterContent>
-
-      <FooterContent>
         <FooterBottom>
-          <FooterCopyright>
-            &copy; {currentYear} Konstantin Vanichkin. {t('footer.rights')}
-          </FooterCopyright>
-          <FooterLinks>
-            <PolicyDialog
-              isOpen={isPrivacyOpen}
-              onOpenChange={setIsPrivacyOpen}
-              title={t('footer.privacy')}
-            >
-              <Privacy />
-            </PolicyDialog>
-
-            <PolicyDialog
-              isOpen={isTermsOpen}
-              onOpenChange={setIsTermsOpen}
-              title={t('footer.terms')}
-            >
-              <Terms />
-            </PolicyDialog>
-          </FooterLinks>
+          <span>© {currentYear} Konstantin Vanichkin</span>
+          <span>{t('footer.tagline')}</span>
         </FooterBottom>
+
+        <FooterLinks>
+          <PolicyDialog
+            isOpen={isPrivacyOpen}
+            onOpenChange={setIsPrivacyOpen}
+            title={t('footer.privacy')}
+          >
+            <Privacy />
+          </PolicyDialog>
+
+          <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('footer.terms')}>
+            <Terms />
+          </PolicyDialog>
+
+          <FooterLink type="button" onClick={scrollToTop}>
+            {t('footer.top')}
+          </FooterLink>
+        </FooterLinks>
       </FooterContent>
     </FooterContainer>
   );
