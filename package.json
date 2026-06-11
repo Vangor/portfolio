@@ -8,13 +8,13 @@
     "bun": ">=1.0.0"
   },
   "scripts": {
-    "dev": "infisical run --projectId=b309394e-2738-4226-8567-dfe3ab0ad385 --env=prod --domain=https://infisical.lan/api -- bun vite",
-    "build": "infisical run --projectId=b309394e-2738-4226-8567-dfe3ab0ad385 --env=prod --domain=https://infisical.lan/api -- bun vite build",
-    "build:dev": "infisical run --projectId=b309394e-2738-4226-8567-dfe3ab0ad385 --env=prod --domain=https://infisical.lan/api -- bun vite build --mode development",
+    "dev": "bun vite",
+    "build": "bun vite build",
+    "build:dev": "bun vite build --mode development",
     "lint": "bun scripts/check-file-size.ts && bunx eslint .",
     "format": "bunx prettier . --write",
     "format:check": "bunx prettier . --check",
-    "preview": "infisical run --projectId=b309394e-2738-4226-8567-dfe3ab0ad385 --env=prod --domain=https://infisical.lan/api -- bun vite preview",
+    "preview": "bun vite preview",
     "test": "bun vitest run",
     "test:ui": "bun vitest --ui",
     "test:run": "bun vitest run",
