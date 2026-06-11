@@ -1,35 +1,69 @@
-image: oven/bun:1
-
 stages:
-  - build
   - test
+  - build
+  - deploy
 
-variables:
-  BUN_INSTALL_CACHE_DIR: .bun-cache
+default:
+  tags: [linux, sreda]
+  image: oven/bun:1
 
-cache:
-  key:
-    files:
-      - bun.lock
-  paths:
-    - .bun-cache/
-    - node_modules/
+file-size:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
+  script:
+    - bun scripts/check-file-size.ts
 
-before_script:
-  - bun install --frozen-lockfile
-
+# Build the static site without the infisical.lan wrapper (not reachable from CI).
+# Vite reads VITE_POSTHOG_KEY from the process env at build time; the two PostHog
+# keys are provided as GitLab CI/CD variables instead of via `infisical run`.
 build:
   stage: build
+  rules:
+    - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_COMMIT_BRANCH == "main" && $CI_PIPELINE_SOURCE == "push"
   script:
-    - bun run build
+    - bun install --frozen-lockfile
+    - bun vite build
   artifacts:
     paths:
-      - dist/
+      - dist
     expire_in: 1 hour
-  timeout: 10 minutes
 
-test:
-  stage: test
+# Deploy the built site to Cloudflare Pages (project "vanichkin") via wrangler.
+# staging branch -> preview deployment; main branch -> production deployment.
+#
+# ROOT CAUSE of the "deploy silently uploaded nothing" failures (2026-06-10/11):
+# wrangler 4.99 `pages deploy` SILENTLY NO-OPS when run under bun (the oven/bun:1
+# image) — it fetches the project then exits 0 without uploading. The token was always
+# valid (deploys fine under Node). Fix: run this job on node:22 with `npx wrangler`.
+# The fail-loud guard below stays as a regression safety net.
+deploy:
+  stage: deploy
+  image: node:22
+  needs: [build]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "staging" && $CI_PIPELINE_SOURCE == "push"
+    - if: $CI_COMMIT_BRANCH == "main" && $CI_PIPELINE_SOURCE == "push"
   script:
-    - bun run test
-  timeout: 10 minutes
+    - |
+      set -euo pipefail
+      if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+        echo "ERROR: CLOUDFLARE_API_TOKEN is empty — refusing to deploy (would no-op silently)." >&2
+        exit 1
+      fi
+      if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+        echo "ERROR: CLOUDFLARE_ACCOUNT_ID is empty — refusing to deploy." >&2
+        exit 1
+      fi
+      # Fail fast if the token can't even authenticate against Cloudflare Pages.
+      if ! npx -y wrangler@4.99.0 pages project list --json >/dev/null 2>&1; then
+        echo "ERROR: wrangler could not authenticate to Cloudflare Pages (bad/expired CLOUDFLARE_API_TOKEN?)." >&2
+        exit 1
+      fi
+      npx -y wrangler@4.99.0 pages deploy dist --project-name=vanichkin --branch="$CI_COMMIT_BRANCH" 2>&1 | tee wrangler-deploy.log
+      if ! grep -q "Deployment complete" wrangler-deploy.log; then
+        echo "ERROR: wrangler did not report 'Deployment complete' — the deploy silently uploaded nothing." >&2
+        exit 1
+      fi

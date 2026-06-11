@@ -29,11 +29,18 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files — use .env.example for var reference; never commit real env files
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
+
+# Filesystem task docs removed; vault/knowledge DB is sole source (2026-05-30)
+/tasks/

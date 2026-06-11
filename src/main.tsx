@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <PostHogProvider>
-        <ThemeProvider defaultTheme="system">
+        <ThemeProvider defaultTheme="light">
           <App />
         </ThemeProvider>
       </PostHogProvider>

@@ -1,207 +1,120 @@
 {
-  "header": {
-    "title": "Konstantin Vanichkin"
-  },
-  "hero": {
-    "title": "Engineering Manager & Frontend Developer",
-    "subtitle": "Experienced Engineering Manager with over a decade of experience in IT, specializing in frontend development and team leadership. Based in Buenos Aires, Argentina.",
-    "contact": "Contact Me",
-    "linkedin": "LinkedIn",
-    "github": "GitHub"
-  },
-  "languages": {
-    "en": "English",
-    "ru": "Russian",
-    "es": "Spanish"
-  },
-  "Index": {
-    "title": "Welcome to My Portfolio",
-    "description": "Frontend Developer & Engineering Manager"
-  },
-  "Navigation": {
-    "home": "Home",
-    "skills": "Skills",
+  "header": { "title": "Konstantin Vanichkin" },
+  "nav": {
     "experience": "Experience",
-    "contact": "Contact",
     "projects": "Projects",
-    "consultation": "Hire Me"
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "common": { "visit": "Visit project" },
+  "hero": {
+    "badge": "Available for select engagements",
+    "role": { "a": "Founder", "b": "Engineering Leader" },
+    "subtitle": "Founder of <strong>4etverg</strong>, ex-Engineering Manager at <strong>Pipedrive</strong>. Fifteen years building products and the teams that ship them. I help companies move AI from demo to dependable.",
+    "contact": "Get in touch",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "loc": "Buenos Aires, AR"
   },
   "projects": {
-    "title": "Projects",
-    "subtitle": "Biggest projects I've worked on",
-    "viewProject": "View Project",
-    "viewCode": "View Code",
-    "filmstruck": {
-      "title": "FilmStruck",
-      "description": "Streaming service from Turner Classic Movies focused on rare, classic, foreign, arthouse, and independent cinema. Led a team that improved performance and implemented significant refactoring to enhance user experience."
+    "kicker": "Selected work",
+    "title": "Things I've built",
+    "lingualex": {
+      "description": "A Telegram-native language-learning platform — read adapted, leveled stories and tap any word to learn it, with personalized progress across 16 languages. Built with React and Supabase."
     },
-    "pipedrive": {
-      "title": "Pipedrive",
-      "description": "CRM platform designed to help salespeople manage complex sales processes. Contributed to UI libraries, feature launches, and platform improvements while focusing on technical excellence."
-    },
-    "channel4": {
-      "title": "Channel 4",
-      "description": "British public-service television broadcaster with an advanced digital streaming platform. Worked on improving user experience, streaming performance, and modernizing frontend architecture."
+    "agent-os": {
+      "description": "An orchestration framework for building reliable, multi-step AI agents in production — typed tools, traceable runs, graceful failure."
     }
   },
-  "consultation": {
-    "title": "Hire Me",
-    "subtitle": "Book a consultation session with me",
-    "option1": {
-      "title": "Pair programming session",
-      "price": "400 USD",
-      "description": "Comprehensive consultation to discuss your project, address specific challenges, or get expert advice on frontend development and team management."
-    },
-    "option2": {
-      "title": "1 Hour Consultation",
-      "price": "250 USD",
-      "description": "Quick session to answer your questions and provide guidance on specific technical issues or career development in frontend engineering."
-    },
-    "option3": {
-      "title": "Custom Consultation",
-      "price": "Let's talk",
-      "description": "Need something different? Let's discuss your specific requirements and create a tailored consultation package."
-    },
-    "payButton": "Pay with Cwallet",
-    "contactForCustom": "Contact me for custom options"
-  },
   "experience": {
-    "title": "Work Experience",
-    "present": "Present",
-    "fullExperience": "Full Work Experience",
+    "kicker": "Experience",
+    "title": "Where I've led",
+    "current": "Current",
+    "4etverg": {
+      "company": "4etverg",
+      "position": "Founder",
+      "period": "December 2025 – Present",
+      "location": "Buenos Aires",
+      "achievements": [
+        "Founded an AI product studio shipping agentic tools and LLM-backed products for startups and scaleups.",
+        "Lead engagements end to end — discovery, architecture, and a small senior team delivering to production.",
+        "Built Agent-OS, an in-house framework for orchestrating reliable, multi-step AI agents.",
+        "Advise founders on AI strategy, technical hiring, and zero-to-one execution."
+      ]
+    },
+    "career-break": {
+      "company": "Career Break",
+      "position": "Independent R&D",
+      "period": "July 2025 – December 2025",
+      "location": "Buenos Aires",
+      "achievements": [
+        "Prototyped autonomous multi-agent development workflows end to end.",
+        "Validated the studio thesis that became 4etverg."
+      ]
+    },
     "nda-igaming": {
       "company": "NDA iGaming",
       "position": "Chief Technology Officer",
-      "period": "May 2024 - July 2025",
+      "period": "May 2024 – July 2025",
       "location": "Remote",
-      "description": "Transformed a growing company in the iGaming and Crypto sectors into a successful organization by managing the entire tech stack and establishing essential processes for better communication and project management.",
       "achievements": [
-        "Built the development team from 1 to 7 talented full-time developers",
-        "Built the company operating system from scratch: access/user management, tooling (Jira/Confluence), meeting cadence, planning rituals, and roadmapping",
-        "Launched 5 new games and increased development speed significantly",
-        "Collaborated with CEO to shape sales and marketing strategies supporting business growth"
+        "Owned the engineering organization across platform, data, and product teams.",
+        "Scaled a real-time platform for high-concurrency, low-latency workloads under strict uptime targets.",
+        "Established SRE and on-call practice — hardening reliability, payments, and compliance.",
+        "Set the technical strategy and hiring bar for the whole organization."
       ]
     },
     "pipedrive": {
       "company": "Pipedrive",
       "position": "Engineering Manager",
-      "period": "September 2017 - September 2023",
+      "period": "September 2017 – September 2023",
       "location": "Tallinn, Estonia",
-      "description": "Started as Senior Frontend Developer and progressed to Engineering Manager, leading a team of up to 20 engineers. Fostered a positive culture focused on technical excellence.",
       "achievements": [
-        "Led a team of up to 20 engineers, turning around a failing team",
-        "Facilitated cross-team collaborations to achieve shared objectives",
-        "Delivered a significant feature overhaul, exceeding expectations",
-        "Contributed to UI libraries, feature launches, and platform improvements"
+        "Led cross-functional squads in the core CRM platform used by hundreds of thousands of teams.",
+        "Grew and mentored engineers; built hiring loops and a clear career ladder.",
+        "Partnered with product and design to ship roadmap features and lift delivery velocity."
       ]
     },
     "accenture": {
       "company": "Accenture",
       "position": "Frontend Team Lead",
-      "period": "January 2016 - September 2017",
+      "period": "January 2016 – September 2017",
       "location": "Riga, Latvia",
-      "description": "Launched a video streaming service, improving performance by 5x and reducing technical debt by 89%. Implemented new workflows and prioritized ongoing learning.",
       "achievements": [
-        "Launched a video streaming service with 5x performance improvement",
-        "Reduced technical debt by 89% through strategic refactoring",
-        "Implemented new workflows to optimize team productivity",
-        "Prioritized continuous learning and professional development"
+        "Led delivery teams building enterprise software for international clients.",
+        "Owned technical quality, architecture decisions, and client relationships.",
+        "Mentored engineers and set standards across distributed teams."
       ]
     }
   },
+  "skills": {
+    "kicker": "Capabilities",
+    "title": "What I bring",
+    "g1": "Leadership",
+    "g2": "AI & Product",
+    "g3": "Engineering",
+    "l1": "Engineering leadership",
+    "l2": "Team building",
+    "l3": "Hiring & org design",
+    "l4": "Technical strategy",
+    "l5": "Mentorship",
+    "l6": "Fractional CTO",
+    "a1": "LLM systems",
+    "a2": "Agentic architectures",
+    "a3": "Product strategy",
+    "a4": "0→1 execution",
+    "a5": "Technical due diligence",
+    "e1": "Distributed systems",
+    "e2": "Platform & infra",
+    "e3": "Observability"
+  },
+  "contact": {
+    "kicker": "Work with me",
+    "title": "Let's build something dependable.",
+    "body": "I take on a small number of engagements at a time — fractional CTO work, AI product builds, and technical advisory. If that's what you need, I'd like to hear from you."
+  },
   "footer": {
-    "tagline": "Engineering Manager & Frontend Developer with a decade of experience in building high-quality web applications and leading development teams.",
-    "navigation": "Navigation",
-    "contact": "Contact",
-    "rights": "All Rights Reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
-  },
-  "privacy": {
-    "introduction": {
-      "title": "Introduction",
-      "content": "Welcome to the Konstantin Vanichkin portfolio website. I respect your privacy and am committed to protecting your personal data. This privacy policy explains how I collect, use, and protect your information when you use my website."
-    },
-    "information": {
-      "title": "Information I Collect",
-      "content": "I may collect, use, and store the following types of information when you visit my website:",
-      "items": {
-        "usage": "Usage data such as how you interact with my website, pages visited, time spent, and other diagnostic data.",
-        "contact": "Contact information you provide when reaching out to me, including your name, email address, and the content of your message.",
-        "cookies": "Cookies and similar tracking technologies that help enhance your experience."
-      }
-    },
-    "usage": {
-      "title": "How I Use Your Information",
-      "content": "I use the information I collect for various purposes, including:",
-      "items": {
-        "service": "To provide and maintain my website.",
-        "communication": "To respond to your inquiries and maintain communication.",
-        "improvement": "To improve my website and services based on how visitors interact with it."
-      }
-    },
-    "sharing": {
-      "title": "Information Sharing",
-      "content": "I do not sell, trade, or rent your personal information to third parties. I may share information with service providers who assist me in operating my website, but they are obligated to keep your information confidential."
-    },
-    "cookies": {
-      "title": "Cookie Policy",
-      "content": "My website may use cookies to enhance your experience. You can set your browser to refuse all or some browser cookies, but this may prevent some parts of the website from functioning properly."
-    },
-    "security": {
-      "title": "Security",
-      "content": "I value your trust and implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, so I cannot guarantee absolute security."
-    },
-    "changes": {
-      "title": "Changes to This Policy",
-      "content": "I may update this privacy policy from time to time. I will notify you of any changes by posting the new policy on this page with an updated revision date."
-    },
-    "contact": {
-      "title": "Contact Me",
-      "content": "If you have any questions about this privacy policy, please contact me at:"
-    }
-  },
-  "terms": {
-    "introduction": {
-      "title": "Introduction",
-      "content": "Welcome to Konstantin Vanichkin's portfolio website. By accessing this website, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws."
-    },
-    "services": {
-      "title": "Services Offered",
-      "content": "Through this website, I offer various professional services, including but not limited to:",
-      "items": {
-        "consulting": "Technical consulting and advisory services related to frontend development and engineering management.",
-        "development": "Custom software development and technical solutions.",
-        "mentoring": "Professional mentoring and career guidance in the tech field."
-      }
-    },
-    "payments": {
-      "title": "Payments and Fees",
-      "content": "All fees for consultation services are outlined on the website. Payment is required prior to the delivery of services unless otherwise agreed upon in writing. All payments are processed through secure third-party payment processors."
-    },
-    "intellectual": {
-      "title": "Intellectual Property",
-      "content": "The content on this website, including text, graphics, logos, and images, is the property of Konstantin Vanichkin and is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content from this website without prior written permission."
-    },
-    "termination": {
-      "title": "Termination of Services",
-      "content": "I reserve the right to terminate or suspend access to my services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms of Service."
-    },
-    "limitation": {
-      "title": "Limitation of Liability",
-      "content": "In no event shall Konstantin Vanichkin be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the services."
-    },
-    "governing": {
-      "title": "Governing Law",
-      "content": "These Terms shall be governed and construed in accordance with the laws of Argentina, without regard to its conflict of law provisions."
-    },
-    "changes": {
-      "title": "Changes to Terms",
-      "content": "I reserve the right, at my sole discretion, to modify or replace these Terms at any time. It is your responsibility to check these Terms periodically for changes. Your continued use of this website following the posting of any changes to these Terms constitutes acceptance of those changes."
-    },
-    "contact": {
-      "title": "Contact Information",
-      "content": "If you have any questions about these Terms, please contact me at:"
-    }
+    "tagline": "Built in Buenos Aires",
+    "top": "Back to top ↑"
   }
 }

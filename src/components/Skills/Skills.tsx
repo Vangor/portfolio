@@ -1,88 +1,50 @@
-'use client';
-
 import { useTranslation } from 'react-i18next';
-import { Code2, Database, Wrench, Users } from 'lucide-react';
-import {
-  SkillsSection,
-  SkillsContainer,
-  SectionTitle,
-  SectionSubtitle,
-  SkillCategoriesContainer,
-  SkillCategory,
-  CategoryHeader,
-  CategoryTitle,
-  CategoryContent,
-  SkillsList,
-  SkillItem,
-  SkillName,
-  SkillLevel,
-  SkillLevelFill,
-} from './Skills.styled';
-import { skillsData, SkillCategory as SkillCategoryType } from './Skills.utils';
 
-// Map of category icons
-const categoryIcons = {
-  frontend: Code2,
-  backend: Database,
-  tools: Wrench,
-  management: Users,
-};
+const groups = [
+  { key: 'g1', items: ['l1', 'l2', 'l3', 'l4', 'l5', 'l6'] },
+  { key: 'g2', items: ['a1', 'a2', 'a3', 'a4', 'a5'] },
+  { key: 'g3', items: ['e1', 'e2', 'TypeScript', 'PostgreSQL', 'Kubernetes', 'Observability'] },
+] as const;
 
 export const Skills = () => {
   const { t } = useTranslation();
 
-  // Get the icon component for each category
-  const getCategoryWithIcon = (category: SkillCategoryType) => {
-    const IconComponent = categoryIcons[category.id as keyof typeof categoryIcons];
-    return {
-      ...category,
-      icon: IconComponent,
-    };
-  };
-
-  const categoriesWithIcons = skillsData.map(getCategoryWithIcon);
-
   return (
-    <SkillsSection id="skills">
-      <SkillsContainer>
-        <SectionTitle>{t('skills.title')}</SectionTitle>
-        <SectionSubtitle>{t('skills.subtitle')}</SectionSubtitle>
+    <section id="skills" className="border-t border-border/80">
+      <div className="mx-auto max-w-[1080px] px-6 py-24">
+        <div data-reveal className="mb-10 opacity-0 translate-y-6 transition-all duration-[700ms] ease-[cubic-bezier(.22,1,.36,1)]">
+          <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-muted-foreground">
+            {t('skills.kicker')}
+          </p>
+          <h2 className="mt-3 text-[clamp(28px,4vw,40px)] font-semibold tracking-[-0.03em]">
+            {t('skills.title')}
+          </h2>
+        </div>
 
-        <SkillCategoriesContainer>
-          {categoriesWithIcons.map(category => {
-            const IconComponent = category.icon;
-
-            return (
-              <SkillCategory key={category.id}>
-                <CategoryHeader>
-                  <CategoryTitle>
-                    <IconComponent className="h-5 w-5" />
-                    {t(`skills.${category.titleKey}`)}
-                  </CategoryTitle>
-                </CategoryHeader>
-
-                <CategoryContent>
-                  <SkillsList>
-                    {category.skills.map(skill => (
-                      <SkillItem key={skill.id}>
-                        <div className="flex flex-col w-full">
-                          <div className="flex items-center justify-between mb-1">
-                            <SkillName>{skill.name}</SkillName>
-                            <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                          </div>
-                          <SkillLevel>
-                            <SkillLevelFill level={skill.level} />
-                          </SkillLevel>
-                        </div>
-                      </SkillItem>
-                    ))}
-                  </SkillsList>
-                </CategoryContent>
-              </SkillCategory>
-            );
-          })}
-        </SkillCategoriesContainer>
-      </SkillsContainer>
-    </SkillsSection>
+        <div className="space-y-8">
+          {groups.map(group => (
+            <div
+              key={group.key}
+              data-reveal
+              className="grid gap-4 border-t border-border/80 pt-6 opacity-0 translate-y-6 transition-all duration-[700ms] ease-[cubic-bezier(.22,1,.36,1)] lg:grid-cols-[220px_1fr]"
+            >
+              <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-muted-foreground">
+                {t(`skills.${group.key}`)}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map(item => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-border bg-background px-4 py-2 font-mono text-[13px] text-foreground"
+                  >
+                    {item.length === 2 && item[0] !== item[0].toUpperCase() ? t(`skills.${item}`) : item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };

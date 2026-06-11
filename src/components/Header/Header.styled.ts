@@ -6,42 +6,39 @@ export const HeaderContainer = tw.header`
   z-50
   w-full
   border-b
-  bg-background/95
-  backdrop-blur
-  supports-[backdrop-filter]:bg-background/60
-  w-full
-  flex
-  items-center
-  flex-col
+  border-transparent
+  bg-background/90
+  backdrop-blur-md
 `;
 
 export const HeaderContent = tw.div`
-  container
+  mx-auto
   flex
-  h-16
+  w-full
+  max-w-[1080px]
   items-center
   justify-between
-  px-4
-  w-full
+  px-6
+  py-4
+  sm:px-8
 `;
 
 export const Logo = tw.div`
   flex
   items-center
-  space-x-2
-  font-bold
-  text-xl
+  gap-3
 `;
 
 export const Nav = tw.nav`
-  flex
+  hidden
   items-center
-  space-x-4
-  ml-auto
+  gap-6
+  lg:flex
 `;
 
 export const Actions = tw.div`
   flex
   items-center
-  space-x-4
+  gap-2
+  sm:gap-3
 `;

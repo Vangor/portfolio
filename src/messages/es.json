@@ -1,208 +1,108 @@
 {
-  "header": {
-    "title": "Konstantin Vanichkin"
-  },
+  "header": { "title": "Konstantin Vanichkin" },
+  "nav": { "experience": "Experiencia", "projects": "Proyectos", "skills": "Habilidades", "contact": "Contacto" },
+  "common": { "visit": "Visitar proyecto" },
   "hero": {
-    "title": "Gerente de Ingeniería y Desarrollador Frontend",
-    "subtitle": "Gerente de Ingeniería con más de una década de experiencia en TI, especializado en desarrollo frontend y liderazgo de equipos. Basado en Buenos Aires, Argentina.",
-    "contact": "Contáctame",
+    "badge": "Disponible para proyectos selectos",
+    "role": { "a": "Fundador", "b": "Líder de ingeniería" },
+    "subtitle": "Fundador de <strong>4etverg</strong>, ex Engineering Manager en <strong>Pipedrive</strong>. Quince años construyendo productos y los equipos que los lanzan. Ayudo a las empresas a llevar la IA de la demo a algo confiable.",
+    "contact": "Contactame",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
-  },
-  "languages": {
-    "en": "Inglés",
-    "ru": "Ruso",
-    "es": "Español"
-  },
-  "Index": {
-    "title": "Bienvenido a Mi Portafolio",
-    "description": "Desarrollador Frontend y Gerente de Ingeniería"
-  },
-  "Navigation": {
-    "home": "Inicio",
-    "skills": "Habilidades",
-    "experience": "Experiencia",
-    "contact": "Contacto",
-    "projects": "Proyectos",
-    "consultation": "Contrátame"
+    "github": "GitHub",
+    "loc": "Buenos Aires, AR"
   },
   "projects": {
-    "title": "Proyectos",
-    "subtitle": "Mis proyectos más grandes",
-    "viewProject": "Ver Proyecto",
-    "viewCode": "Ver Código",
-    "filmstruck": {
-      "title": "FilmStruck",
-      "description": "Servicio de streaming de Turner Classic Movies centrado en cine raro, clásico, extranjero, de autor e independiente. Lideré un equipo que mejoró el rendimiento e implementó una refactorización significativa para mejorar la experiencia del usuario."
-    },
-    "pipedrive": {
-      "title": "Pipedrive",
-      "description": "Plataforma CRM diseñada para ayudar a los vendedores a gestionar procesos de ventas complejos. Contribuí a bibliotecas de UI, lanzamientos de funciones y mejoras de la plataforma mientras me enfocaba en la excelencia técnica."
-    },
-    "channel4": {
-      "title": "Channel 4",
-      "description": "Emisora de televisión británica de servicio público con una avanzada plataforma de streaming digital. Trabajé en mejorar la experiencia del usuario, el rendimiento de streaming y la modernización de la arquitectura frontend."
-    }
-  },
-  "consultation": {
-    "title": "Contrátame",
-    "subtitle": "Reserva una sesión de consulta conmigo",
-    "option1": {
-      "title": "Consulta de 1 hora",
-      "price": "400 USD",
-      "description": "Consulta completa para discutir tu proyecto, abordar desafíos específicos u obtener consejos de expertos en desarrollo frontend y gestión de equipos."
-    },
-    "option2": {
-      "title": "Consulta de 30 minutos",
-      "price": "250 USD",
-      "description": "Sesión rápida para responder tus preguntas y proporcionar orientación sobre problemas técnicos específicos o desarrollo profesional en ingeniería frontend."
-    },
-    "option3": {
-      "title": "Consulta personalizada",
-      "price": "Hablemos",
-      "description": "¿Necesitas algo diferente? Discutamos tus requisitos específicos y creemos un paquete de consulta personalizado."
-    },
-    "payButton": "Pagar con Cwallet",
-    "contactForCustom": "Contáctame para opciones personalizadas"
+    "kicker": "Trabajo seleccionado",
+    "title": "Cosas que construí",
+    "lingualex": { "description": "Una plataforma de aprendizaje de idiomas nativa de Telegram: lee historias adaptadas y niveladas, toca cualquier palabra para aprenderla, con progreso personalizado en 16 idiomas. Construida con React y Supabase." },
+    "agent-os": { "description": "Un framework de orquestación para construir agentes de IA confiables y de múltiples pasos en producción: herramientas tipadas, ejecuciones trazables y fallas elegantes." }
   },
   "experience": {
-    "title": "Experiencia Laboral",
-    "subtitle": "Mi trayectoria profesional",
-    "present": "Presente",
-    "fullExperience": "Experiencia Laboral Completa",
+    "kicker": "Experiencia",
+    "title": "Dónde lideré",
+    "current": "Actual",
+    "4etverg": {
+      "company": "4etverg",
+      "position": "Fundador",
+      "period": "Diciembre 2025 – Presente",
+      "location": "Buenos Aires",
+      "achievements": [
+        "Fundé un estudio de productos de IA que lanza herramientas agentic y productos con LLM para startups y scaleups.",
+        "Llevo proyectos de punta a punta — desde discovery y arquitectura hasta un pequeño equipo senior en producción.",
+        "Creé Agent-OS, un framework interno para agentes de IA confiables de múltiples pasos.",
+        "Asesoro fundadores sobre estrategia de IA, contratación técnica y ejecución de cero a uno."
+      ]
+    },
+    "career-break": {
+      "company": "Pausa profesional",
+      "position": "I+D independiente",
+      "period": "Julio 2025 – Diciembre 2025",
+      "location": "Buenos Aires",
+      "achievements": [
+        "Prototipé workflows multiagente autónomos de desarrollo end to end.",
+        "Validé la tesis de estudio que terminó siendo 4etverg."
+      ]
+    },
     "nda-igaming": {
       "company": "NDA iGaming",
       "position": "Chief Technology Officer",
-      "period": "Mayo 2024 - Julio 2025",
+      "period": "Mayo 2024 – Julio 2025",
       "location": "Remoto",
-      "description": "Transformé una empresa en crecimiento en los sectores iGaming y Crypto en una organización exitosa, gestionando todo el stack tecnológico y estableciendo procesos esenciales para mejorar la comunicación y la gestión de proyectos.",
       "achievements": [
-        "Construí el equipo de desarrollo de 1 a 7 desarrolladores full-time talentosos",
-        "Construí desde cero el sistema operativo de la empresa: gestión de accesos y usuarios, herramientas (Jira/Confluence), cadencia de reuniones, rituales de planificación y roadmapping",
-        "Lancé 5 nuevos juegos e incrementé significativamente la velocidad de desarrollo",
-        "Colaboré con el CEO para definir estrategias de ventas y marketing que impulsaron el crecimiento del negocio"
+        "Lideré la organización de ingeniería en plataforma, datos y equipos de producto.",
+        "Escalé una plataforma en tiempo real con objetivos estrictos de uptime y latencia.",
+        "Establecí prácticas de SRE y on-call para confiabilidad, pagos y compliance.",
+        "Definí la estrategia técnica y el estándar de contratación para toda la organización."
       ]
     },
     "pipedrive": {
       "company": "Pipedrive",
-      "position": "Gerente de Ingeniería",
-      "period": "Septiembre 2017 - Septiembre 2023",
+      "position": "Engineering Manager",
+      "period": "Septiembre 2017 – Septiembre 2023",
       "location": "Tallinn, Estonia",
-      "description": "Comencé como Desarrollador Frontend Senior y progresé a Gerente de Ingeniería, liderando un equipo de hasta 20 ingenieros. Fomentando una cultura positiva enfocada en la excelencia técnica.",
       "achievements": [
-        "Lideré un equipo de hasta 20 ingenieros, transformando un equipo en dificultades",
-        "Facilité colaboraciones entre equipos para lograr objetivos compartidos",
-        "Entregué una renovación significativa de características, superando las expectativas",
-        "Contribuí a bibliotecas de UI, lanzamientos de funciones y mejoras de la plataforma"
+        "Lideré squads multifuncionales en el core de la plataforma CRM usada por cientos de miles de equipos.",
+        "Hice crecer y mentoreé ingenieros, construyendo el hiring loop y una carrera clara.",
+        "Trabajé con producto y diseño para lanzar features del roadmap más rápido."
       ]
     },
     "accenture": {
       "company": "Accenture",
-      "position": "Líder de Equipo Frontend",
-      "period": "Enero 2016 - Septiembre 2017",
+      "position": "Frontend Team Lead",
+      "period": "Enero 2016 – Septiembre 2017",
       "location": "Riga, Letonia",
-      "description": "Lancé un servicio de streaming de video, mejorando el rendimiento 5 veces y reduciendo la deuda técnica en un 89%. Implementé nuevos flujos de trabajo y prioricé el aprendizaje continuo.",
       "achievements": [
-        "Lancé un servicio de streaming de video con mejora de rendimiento 5x",
-        "Reduje la deuda técnica en un 89% mediante refactorización estratégica",
-        "Implementé nuevos flujos de trabajo para optimizar la productividad del equipo",
-        "Prioricé el aprendizaje continuo y el desarrollo profesional del equipo"
+        "Lideré equipos de entrega construyendo software empresarial para clientes internacionales.",
+        "Responsable de calidad técnica, decisiones de arquitectura y relación con clientes.",
+        "Mentoreé ingenieros y fijé estándares en equipos distribuidos."
       ]
     }
   },
-  "footer": {
-    "tagline": "Gerente de Ingeniería y Desarrollador Frontend con una década de experiencia en la construcción de aplicaciones web de alta calidad y liderazgo de equipos de desarrollo.",
-    "navigation": "Navegación",
-    "contact": "Contacto",
-    "rights": "Todos los derechos reservados.",
-    "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio"
+  "skills": {
+    "kicker": "Capacidades",
+    "title": "Lo que aporto",
+    "g1": "Liderazgo",
+    "g2": "IA y producto",
+    "g3": "Ingeniería",
+    "l1": "Liderazgo de ingeniería",
+    "l2": "Construcción de equipos",
+    "l3": "Hiring y diseño organizacional",
+    "l4": "Estrategia técnica",
+    "l5": "Mentoría",
+    "l6": "Fractional CTO",
+    "a1": "Sistemas LLM",
+    "a2": "Arquitecturas agentic",
+    "a3": "Estrategia de producto",
+    "a4": "Ejecución 0→1",
+    "a5": "Due diligence técnica",
+    "e1": "Sistemas distribuidos",
+    "e2": "Platform & infra",
+    "e3": "Observabilidad"
   },
-  "privacy": {
-    "introduction": {
-      "title": "Introducción",
-      "content": "Bienvenido al sitio web de portafolio de Konstantin Vanichkin. Respeto tu privacidad y estoy comprometido a proteger tus datos personales. Esta política de privacidad explica cómo recopilo, uso y protejo tu información cuando utilizas mi sitio web."
-    },
-    "information": {
-      "title": "Información que Recopilo",
-      "content": "Puedo recopilar, utilizar y almacenar los siguientes tipos de información cuando visitas mi sitio web:",
-      "items": {
-        "usage": "Datos de uso como la forma en que interactúas con mi sitio web, páginas visitadas, tiempo de permanencia y otros datos de diagnóstico.",
-        "contact": "Información de contacto que proporcionas al comunicarte conmigo, incluyendo tu nombre, dirección de correo electrónico y el contenido de tu mensaje.",
-        "cookies": "Cookies y tecnologías de seguimiento similares que ayudan a mejorar tu experiencia."
-      }
-    },
-    "usage": {
-      "title": "Cómo Uso Tu Información",
-      "content": "Utilizo la información que recopilo para diversos fines, incluyendo:",
-      "items": {
-        "service": "Proporcionar y mantener mi sitio web.",
-        "communication": "Responder a tus consultas y mantener la comunicación.",
-        "improvement": "Mejorar mi sitio web y servicios basados en cómo los visitantes interactúan con él."
-      }
-    },
-    "sharing": {
-      "title": "Compartir Información",
-      "content": "No vendo, intercambio ni alquilo tu información personal a terceros. Puedo compartir información con proveedores de servicios que me ayudan a operar mi sitio web, pero están obligados a mantener tu información confidencial."
-    },
-    "cookies": {
-      "title": "Política de Cookies",
-      "content": "Mi sitio web puede utilizar cookies para mejorar tu experiencia. Puedes configurar tu navegador para rechazar todas o algunas cookies del navegador, pero esto puede impedir que algunas partes del sitio web funcionen correctamente."
-    },
-    "security": {
-      "title": "Seguridad",
-      "content": "Valoro tu confianza e implemento medidas de seguridad apropiadas para proteger tu información personal. Sin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro, por lo que no puedo garantizar la seguridad absoluta."
-    },
-    "changes": {
-      "title": "Cambios en esta Política",
-      "content": "Puedo actualizar esta política de privacidad de vez en cuando. Te notificaré cualquier cambio publicando la nueva política en esta página con una fecha de revisión actualizada."
-    },
-    "contact": {
-      "title": "Contáctame",
-      "content": "Si tienes alguna pregunta sobre esta política de privacidad, por favor contáctame en:"
-    }
+  "contact": {
+    "kicker": "Trabajar conmigo",
+    "title": "Construyamos algo confiable.",
+    "body": "Tomo unos pocos proyectos a la vez: trabajo como CTO fraccional, desarrollo de productos de IA y asesoría técnica. Si es lo que necesitás, me gustaría saber de vos."
   },
-  "terms": {
-    "introduction": {
-      "title": "Introducción",
-      "content": "Bienvenido al sitio web de portafolio de Konstantin Vanichkin. Al acceder a este sitio web, aceptas estar sujeto a estos Términos de Servicio, todas las leyes y regulaciones aplicables, y estás de acuerdo en que eres responsable del cumplimiento de cualquier ley local aplicable."
-    },
-    "services": {
-      "title": "Servicios Ofrecidos",
-      "content": "A través de este sitio web, ofrezco varios servicios profesionales, que incluyen pero no se limitan a:",
-      "items": {
-        "consulting": "Consultoría técnica y servicios de asesoramiento relacionados con el desarrollo frontend y la gestión de ingeniería.",
-        "development": "Desarrollo de software personalizado y soluciones técnicas.",
-        "mentoring": "Mentoría profesional y orientación de carrera en el campo tecnológico."
-      }
-    },
-    "payments": {
-      "title": "Pagos y Tarifas",
-      "content": "Todas las tarifas por servicios de consulta se detallan en el sitio web. El pago es requerido antes de la entrega de los servicios a menos que se acuerde lo contrario por escrito. Todos los pagos se procesan a través de procesadores de pago de terceros seguros."
-    },
-    "intellectual": {
-      "title": "Propiedad Intelectual",
-      "content": "El contenido de este sitio web, incluidos texto, gráficos, logotipos e imágenes, es propiedad de Konstantin Vanichkin y está protegido por derechos de autor y otras leyes de propiedad intelectual. No puedes usar, reproducir o distribuir ningún contenido de este sitio web sin permiso previo por escrito."
-    },
-    "termination": {
-      "title": "Terminación de Servicios",
-      "content": "Me reservo el derecho de terminar o suspender el acceso a mis servicios inmediatamente, sin previo aviso ni responsabilidad, por cualquier motivo, incluyendo sin limitación si incumples estos Términos de Servicio."
-    },
-    "limitation": {
-      "title": "Limitación de Responsabilidad",
-      "content": "En ningún caso Konstantin Vanichkin será responsable por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluyendo sin limitación, pérdida de ganancias, datos, uso, buena voluntad u otras pérdidas intangibles, resultantes de tu acceso o uso o incapacidad para acceder o usar los servicios."
-    },
-    "governing": {
-      "title": "Ley Aplicable",
-      "content": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de Argentina, sin tener en cuenta sus disposiciones sobre conflictos de leyes."
-    },
-    "changes": {
-      "title": "Cambios en los Términos",
-      "content": "Me reservo el derecho, a mi exclusivo criterio, de modificar o reemplazar estos Términos en cualquier momento. Es tu responsabilidad revisar estos Términos periódicamente para verificar cambios. Tu uso continuado de este sitio web después de la publicación de cualquier cambio en estos Términos constituye la aceptación de esos cambios."
-    },
-    "contact": {
-      "title": "Información de Contacto",
-      "content": "Si tienes alguna pregunta sobre estos Términos, por favor contáctame en:"
-    }
-  }
+  "footer": { "tagline": "Hecho en Buenos Aires", "top": "Volver arriba ↑" }
 }
