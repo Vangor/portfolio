@@ -1,9 +1,6 @@
-'use client';
-
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import i18n, { locales, type Locale } from '@/i18n/client';
-import { LanguageButton, LanguageContainer } from './LanguageSwitcher.styled';
 
 const resolveLocale = (): Locale => {
   const locale = i18n.resolvedLanguage || i18n.language;
@@ -29,22 +26,24 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <LanguageContainer aria-label="Language switcher">
+    <div className="inline-flex rounded-full border border-border/80 bg-background p-1" aria-label="Language switcher">
       {locales.map(locale => {
         const active = currentLocale === locale;
-
         return (
-          <LanguageButton
+          <button
             key={locale}
             type="button"
             aria-pressed={active}
             onClick={() => switchLanguage(locale)}
-            className={active ? 'bg-foreground text-background shadow-sm' : ''}
+            className={[
+              'h-9 rounded-full px-3.5 text-[12px] font-medium tracking-[0.14em] transition-all',
+              active ? 'bg-foreground text-background shadow-sm' : 'text-muted-foreground hover:text-foreground',
+            ].join(' ')}
           >
             {locale.toUpperCase()}
-          </LanguageButton>
+          </button>
         );
       })}
-    </LanguageContainer>
+    </div>
   );
 };

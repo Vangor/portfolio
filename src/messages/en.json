@@ -1,92 +1,54 @@
 {
-  "header": {
-    "title": "Konstantin Vanichkin"
-  },
+  "header": { "title": "Konstantin Vanichkin" },
   "nav": {
     "experience": "Experience",
     "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact"
   },
+  "common": { "visit": "Visit project" },
   "hero": {
     "badge": "Available for select engagements",
-    "role": {
-      "a": "Founder",
-      "b": "Engineering Leader"
-    },
-    "subtitle": "Founder of <strong>4etverg</strong>, an AI product studio in Buenos Aires. Former CTO and engineering manager at <strong>Pipedrive</strong>. Fifteen years turning ambiguous problems into products, and the teams that ship them. I help companies move AI from demo to dependable.",
+    "role": { "a": "Founder", "b": "Engineering Leader" },
+    "subtitle": "Founder of <strong>4etverg</strong>, an AI product studio in Buenos Aires. Former CTO at <strong>NDA iGaming</strong> and engineering manager at <strong>Pipedrive</strong>. Fifteen years turning ambiguous problems into products and the teams that ship them. I help companies move AI from demo to dependable.",
     "contact": "Get in touch",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "loc": "Buenos Aires, AR",
-    "title": "Founder & Engineering Leader"
-  },
-  "languages": {
-    "en": "English",
-    "ru": "Russian",
-    "es": "Spanish"
-  },
-  "common": {
-    "visit": "Visit"
-  },
-  "Index": {
-    "title": "Konstantin Vanichkin — Founder & Engineering Leader",
-    "description": "Founder of 4etverg, an AI product studio in Buenos Aires. Former CTO and engineering manager at Pipedrive. Building dependable AI products and the systems that ship them."
-  },
-  "Navigation": {
-    "home": "Home",
-    "skills": "Skills",
-    "experience": "Experience",
-    "contact": "Contact",
-    "projects": "Projects",
-    "consultation": "Work with me"
+    "loc": "Buenos Aires, AR"
   },
   "projects": {
+    "kicker": "Selected work",
     "title": "Things I've built",
-    "subtitle": "Products I built and platforms I shaped",
-    "viewProject": "View Project",
-    "viewCode": "View Code",
     "lingualex": {
-      "title": "LinguaLex",
-      "description": "AI language learning on Telegram. Build your own vocabulary and get daily short stories that weave in your words, adapted from public-domain books. Live product at lingualex.app."
+      "description": "An AI assistant that turns dense contracts into plain, reviewable language — built to keep a lawyer in the loop, not replace one."
     },
     "agent-os": {
-      "title": "4etverg Agent-OS",
-      "description": "Autonomous agent fleet: a shared knowledge layer (Cortex) + self-reviewing and self-merging drone agents + a claudops pipeline. Lets one founder ship like a team of ten."
-    },
-    "kicker": "Selected work"
-  },
-  "consultation": {
-    "title": "Let's build something dependable.",
-    "cta": "hello@4etverg.com",
-    "kicker": "Work with me",
-    "body": "I take on a small number of engagements at a time - fractional CTO work, AI product builds, and technical advisory. If that's what you need, I'd like to hear from you."
+      "description": "An orchestration framework for building reliable, multi-step AI agents in production — typed tools, traceable runs, graceful failure."
+    }
   },
   "experience": {
+    "kicker": "Experience",
     "title": "Where I've led",
-    "present": "Present",
-    "fullExperience": "Full Work Experience",
-    "fetverg": {
+    "current": "Current",
+    "4etverg": {
       "company": "4etverg",
       "position": "Founder",
       "period": "December 2025 – Present",
-      "location": "Buenos Aires, Argentina",
-      "description": "Founded an AI product studio and ship AI products end-to-end.",
+      "location": "Buenos Aires",
       "achievements": [
-        "Built AI products end-to-end for startups and client engagements.",
-        "Created Agent-OS, an internal framework for reliable multi-step agent workflows.",
-        "Lead engagements with research, architecture, and a small senior team shipping to production.",
+        "Founded an AI product studio shipping agentic tools and LLM-backed products for startups and scaleups.",
+        "Lead engagements end to end — discovery, architecture, and a small senior team delivering to production.",
+        "Built Agent-OS, an in-house framework for orchestrating reliable, multi-step AI agents.",
         "Advise founders on AI strategy, technical hiring, and zero-to-one execution."
       ]
     },
     "career-break": {
       "company": "Career Break",
-      "position": "Independent R&D (AI agent systems)",
+      "position": "Independent R&D",
       "period": "July 2025 – December 2025",
-      "location": "Buenos Aires, Argentina",
-      "description": "Focused on AI agent orchestration and autonomous developer tooling that became 4etverg.",
+      "location": "Buenos Aires",
       "achievements": [
-        "Prototyped autonomous multi-agent development workflows end-to-end.",
+        "Prototyped autonomous multi-agent development workflows end to end.",
         "Validated the studio thesis that became 4etverg."
       ]
     },
@@ -95,12 +57,11 @@
       "position": "Chief Technology Officer",
       "period": "May 2024 – July 2025",
       "location": "Remote",
-      "description": "Ran the engineering organization across platform, data, and product teams.",
       "achievements": [
-        "Scaled a real-time platform under strict uptime and latency targets.",
-        "Established SRE and on-call practice for reliability, payments, and compliance.",
-        "Set the technical strategy and hiring bar for the organization.",
-        "Built the development team from 1 to 7 full-time engineers."
+        "Owned the engineering organization across platform, data, and product teams.",
+        "Scaled a real-time platform for high-concurrency, low-latency workloads under strict uptime targets.",
+        "Established SRE and on-call practice — hardening reliability, payments, and compliance.",
+        "Set the technical strategy and hiring bar for the whole organization."
       ]
     },
     "pipedrive": {
@@ -108,12 +69,10 @@
       "position": "Engineering Manager",
       "period": "September 2017 – September 2023",
       "location": "Tallinn, Estonia",
-      "description": "Led cross-functional squads in the core CRM platform used by hundreds of thousands of teams.",
       "achievements": [
-        "Grew and mentored engineers while building hiring loops and a clear career ladder.",
-        "Partnered with product and design to ship roadmap features and improve delivery speed.",
-        "Led squads across the product's most-used surfaces.",
-        "Helped shape UI libraries, feature launches, and platform improvements."
+        "Led cross-functional squads in the core CRM platform used by hundreds of thousands of teams.",
+        "Grew and mentored engineers; built hiring loops and a clear career ladder.",
+        "Partnered with product and design to ship roadmap features and lift delivery velocity."
       ]
     },
     "accenture": {
@@ -121,123 +80,41 @@
       "position": "Frontend Team Lead",
       "period": "January 2016 – September 2017",
       "location": "Riga, Latvia",
-      "description": "Led delivery teams building enterprise software for international clients.",
       "achievements": [
+        "Led delivery teams building enterprise software for international clients.",
         "Owned technical quality, architecture decisions, and client relationships.",
-        "Mentored engineers and set standards across distributed teams.",
-        "Contributed to enterprise software delivery for international clients."
+        "Mentored engineers and set standards across distributed teams."
       ]
-    },
-    "kicker": "Experience",
-    "current": "Current"
+    }
   },
   "skills": {
-    "title": "What I bring",
-    "subtitle": "Technologies and practices I work with",
-    "frontend": "Frontend",
-    "backend": "Backend & Data",
-    "tools": "Tools & Infrastructure",
-    "management": "Leadership",
-    "ai": "AI & Agents",
     "kicker": "Capabilities",
+    "title": "What I bring",
     "g1": "Leadership",
     "g2": "AI & Product",
-    "g3": "Engineering"
+    "g3": "Engineering",
+    "l1": "Engineering leadership",
+    "l2": "Team building",
+    "l3": "Hiring & org design",
+    "l4": "Technical strategy",
+    "l5": "Mentorship",
+    "l6": "Fractional CTO",
+    "a1": "LLM systems",
+    "a2": "Agentic architectures",
+    "a3": "Product strategy",
+    "a4": "0→1 execution",
+    "a5": "Technical due diligence",
+    "e1": "Distributed systems",
+    "e2": "Platform & infra",
+    "e3": "Observability"
+  },
+  "contact": {
+    "kicker": "Work with me",
+    "title": "Let's build something dependable.",
+    "body": "I take on a small number of engagements at a time — fractional CTO work, AI product builds, and technical advisory. If that's what you need, I'd like to hear from you."
   },
   "footer": {
     "tagline": "Built in Buenos Aires",
-    "navigation": "Navigation",
-    "contact": "Contact",
-    "rights": "All Rights Reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
     "top": "Back to top ↑"
-  },
-  "privacy": {
-    "introduction": {
-      "title": "Introduction",
-      "content": "Welcome to the Konstantin Vanichkin portfolio website. I respect your privacy and am committed to protecting your personal data. This privacy policy explains how I collect, use, and protect your information when you use my website."
-    },
-    "information": {
-      "title": "Information I Collect",
-      "content": "I may collect, use, and store the following types of information when you visit my website:",
-      "items": {
-        "usage": "Usage data such as how you interact with my website, pages visited, time spent, and other diagnostic data.",
-        "contact": "Contact information you provide when reaching out to me, including your name, email address, and the content of your message.",
-        "cookies": "Cookies and similar tracking technologies that help enhance your experience."
-      }
-    },
-    "usage": {
-      "title": "How I Use Your Information",
-      "content": "I use the information I collect for various purposes, including:",
-      "items": {
-        "service": "To provide and maintain my website.",
-        "communication": "To respond to your inquiries and maintain communication.",
-        "improvement": "To improve my website and services based on how visitors interact with it."
-      }
-    },
-    "sharing": {
-      "title": "Information Sharing",
-      "content": "I do not sell, trade, or rent your personal information to third parties. I may share information with service providers who assist me in operating my website, but they are obligated to keep your information confidential."
-    },
-    "cookies": {
-      "title": "Cookie Policy",
-      "content": "My website may use cookies to enhance your experience. You can set your browser to refuse all or some browser cookies, but this may prevent some parts of the website from functioning properly."
-    },
-    "security": {
-      "title": "Security",
-      "content": "I value your trust and implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, so I cannot guarantee absolute security."
-    },
-    "changes": {
-      "title": "Changes to This Policy",
-      "content": "I may update this privacy policy from time to time. I will notify you of any changes by posting the new policy on this page with an updated revision date."
-    },
-    "contact": {
-      "title": "Contact Me",
-      "content": "If you have any questions about this privacy policy, please contact me at:"
-    }
-  },
-  "terms": {
-    "introduction": {
-      "title": "Introduction",
-      "content": "Welcome to Konstantin Vanichkin's portfolio website. By accessing this website, you agree to be bound by these Terms of Service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws."
-    },
-    "services": {
-      "title": "Services Offered",
-      "content": "Through this website, I offer various professional services, including but not limited to:",
-      "items": {
-        "consulting": "Technical consulting and advisory services related to product development, AI systems, and engineering leadership.",
-        "development": "Custom software development and technical solutions.",
-        "mentoring": "Professional mentoring and career guidance in the tech field."
-      }
-    },
-    "payments": {
-      "title": "Payments and Fees",
-      "content": "Any fees for services are discussed and agreed upon directly. All payments are processed through secure third-party payment processors."
-    },
-    "intellectual": {
-      "title": "Intellectual Property",
-      "content": "The content on this website, including text, graphics, logos, and images, is the property of Konstantin Vanichkin and is protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content from this website without prior written permission."
-    },
-    "termination": {
-      "title": "Termination of Services",
-      "content": "I reserve the right to terminate or suspend access to my services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms of Service."
-    },
-    "limitation": {
-      "title": "Limitation of Liability",
-      "content": "In no event shall Konstantin Vanichkin be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the services."
-    },
-    "governing": {
-      "title": "Governing Law",
-      "content": "These Terms shall be governed and construed in accordance with the laws of Argentina, without regard to its conflict of law provisions."
-    },
-    "changes": {
-      "title": "Changes to Terms",
-      "content": "I reserve the right, at my sole discretion, to modify or replace these Terms at any time. It is your responsibility to check these Terms periodically for changes. Your continued use of this website following the posting of any changes to these Terms constitutes acceptance of those changes."
-    },
-    "contact": {
-      "title": "Contact Information",
-      "content": "If you have any questions about these Terms, please contact me at:"
-    }
   }
 }

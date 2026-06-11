@@ -6,15 +6,6 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
-  {
-    id: 'lingualex',
-    tag: 'AI · Legal tech',
-    href: 'https://lingualex.app',
-    external: true,
-  },
-  {
-    id: 'agent-os',
-    tag: '4etverg · Framework',
-    external: false,
-  },
+  { id: 'lingualex', tag: 'AI · Legal tech', href: 'https://lingualex.app', external: true },
+  { id: 'agent-os', tag: '4etverg · Framework', external: false },
 ];

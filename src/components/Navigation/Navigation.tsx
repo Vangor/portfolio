@@ -1,32 +1,22 @@
-'use client';
-
 import { useTranslation } from 'react-i18next';
-import { NavContainer, NavLink, NavTitle } from './Navigation.styled';
 
-type NavigationProps = {
-  showTitle?: boolean;
-  className?: string;
-};
-
-export const Navigation = ({ showTitle = false, className = '' }: NavigationProps) => {
+export const Navigation = () => {
   const { t } = useTranslation();
 
-  const navItems = [
-    { key: 'experience', href: '#experience' },
-    { key: 'projects', href: '#projects' },
-    { key: 'skills', href: '#skills' },
-    { key: 'contact', href: '#contact' },
-  ];
-
   return (
-    <NavContainer className={className}>
-      {showTitle ? <NavTitle>{t('footer.navigation')}</NavTitle> : null}
-
-      {navItems.map(item => (
-        <NavLink key={item.key} href={item.href}>
-          {t(`nav.${item.key}`)}
-        </NavLink>
-      ))}
-    </NavContainer>
+    <>
+      <a href="#experience" className="transition-colors hover:text-foreground">
+        {t('nav.experience')}
+      </a>
+      <a href="#projects" className="transition-colors hover:text-foreground">
+        {t('nav.projects')}
+      </a>
+      <a href="#skills" className="transition-colors hover:text-foreground">
+        {t('nav.skills')}
+      </a>
+      <a href="#contact" className="transition-colors hover:text-foreground">
+        {t('nav.contact')}
+      </a>
+    </>
   );
 };
