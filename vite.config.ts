@@ -16,7 +16,8 @@ export default defineConfig(() => ({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./src/utils/test-utils.tsx'],
+    setupFiles: ['./src/utils/vitest-setup.ts', './src/utils/test-utils.tsx'],
+    include: ['src/**/*.{test,spec}.{ts,tsx,js,mjs,cjs}'],
     exclude: ['node_modules/**', '.bun-cache/**', 'dist/**'],
     coverage: {
       provider: 'v8',

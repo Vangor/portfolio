@@ -2,6 +2,7 @@
 import React, { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
+import '@/i18n/client';
 import { portfolioTheme } from '@/lib/themes';
 
 // Create a custom renderer that includes providers

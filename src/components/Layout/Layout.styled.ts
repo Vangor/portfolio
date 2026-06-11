@@ -6,10 +6,7 @@ export const MainContainer = tw.div`
   flex-col
 `;
 
-export const Content = tw.div`
-  flex-grow
-  container
-  mx-auto
-  px-4
-  py-8
+export const Content = tw.main`
+  flex-1
+  w-full
 `;

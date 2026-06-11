@@ -4,19 +4,28 @@
   },
   "hero": {
     "title": "Fundador y Líder de Ingeniería",
-    "subtitle": "Construyo productos nativos de IA y los sistemas — humanos y de agentes — que los entregan. Más de 10 años en IT: IC → Gerente de Ingeniería (20 ingenieros) → CTO → fundador de 4etverg, un estudio de productos de IA en Buenos Aires.",
-    "contact": "Contáctame",
+    "subtitle": "Fundador de <strong>4etverg</strong>, un estudio de productos de IA en Buenos Aires. Ex-CTO y engineering manager en <strong>Pipedrive</strong>. Quince años convirtiendo problemas ambiguos en productos y en los equipos que los lanzan. Ayudo a las empresas a llevar la IA de la demo a algo confiable.",
+    "contact": "Contactame",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "badge": "Disponible para proyectos selectos",
+    "role": {
+      "a": "Fundador",
+      "b": "Líder de ingeniería"
+    },
+    "loc": "Buenos Aires, AR"
   },
   "languages": {
     "en": "Inglés",
     "ru": "Ruso",
     "es": "Español"
   },
+  "common": {
+    "visit": "Visitar"
+  },
   "Index": {
     "title": "Konstantin Vanichkin — Fundador y Líder de Ingeniería",
-    "description": "Fundador de 4etverg, un estudio de productos de IA en Buenos Aires. Más de 10 años en IT: IC → Gerente de Ingeniería → CTO → Fundador."
+    "description": "Fundador de 4etverg, un estudio de productos de IA en Buenos Aires. Ex-CTO y engineering manager en Pipedrive. Construyendo productos de IA confiables y los sistemas que los entregan."
   },
   "Navigation": {
     "home": "Inicio",
@@ -27,7 +36,7 @@
     "consultation": "Trabajar juntos"
   },
   "projects": {
-    "title": "Proyectos Seleccionados",
+    "title": "Cosas que construí",
     "subtitle": "Productos que construí y plataformas que moldé",
     "viewProject": "Ver Proyecto",
     "viewCode": "Ver Código",
@@ -39,25 +48,16 @@
       "title": "4etverg Agent-OS",
       "description": "Flota de agentes autónomos: una capa de conocimiento compartido (Cortex) + agentes dron que se auto-revisan y auto-fusionan + un pipeline claudops. Permite que un fundador trabaje como un equipo de diez."
     },
-    "pipedrive": {
-      "title": "Pipedrive",
-      "description": "Plataforma CRM diseñada para ayudar a los vendedores a gestionar procesos de ventas complejos. Contribuí a bibliotecas de UI, lanzamientos de funciones y mejoras de la plataforma mientras me enfocaba en la excelencia técnica."
-    },
-    "channel4": {
-      "title": "Channel 4",
-      "description": "Emisora de televisión británica de servicio público con una avanzada plataforma de streaming digital. Trabajé en mejorar la experiencia del usuario, el rendimiento de streaming y la modernización de la arquitectura frontend."
-    }
+    "kicker": "Trabajo seleccionado"
   },
   "consultation": {
-    "title": "Trabajar juntos",
-    "subtitle": "¿Interesado en construir algo juntos, necesitas un interlocutor técnico o estás explorando una colaboración?",
-    "description": "Estoy abierto a compromisos de asesoramiento, trabajo fraccionado como CTO y colaboraciones de productos. Escríbeme y hablemos sobre lo que estás construyendo.",
-    "cta": "Ponerse en contacto",
-    "telegram": "Escribir en Telegram",
-    "email": "Enviar un correo"
+    "title": "Construyamos algo confiable.",
+    "cta": "hello@4etverg.com",
+    "kicker": "Trabajá conmigo",
+    "body": "Tomo unos pocos proyectos a la vez - trabajo como CTO fraccional, desarrollo de productos de IA y asesoría técnica. Si es lo que necesitás, me gustaría saber de vos."
   },
   "experience": {
-    "title": "Experiencia Laboral",
+    "title": "Dónde lideré",
     "present": "Presente",
     "fullExperience": "Experiencia Laboral Completa",
     "fetverg": {
@@ -65,22 +65,22 @@
       "position": "Fundador",
       "period": "Diciembre 2025 – Presente",
       "location": "Buenos Aires, Argentina",
-      "description": "Fundé un estudio de productos nativos de IA. Construyo y entrego productos de IA de principio a fin — y construí la flota de agentes autónomos que los entrega.",
+      "description": "Fundé un estudio de productos de IA y entrego productos de IA de principio a fin.",
       "achievements": [
-        "Lancé LinguaLex, una app de aprendizaje de idiomas con IA en Telegram (activa).",
-        "Construí una flota de agentes autónomos (capa de conocimiento Cortex + flota dron) que planifica, implementa, revisa y fusiona código de producción.",
-        "Entrego múltiples productos en solitario al ritmo de un equipo pequeño mediante un pipeline claudops propio.",
-        "Entrego software de negocio vertical para clientes (reservas/pagos/operaciones)."
+        "Construyo productos de IA de principio a fin para startups y clientes.",
+        "Creé Agent-OS, un framework interno para workflows agénticos confiables de múltiples pasos.",
+        "Llevo proyectos desde research y arquitectura hasta producción con un pequeño equipo senior.",
+        "Asesoro fundadores sobre estrategia de IA, contratación técnica y ejecución de cero a uno."
       ]
     },
     "career-break": {
-      "company": "Pausa Profesional",
-      "position": "I&D Independiente — sistemas de agentes de IA",
+      "company": "Pausa profesional",
+      "position": "I+D independiente (sistemas de agentes de IA)",
       "period": "Julio 2025 – Diciembre 2025",
       "location": "Buenos Aires, Argentina",
-      "description": "Una pausa deliberada para profundizar en la orquestación de agentes de IA y las herramientas de desarrollo autónomo — las investigaciones y prototipos que se convirtieron en 4etverg.",
+      "description": "Me enfoqué en la orquestación de agentes de IA y herramientas autónomas para desarrolladores que dieron origen a 4etverg.",
       "achievements": [
-        "Prototipé flujos de trabajo de desarrollo multi-agente autónomo de extremo a extremo.",
+        "Prototipé workflows multiagente autónomos de desarrollo end-to-end.",
         "Validé la tesis del estudio que se convirtió en 4etverg."
       ]
     },
@@ -89,57 +89,63 @@
       "position": "Chief Technology Officer",
       "period": "Mayo 2024 – Julio 2025",
       "location": "Remoto",
-      "description": "Transformé una empresa en crecimiento en los sectores iGaming y Crypto en una organización exitosa, gestionando todo el stack tecnológico y estableciendo procesos esenciales para mejorar la comunicación y la gestión de proyectos.",
+      "description": "Lideré la organización de ingeniería en plataforma, datos y equipos de producto.",
       "achievements": [
-        "Construí el equipo de desarrollo de 1 a 7 desarrolladores full-time talentosos",
-        "Construí desde cero el sistema operativo de la empresa: gestión de accesos y usuarios, herramientas (Jira/Confluence), cadencia de reuniones, rituales de planificación y roadmapping",
-        "Lancé 5 nuevos juegos e incrementé significativamente la velocidad de desarrollo",
-        "Colaboré con el CEO para definir estrategias de ventas y marketing que impulsaron el crecimiento del negocio"
+        "Escalé una plataforma en tiempo real bajo estrictos objetivos de uptime y latencia.",
+        "Establecí prácticas de SRE y on-call para confiabilidad, pagos y compliance.",
+        "Definí la estrategia técnica y el estándar de contratación para la organización.",
+        "Construí el equipo de desarrollo de 1 a 7 ingenieros full-time."
       ]
     },
     "pipedrive": {
       "company": "Pipedrive",
-      "position": "Gerente de Ingeniería",
+      "position": "Engineering Manager",
       "period": "Septiembre 2017 – Septiembre 2023",
       "location": "Tallinn, Estonia",
-      "description": "Comencé como Desarrollador Frontend Senior y progresé a Gerente de Ingeniería, liderando un equipo de hasta 20 ingenieros. Fomentando una cultura positiva enfocada en la excelencia técnica.",
+      "description": "Lideré squads multifuncionales en el core de la plataforma CRM usada por cientos de miles de equipos.",
       "achievements": [
-        "Lideré un equipo de hasta 20 ingenieros, transformando un equipo en dificultades",
-        "Facilité colaboraciones entre equipos para lograr objetivos compartidos",
-        "Entregué una renovación significativa de características, superando las expectativas",
-        "Contribuí a bibliotecas de UI, lanzamientos de funciones y mejoras de la plataforma"
+        "Hice crecer y mentoreé ingenieros, construyendo el hiring loop y una carrera clara.",
+        "Trabajé con producto y diseño para lanzar features del roadmap más rápido.",
+        "Lideré squads en las superficies más usadas del producto.",
+        "Ayudé a dar forma a bibliotecas de UI, lanzamientos y mejoras de plataforma."
       ]
     },
     "accenture": {
       "company": "Accenture",
-      "position": "Líder de Equipo Frontend",
+      "position": "Frontend Team Lead",
       "period": "Enero 2016 – Septiembre 2017",
       "location": "Riga, Letonia",
-      "description": "Lancé un servicio de streaming de video, mejorando el rendimiento 5 veces y reduciendo la deuda técnica en un 89%. Implementé nuevos flujos de trabajo y prioricé el aprendizaje continuo.",
+      "description": "Lideré equipos de entrega construyendo software empresarial para clientes internacionales.",
       "achievements": [
-        "Lancé un servicio de streaming de video con mejora de rendimiento 5x",
-        "Reduje la deuda técnica en un 89% mediante refactorización estratégica",
-        "Implementé nuevos flujos de trabajo para optimizar la productividad del equipo",
-        "Prioricé el aprendizaje continuo y el desarrollo profesional del equipo"
+        "Responsable de calidad técnica, decisiones de arquitectura y relación con clientes.",
+        "Mentoreé ingenieros y fijé estándares en equipos distribuidos.",
+        "Contribuí a la entrega de software empresarial para clientes internacionales."
       ]
-    }
+    },
+    "kicker": "Experiencia",
+    "current": "Actual"
   },
   "skills": {
-    "title": "Habilidades",
+    "title": "Lo que aporto",
     "subtitle": "Tecnologías y prácticas con las que trabajo",
     "frontend": "Frontend",
     "backend": "Backend y Datos",
     "tools": "Herramientas e Infraestructura",
     "management": "Liderazgo",
-    "ai": "IA y Agentes"
+    "ai": "IA y Agentes",
+    "kicker": "Capacidades",
+    "g1": "Liderazgo",
+    "g2": "IA y producto",
+    "g3": "Ingeniería"
   },
   "footer": {
-    "tagline": "Fundador y Líder de Ingeniería. Construyendo productos nativos de IA y los sistemas que los entregan.",
+    "tagline": "Hecho en Buenos Aires",
     "navigation": "Navegación",
     "contact": "Contacto",
     "rights": "Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio"
+    "terms": "Términos de Servicio",
+    "top": "Volver arriba ↑"
   },
   "privacy": {
     "introduction": {
@@ -227,5 +233,11 @@
       "title": "Información de Contacto",
       "content": "Si tienes alguna pregunta sobre estos Términos, por favor contáctame en:"
     }
+  },
+  "nav": {
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
   }
 }

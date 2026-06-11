@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { NavContainer, NavLink, NavTitle } from './Navigation.styled';
 
 type NavigationProps = {
-  variant?: 'header' | 'footer';
   showTitle?: boolean;
   className?: string;
 };
@@ -13,20 +12,20 @@ export const Navigation = ({ showTitle = false, className = '' }: NavigationProp
   const { t } = useTranslation();
 
   const navItems = [
-    { key: 'home', href: '#' },
     { key: 'experience', href: '#experience' },
     { key: 'projects', href: '#projects' },
-    { key: 'consultation', href: '#consultation' },
+    { key: 'skills', href: '#skills' },
+    { key: 'contact', href: '#contact' },
   ];
 
   return (
     <NavContainer className={className}>
-      {showTitle && <NavTitle>{t('footer.navigation')}</NavTitle>}
+      {showTitle ? <NavTitle>{t('footer.navigation')}</NavTitle> : null}
 
       {navItems.map(item => (
-        <a key={item.key} href={item.href}>
-          <NavLink>{t(`Navigation.${item.key}`)}</NavLink>
-        </a>
+        <NavLink key={item.key} href={item.href}>
+          {t(`nav.${item.key}`)}
+        </NavLink>
       ))}
     </NavContainer>
   );
