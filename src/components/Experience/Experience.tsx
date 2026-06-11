@@ -1,77 +1,56 @@
-'use client';
-
 import { useTranslation } from 'react-i18next';
-import {
-  ExperienceSection,
-  ExperienceContainer,
-  SectionHeader,
-  Kicker,
-  SectionTitle,
-  ExperienceList,
-  Role,
-  RoleAside,
-  CompanyRow,
-  CompanyName,
-  RoleBadge,
-  RoleDates,
-  RoleLocation,
-  RoleBody,
-  RoleTitle,
-  RoleDescription,
-  BulletList,
-  Bullet,
-} from './Experience.styled';
 
-const EXPERIENCE_ORDER = [
-  { id: 'fetverg', current: true },
-  { id: 'career-break', current: false },
-  { id: 'nda-igaming', current: false },
-  { id: 'pipedrive', current: false },
-  { id: 'accenture', current: false },
-] as const;
+const order = ['4etverg', 'career-break', 'nda-igaming', 'pipedrive', 'accenture'] as const;
 
 export const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <ExperienceSection id="experience">
-      <ExperienceContainer>
-        <SectionHeader>
-          <Kicker>{t('experience.kicker')}</Kicker>
-          <SectionTitle>{t('experience.title')}</SectionTitle>
-        </SectionHeader>
+    <section id="experience" className="border-t border-border/80">
+      <div className="mx-auto max-w-[1080px] px-6 py-24">
+        <div data-reveal className="mb-10 opacity-0 translate-y-6 transition-all duration-[700ms] ease-[cubic-bezier(.22,1,.36,1)]">
+          <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-muted-foreground">
+            {t('experience.kicker')}
+          </p>
+          <h2 className="mt-3 text-[clamp(28px,4vw,40px)] font-semibold tracking-[-0.03em]">
+            {t('experience.title')}
+          </h2>
+        </div>
 
-        <ExperienceList>
-          {EXPERIENCE_ORDER.map(item => {
-            const achievements = t(`experience.${item.id}.achievements`, {
-              returnObjects: true,
-            }) as string[];
+        <div className="space-y-0">
+          {order.map(key => (
+            <article
+              key={key}
+              data-reveal
+              className="grid gap-6 border-t border-border/80 py-8 opacity-0 translate-y-6 transition-all duration-[700ms] ease-[cubic-bezier(.22,1,.36,1)] lg:grid-cols-[220px_1fr]"
+            >
+              <aside className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-[18px] font-medium tracking-[-0.02em]">{t(`experience.${key}.company`)}</h3>
+                  {key === '4etverg' ? (
+                    <span className="rounded-full border border-primary px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-primary">
+                      {t('experience.current')}
+                    </span>
+                  ) : null}
+                </div>
+                <p className="font-mono text-[13px] text-muted-foreground">{t(`experience.${key}.period`)}</p>
+                <p className="font-mono text-[13px] text-muted-foreground">{t(`experience.${key}.location`)}</p>
+              </aside>
 
-            return (
-              <Role key={item.id}>
-                <RoleAside>
-                  <CompanyRow>
-                    <CompanyName>{t(`experience.${item.id}.company`)}</CompanyName>
-                    {item.current ? <RoleBadge>{t('experience.current')}</RoleBadge> : null}
-                  </CompanyRow>
-                  <RoleDates>{t(`experience.${item.id}.period`)}</RoleDates>
-                  <RoleLocation>{t(`experience.${item.id}.location`)}</RoleLocation>
-                </RoleAside>
-
-                <RoleBody>
-                  <RoleTitle>{t(`experience.${item.id}.position`)}</RoleTitle>
-                  <RoleDescription>{t(`experience.${item.id}.description`)}</RoleDescription>
-                  <BulletList>
-                    {achievements.map(achievement => (
-                      <Bullet key={achievement}>{achievement}</Bullet>
-                    ))}
-                  </BulletList>
-                </RoleBody>
-              </Role>
-            );
-          })}
-        </ExperienceList>
-      </ExperienceContainer>
-    </ExperienceSection>
+              <div className="space-y-4">
+                <h4 className="text-[18px] font-medium">{t(`experience.${key}.position`)}</h4>
+                <ul className="space-y-3 text-[16px] leading-[1.65] text-foreground/85">
+                  {(t(`experience.${key}.achievements`, { returnObjects: true }) as string[]).map(item => (
+                    <li key={item} className="max-w-[70ch]">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };

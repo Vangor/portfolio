@@ -1,48 +1,21 @@
-'use client';
-
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FooterContainer, FooterContent, FooterBottom, FooterLinks, FooterLink } from './Footer.styled';
-import { PolicyDialog } from './Footer.PolicyDialog';
-import { Privacy } from './Footer.Privacy';
-import { Terms } from './Footer.Terms';
 
 export const Footer = () => {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
-  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
-  const [isTermsOpen, setIsTermsOpen] = useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
-    <FooterContainer>
-      <FooterContent>
-        <FooterBottom>
-          <span>© {currentYear} Konstantin Vanichkin</span>
+    <footer className="border-t border-border/80">
+      <div className="mx-auto flex max-w-[1080px] flex-col gap-4 px-6 py-8 text-[13px] text-muted-foreground md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-1 md:flex-row md:items-center md:gap-3">
+          <span>© 2026 Konstantin Vanichkin</span>
           <span>{t('footer.tagline')}</span>
-        </FooterBottom>
-
-        <FooterLinks>
-          <PolicyDialog
-            isOpen={isPrivacyOpen}
-            onOpenChange={setIsPrivacyOpen}
-            title={t('footer.privacy')}
-          >
-            <Privacy />
-          </PolicyDialog>
-
-          <PolicyDialog isOpen={isTermsOpen} onOpenChange={setIsTermsOpen} title={t('footer.terms')}>
-            <Terms />
-          </PolicyDialog>
-
-          <FooterLink type="button" onClick={scrollToTop}>
+        </div>
+        <div className="flex items-center gap-4">
+          <a href="#top" className="inline-flex items-center gap-2 rounded-full border border-border/80 px-4 py-2 text-foreground transition-colors hover:border-foreground">
             {t('footer.top')}
-          </FooterLink>
-        </FooterLinks>
-      </FooterContent>
-    </FooterContainer>
+          </a>
+        </div>
+      </div>
+    </footer>
   );
 };
