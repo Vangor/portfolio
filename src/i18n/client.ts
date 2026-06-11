@@ -8,7 +8,7 @@ import ru from '@/messages/ru.json';
 export const locales = ['en', 'ru', 'es'] as const;
 export type Locale = (typeof locales)[number];
 
-function getInitialLocale(): Locale {
+export function getInitialLocale(): Locale {
   const saved = window.localStorage.getItem('locale');
   if (saved && locales.includes(saved as Locale)) return saved as Locale;
 
