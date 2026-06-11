@@ -26,6 +26,9 @@
     "ru": "Russian",
     "es": "Spanish"
   },
+  "common": {
+    "visit": "Visit"
+  },
   "Index": {
     "title": "Konstantin Vanichkin — Founder & Engineering Leader",
     "description": "Founder of 4etverg, an AI product studio in Buenos Aires. Former CTO and engineering manager at Pipedrive. Building dependable AI products and the systems that ship them."

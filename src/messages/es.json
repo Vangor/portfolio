@@ -20,6 +20,9 @@
     "ru": "Ruso",
     "es": "Español"
   },
+  "common": {
+    "visit": "Visitar"
+  },
   "Index": {
     "title": "Konstantin Vanichkin — Fundador y Líder de Ingeniería",
     "description": "Fundador de 4etverg, un estudio de productos de IA en Buenos Aires. Ex-CTO y engineering manager en Pipedrive. Construyendo productos de IA confiables y los sistemas que los entregan."

@@ -23,9 +23,9 @@ export const Navigation = ({ showTitle = false, className = '' }: NavigationProp
       {showTitle ? <NavTitle>{t('footer.navigation')}</NavTitle> : null}
 
       {navItems.map(item => (
-        <a key={item.key} href={item.href}>
-          <NavLink>{t(`nav.${item.key}`)}</NavLink>
-        </a>
+        <NavLink key={item.key} href={item.href}>
+          {t(`nav.${item.key}`)}
+        </NavLink>
       ))}
     </NavContainer>
   );
