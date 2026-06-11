@@ -36,9 +36,11 @@ build:
 #
 # ROOT CAUSE of the "deploy silently uploaded nothing" failures (2026-06-10/11):
 # wrangler 4.99 `pages deploy` SILENTLY NO-OPS when run under bun (the oven/bun:1
-# image) — it fetches the project then exits 0 without uploading. The token was always
-# valid (deploys fine under Node). Fix: run this job on node:22 with `npx wrangler`.
-# The fail-loud guard below stays as a regression safety net.
+# image). Under bun it fetches the project then exits 0 without uploading — no error,
+# no "Deployment complete". The CLOUDFLARE_API_TOKEN was always VALID (it deploys fine
+# under Node and from a workstation). Fix: run the deploy step on a Node 22 image with
+# `npx wrangler` instead of bun. The build step stays on bun (vite build is unaffected).
+# The fail-loud guard below stays as a safety net for any future regression.
 deploy:
   stage: deploy
   image: node:22
