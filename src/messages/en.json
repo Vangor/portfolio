@@ -10,7 +10,7 @@
   "hero": {
     "badge": "Available for select engagements",
     "role": { "a": "Founder", "b": "Engineering Leader" },
-    "subtitle": "Founder of <strong>4etverg</strong>, an AI product studio in Buenos Aires. Former CTO at <strong>NDA iGaming</strong> and engineering manager at <strong>Pipedrive</strong>. Fifteen years turning ambiguous problems into products and the teams that ship them. I help companies move AI from demo to dependable.",
+    "subtitle": "Founder of <strong>4etverg</strong>, ex-Engineering Manager at <strong>Pipedrive</strong>. Fifteen years building products and the teams that ship them. I help companies move AI from demo to dependable.",
     "contact": "Get in touch",
     "linkedin": "LinkedIn",
     "github": "GitHub",
@@ -20,7 +20,7 @@
     "kicker": "Selected work",
     "title": "Things I've built",
     "lingualex": {
-      "description": "An AI assistant that turns dense contracts into plain, reviewable language — built to keep a lawyer in the loop, not replace one."
+      "description": "A Telegram-native language-learning platform — read adapted, leveled stories and tap any word to learn it, with personalized progress across 16 languages. Built with React and Supabase."
     },
     "agent-os": {
       "description": "An orchestration framework for building reliable, multi-step AI agents in production — typed tools, traceable runs, graceful failure."
