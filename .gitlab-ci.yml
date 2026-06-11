@@ -15,7 +15,7 @@ file-size:
   script:
     - bun scripts/check-file-size.ts
 
-# Build the static site without the infisical.lan wrapper (not reachable from CI).
+    # Build the static site without the deprecated Infisical wrapper.
 # Vite reads VITE_POSTHOG_KEY from the process env at build time; the two PostHog
 # keys are provided as GitLab CI/CD variables instead of via `infisical run`.
 build:
