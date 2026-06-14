@@ -15,6 +15,7 @@
     "format": "bunx prettier . --write",
     "format:check": "bunx prettier . --check",
     "preview": "bun vite preview",
+    "type-check": "bunx tsc --noEmit",
     "test": "bun vitest run",
     "test:ui": "bun vitest --ui",
     "test:run": "bun vitest run",
