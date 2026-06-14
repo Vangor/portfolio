@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 const contactLinks = [
   { label: 'Telegram', href: 'https://t.me/con_van', meta: '@con_van' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/con_van', meta: 'in/con_van' },
-  { label: 'GitHub', href: 'https://github.com/convanichkin', meta: '/convanichkin' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/konstantinvan/', meta: 'in/konstantinvan' },
+  { label: 'GitHub', href: 'https://github.com/Vangor', meta: '/Vangor' },
 ];
 
 export const Consultation = () => {
