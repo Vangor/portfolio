@@ -5,13 +5,13 @@ commands:
   build: bun vite build
   dev: bun vite
   db: TBD
-  test: TBD
+  test: bun vitest run
 links:
   local: http://localhost:5173
   staging: TBD
-  production: TBD
+  production: https://vanichk.in
 notes:
-  - Deployed via Netlify (netlify.toml at root)
+  - See .env.example for required public environment variables
   - SPA redirect rule required for client-side routing
 ---
 
@@ -27,10 +27,11 @@ Personal CV and portfolio landing page. Built on React + Vite, deployed to Netli
 |---------|-----|
 | Dev server | `bun vite` |
 | Build | `bun vite build` |
+| Test | `bun vitest run` |
 | Lint | `bunx eslint .` |
 | Format | `bunx prettier . --write` |
 
 ## Operational Notes
 
-- No `.env.example` — no runtime env vars required
+- Copy `.env.example` to `.env.local` and fill in real values for local development
 - Netlify deploys on push to main
